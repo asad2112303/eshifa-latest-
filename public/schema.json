@@ -1,0 +1,198 @@
+<!-- Schema.org Structured Data for eShifa -->
+<!-- Place this in the head or body of your HTML -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HealthAndBeautyBusiness",
+  "@id": "https://eshifa.org",
+  "name": "eShifa",
+  "alternateName": "eShifa Pakistan",
+  "legalName": "SIHT (Private) Limited",
+  "slogan": "Quality Healthcare at Your Doorstep",
+  "foundingDate": "2019-12-16",
+  "parentOrganization": {
+    "@type": "Organization",
+    "name": "Shifa International Hospitals Ltd."
+  },
+  "description": "Pakistan's first JCI-accredited home healthcare service offering home laboratory, nursing, rehabilitation, pharmacy, and medical equipment services, alongside teleconsultation and specialized care programs, 24/7 nationwide",
+  "url": "https://eshifa.org",
+  "logo": "https://eshifa.org/images/eshifa-logo.png",
+  "image": "https://eshifa.org/images/hero.png",
+  "telephone": "+92-51-111-111-567",
+  "email": "info@eshifa.org",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Plot No. 17 and 18, 2nd Floor, EOBI Building",
+    "addressLocality": "Islamabad",
+    "addressRegion": "Islamabad Capital Territory",
+    "postalCode": "44000",
+    "addressCountry": "PK"
+  },
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Islamabad"
+    },
+    {
+      "@type": "City",
+      "name": "Lahore"
+    },
+    {
+      "@type": "State",
+      "name": "Pakistan"
+    }
+  ],
+  "serviceArea": "PK",
+  "award": "JCI Accreditation",
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+    "opens": "00:00",
+    "closes": "23:59"
+  },
+  "sameAs": [
+    "https://facebook.com/eshifa.official"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "Customer Service",
+    "telephone": "+92-51-111-111-567",
+    "email": "info@eshifa.org",
+    "areaServed": "PK",
+    "availableLanguage": "en"
+  },
+  "knowsAbout": [
+    "Home Laboratory Services",
+    "Home Nursing Services",
+    "Home Rehabilitation Services",
+    "Home Pharmacy Services",
+    "Home Medical Equipment",
+    "Doctor Teleconsultation",
+    "Home Vaccination Services",
+    "Diabetes Care Plan",
+    "Elderly Care Plan",
+    "LRTI Care Plan",
+    "Arthritis Care Plan",
+    "Post Stroke Care Plan",
+    "Mother and Baby Care Plan",
+    "Dengue Home Monitoring",
+    "Home Phototherapy Care Plan"
+  ],
+  "review": {
+    "@type": "Review",
+    "ratingValue": "4.8",
+    "bestRating": "5",
+    "worstRating": "1",
+    "reviewCount": "500"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "eShifa",
+  "url": "https://eshifa.org",
+  "logo": "https://eshifa.org/images/eshifa-logo.png",
+  "sameAs": [
+    "https://facebook.com/eshifa.official"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "Customer Service",
+    "telephone": "+92-51-111-111-567",
+    "email": "info@eshifa.org"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "url": "https://eshifa.org",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://eshifa.org/search?q={search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is eShifa?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "eShifa is Pakistan's first JCI-accredited home healthcare service, offering home laboratory, nursing, rehabilitation, pharmacy, and medical equipment services, alongside teleconsultation and specialized care programs, across Islamabad, Lahore, and nationwide."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I book an eShifa service?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can book in two ways: download the eShifa app from the Google Play Store or Apple App Store, or call our 24/7 UAN helpline at 051-111-111-567."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What specialized care programs does eShifa offer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "eShifa runs eight home-based care programs: Diabetes, Elderly, LRTI, Arthritis, Post Stroke, Mother & Baby, Dengue Home Monitoring, and Home Phototherapy."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I rent medical equipment for use at home?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. eShifa offers convenient rental of essential medical equipment, including oxygen concentrators, nebulizers, suction machines, BiPAP and CPAP machines, and cardiac monitors."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is eShifa available in Islamabad and Lahore?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. eShifa operates 24/7 in Islamabad and Lahore, with expanding coverage across Pakistan's major cities and home sample collection across 80+ points nationwide."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does JCI accreditation mean for patients?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "JCI accreditation confirms that eShifa meets leading international clinical safety and quality standards for home healthcare."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can overseas Pakistanis manage care through eShifa?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. eShifa provides dedicated coordination for diaspora families in the UK, US, and Middle East with regular updates and managed care plans."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How quickly can eShifa send support?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "eShifa operates 24/7. Response times vary by location and service; call the care team or submit a callback request for scheduling."
+      }
+    }
+  ]
+}
+</script>
