@@ -1,3 +1,5 @@
+"use client";
+
 import React, { ReactNode } from "react";
 import { motion, type TargetAndTransition } from "framer-motion";
 import { DURATION, EASE_OUT, VIEWPORT_ONCE } from "./transitions";

@@ -1,5 +1,8 @@
+"use client";
+
 import { ReactNode, useState } from "react";
-import { Link } from "wouter";
+import Link from "next/link";
+import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import { CheckCircle2, ChevronDown, ChevronRight, ArrowRight, Info } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -92,13 +95,14 @@ export function ServiceHero({ service }: { service: ServiceContent }) {
           </motion.div>
 
           <Reveal direction="right">
-            <img
-              src={`${import.meta.env.BASE_URL}images/${service.hero.image}`}
+            <Image
+              src={`/images/${service.hero.image}`}
               alt={service.hero.imageAlt}
-              className="w-full aspect-[4/3] rounded-[28px] object-cover shadow-xl"
               width={800}
               height={600}
-              decoding="async"
+              priority
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="w-full aspect-[4/3] rounded-[28px] object-cover shadow-xl"
             />
           </Reveal>
         </div>

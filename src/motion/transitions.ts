@@ -1,3 +1,5 @@
+"use client";
+
 import type { Transition } from "framer-motion";
 
 /**

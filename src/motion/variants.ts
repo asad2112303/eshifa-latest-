@@ -1,3 +1,5 @@
+"use client";
+
 import type { Variants } from "framer-motion";
 import { DURATION, EASE_OUT, EASE_IN } from "./transitions";
 

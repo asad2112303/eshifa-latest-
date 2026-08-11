@@ -2,10 +2,10 @@
   "version": "0.0.1",
   "configurations": [
     {
-      "name": "eshifa-dev",
-      "runtimeExecutable": "npm",
-      "runtimeArgs": ["run", "dev"],
-      "port": 22421
+      "name": "eshifa-next",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["next", "dev", "-p", "22431"],
+      "port": 22431
     }
   ]
 }
