@@ -12,6 +12,9 @@ import { ServiceIcon } from "@/components/icons/ServiceIcon";
 import { ServiceGlyph } from "@/components/icons/service-glyphs";
 import { ServiceCardGrid } from "@/components/service/sections";
 import { serviceList, servicePath, type ServiceSlug } from "@/data/services";
+import { normalizePakistaniPhone } from "@/lib/callback-validation";
+import { trackEvent } from "@/lib/analytics";
+import { callbackServiceOptions } from "@/data/callback-services";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -257,17 +260,6 @@ const servicesAlternatingSections: AlternatingSection[] = [
   },
 ];
 
-const callbackServiceOptions = [
-  "Home Laboratory Services",
-  "Home Nursing Services",
-  "Home Rehabilitation Services",
-  "Home Pharmacy Services",
-  "Home Medical Equipment",
-  "Doctor Teleconsultation",
-  "Specialized Care Programs",
-  "International Family Care",
-];
-
 const medicalEquipmentItems = [
   "Oxygen Concentrators",
   "Nebulizers",
@@ -361,17 +353,30 @@ const internationalCards = [
   },
 ];
 
-function getStoreUrl() {
-  if (typeof navigator === "undefined") {
-    return APPLE_STORE_URL;
-  }
+function detectStoreUrl() {
+  if (typeof navigator === "undefined") return APPLE_STORE_URL;
 
   const ua = navigator.userAgent.toLowerCase();
-  if (ua.includes("android") || ua.includes("windows")) {
-    return PLAY_STORE_URL;
-  }
+  return ua.includes("android") || ua.includes("windows") ? PLAY_STORE_URL : APPLE_STORE_URL;
+}
 
-  return APPLE_STORE_URL;
+/**
+ * Resolves the app store link for the visitor's platform.
+ *
+ * Reading `navigator` during render caused a hydration mismatch: the server
+ * always produced the Apple URL while an Android client produced the Play URL,
+ * and React logged "this won't be patched up" — leaving Android users pointed at
+ * the App Store. Instead the first client render matches the server, and the
+ * platform-specific URL is applied in an effect after hydration.
+ */
+function useStoreUrl() {
+  const [storeUrl, setStoreUrl] = useState(APPLE_STORE_URL);
+
+  useEffect(() => {
+    setStoreUrl(detectStoreUrl());
+  }, []);
+
+  return storeUrl;
 }
 
 
@@ -490,6 +495,7 @@ export const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [servicesAccordionOpen, setServicesAccordionOpen] = useState(false);
+  const storeUrl = useStoreUrl();
   const location = usePathname() ?? "/";
 
   useEffect(() => {
@@ -587,7 +593,7 @@ export const Navbar = () => {
               <Link href="/contact">Partner</Link>
             </Button>
             <Button asChild className={navButtonClass}>
-              <a href={getStoreUrl()} target="_blank" rel="noreferrer">
+              <a href={storeUrl} target="_blank" rel="noreferrer">
                 Download App
               </a>
             </Button>
@@ -998,6 +1004,8 @@ const CareProgramsSection = () => {
 };
 
 const HowToAccess = () => {
+  const storeUrl = useStoreUrl();
+
   return (
     /* Red-to-white gradient built from the logo red (#ED3237). The lightest stop
        stays faintly tinted rather than pure white so the white cards keep their edge. */
@@ -1033,7 +1041,7 @@ const HowToAccess = () => {
             <a href="tel:051111111567">Call {UAN_DISPLAY}</a>
           </Button>
           <Button asChild className="rounded-[80px] border border-[#0289E8] bg-white text-[#0289E8] hover:bg-[#F5F5F5] px-7 py-6 font-semibold">
-            <a href={getStoreUrl()} target="_blank" rel="noreferrer">
+            <a href={storeUrl} target="_blank" rel="noreferrer">
               Download the eShifa App
             </a>
           </Button>
@@ -1065,52 +1073,123 @@ const HomeFaq = () => {
 };
 
 /** Animated inline validation message. */
-const FieldError = ({ id, message }: { id: string; message?: string }) => (
-  <AnimatePresence initial={false}>
-    {message && (
-      <motion.p
-        id={id}
-        role="alert"
-        initial={{ opacity: 0, height: 0, y: -4 }}
-        animate={{ opacity: 1, height: "auto", y: 0 }}
-        exit={{ opacity: 0, height: 0, y: -4 }}
-        transition={{ duration: 0.18, ease: [0.22, 1, 0.36, 1] }}
-        className="overflow-hidden text-sm text-[#C0392B]"
-      >
-        {message}
-      </motion.p>
-    )}
-  </AnimatePresence>
-);
+/**
+ * Inline field error.
+ *
+ * Deliberately not wrapped in AnimatePresence: with an `height: auto -> 0` exit,
+ * framer-motion animated the node out of sight but left it in the DOM, so a
+ * stale `role="alert"` stayed in the accessibility tree after the field was
+ * corrected. Rendering conditionally removes the node outright; the entrance is
+ * still animated, only the exit is instant.
+ */
+const FieldError = ({ id, message }: { id: string; message?: string }) => {
+  if (!message) return null;
 
-type CallbackErrors = { name?: string; phone?: string };
+  return (
+    <motion.p
+      id={id}
+      role="alert"
+      initial={{ opacity: 0, y: -4 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.18, ease: [0.22, 1, 0.36, 1] }}
+      className="text-sm text-[#C0392B]"
+    >
+      {message}
+    </motion.p>
+  );
+};
+
+type CallbackErrors = { name?: string; phone?: string; service?: string };
 
 /**
  * Callback request form.
  *
- * NOTE: there is no submission endpoint wired up in this codebase — the form
- * validates and reports field errors, but does not transmit anything. It
- * deliberately does not display a success state, which would tell the user
- * their request was received when nothing was sent.
+ * Submits to /api/callback, which appends the request to an .xlsx workbook on
+ * the server. The success state is only shown once the server confirms the row
+ * was written — it never claims success optimistically. On failure the visitor's
+ * input is preserved so nothing has to be retyped.
  */
 const CallbackForm = () => {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
+  const [service, setService] = useState("");
+  const [notes, setNotes] = useState("");
   const [errors, setErrors] = useState<CallbackErrors>({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formError, setFormError] = useState<string | null>(null);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const validate = (): CallbackErrors => {
     const next: CallbackErrors = {};
     if (!name.trim()) next.name = "Please enter your name.";
-    // Pakistani numbers: allow spaces, dashes, optional +92 country code.
-    const digits = phone.replace(/[^\d]/g, "");
-    if (!digits) next.phone = "Please enter a phone number.";
-    else if (digits.length < 10) next.phone = "Please enter a complete phone number.";
+
+    if (!phone.trim()) {
+      next.phone = "Please enter a phone number.";
+    } else if (!normalizePakistaniPhone(phone)) {
+      next.phone = "Enter a valid Pakistani mobile number, e.g. 0300 1234567.";
+    }
+
+    if (!service) next.service = "Please select a service.";
     return next;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setErrors(validate());
+    if (isSubmitting) return;
+
+    setFormError(null);
+
+    const nextErrors = validate();
+    setErrors(nextErrors);
+    if (Object.keys(nextErrors).length > 0) return;
+
+    setIsSubmitting(true);
+    try {
+      const response = await fetch("/api/callback", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ fullName: name, phone, service, additionalNotes: notes }),
+      });
+
+      const payload = (await response.json().catch(() => ({}))) as {
+        ok?: boolean;
+        message?: string;
+        errors?: Record<string, string>;
+      };
+
+      if (!response.ok || !payload.ok) {
+        // Server-side validation failures map back onto the fields.
+        if (response.status === 422 && payload.errors) {
+          setErrors({
+            name: payload.errors.fullName,
+            phone: payload.errors.phone,
+            service: payload.errors.service,
+          });
+        } else {
+          setFormError(payload.message ?? `Something went wrong. Please call us on ${UAN_DISPLAY}.`);
+        }
+        return;
+      }
+
+      // Service name only — never the visitor's name, number or notes.
+      trackEvent("callback_request", {
+        selected_service: service,
+        page: typeof window === "undefined" ? "" : window.location.pathname,
+        source: "contact_form",
+      });
+
+      setIsSubmitted(true);
+      setName("");
+      setPhone("");
+      setService("");
+      setNotes("");
+    } catch {
+      setFormError(
+        `We could not reach our servers. Please check your connection or call us on ${UAN_DISPLAY}.`,
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const fieldClass = (hasError: boolean) =>
@@ -1159,12 +1238,22 @@ const CallbackForm = () => {
           </label>
           <select
             id="cb-service"
-            className="w-full h-10 rounded-md border border-transparent bg-[#F5F5F5] px-3 text-sm outline-none focus:border-[#1B004E]/30 focus:bg-white"
+            value={service}
+            onChange={(e) => setService(e.target.value)}
+            aria-invalid={!!errors.service}
+            aria-describedby={errors.service ? "cb-service-error" : undefined}
+            className={`w-full h-10 rounded-md border bg-[#F5F5F5] px-3 text-sm outline-none focus:border-[#1B004E]/30 focus:bg-white ${
+              errors.service ? "border-[#C0392B]" : "border-transparent"
+            }`}
           >
+            <option value="">Select a service</option>
             {callbackServiceOptions.map((option) => (
-              <option key={option}>{option}</option>
+              <option key={option} value={option}>
+                {option}
+              </option>
             ))}
           </select>
+          <FieldError id="cb-service-error" message={errors.service} />
         </div>
 
         <div className="space-y-2">
@@ -1173,14 +1262,48 @@ const CallbackForm = () => {
           </label>
           <Textarea
             id="cb-notes"
+            value={notes}
+            onChange={(e) => setNotes(e.target.value)}
             placeholder="Briefly describe your requirements..."
             className="min-h-[110px] bg-[#F5F5F5] border-transparent focus:bg-white"
           />
         </div>
 
-        <Button type="submit" className="w-full bg-[#0289E8] hover:bg-[#0289E8] text-white py-6 rounded-[80px] mt-4">
-          Request a Callback
+        <Button
+          type="submit"
+          disabled={isSubmitting}
+          className="w-full bg-[#0289E8] hover:bg-[#0289E8] text-white py-6 rounded-[80px] mt-4 disabled:opacity-70"
+        >
+          {isSubmitting ? "Sending request..." : "Request a Callback"}
         </Button>
+
+        {formError && (
+          <motion.p
+            role="alert"
+            initial={{ opacity: 0, y: -4 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.18, ease: [0.22, 1, 0.36, 1] }}
+            className="pt-1 text-sm text-[#C0392B]"
+          >
+            {formError}
+          </motion.p>
+        )}
+
+        {isSubmitted && (
+          <motion.div
+            role="status"
+            initial={{ opacity: 0, y: -4 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.18, ease: [0.22, 1, 0.36, 1] }}
+            className="flex items-start gap-3 rounded-2xl border border-[#0E7A4E]/25 bg-[#F1F9F5] p-4"
+          >
+            <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-[#0E7A4E]" aria-hidden="true" />
+            <p className="text-sm leading-relaxed text-[#1B004E]">
+              <span className="font-semibold">Request received.</span> Our care team will call you shortly. For
+              anything urgent, call {UAN_DISPLAY}.
+            </p>
+          </motion.div>
+        )}
       </form>
     </div>
   );

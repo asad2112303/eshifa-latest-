@@ -41,9 +41,17 @@ export const springSmooth: Transition = {
   mass: 1,
 };
 
-/** Shared whileInView viewport config: reveal once, slightly before fully on screen. */
+/**
+ * Shared whileInView viewport config: reveal once, slightly before fully on screen.
+ *
+ * `amount: "some"` rather than a fraction. A fraction is measured against the
+ * *element*, so a container taller than roughly 5x the viewport can never
+ * satisfy `amount: 0.2` — on mobile the Specialized Care Programs grid is ~4.9x
+ * the screen, so its cards stayed at opacity 0 and never appeared. "some" fires
+ * as soon as any part enters, which is correct at every container height.
+ */
 export const VIEWPORT_ONCE = {
   once: true,
-  amount: 0.2,
+  amount: "some",
   margin: "0px 0px -50px 0px",
 } as const;
