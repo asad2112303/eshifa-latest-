@@ -2,10 +2,10 @@
   "version": "0.0.1",
   "configurations": [
     {
-      "name": "eshifa-next",
+      "name": "eshifa-verify",
       "runtimeExecutable": "npx",
-      "runtimeArgs": ["next", "dev", "-p", "22431"],
-      "port": 22431
+      "runtimeArgs": ["next", "dev", "-p", "22441"],
+      "port": 22441
     }
   ]
 }

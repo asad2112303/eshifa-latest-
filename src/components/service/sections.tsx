@@ -172,7 +172,6 @@ export function ServiceIncluded({ service }: { service: ServiceContent }) {
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-8 grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
         <Reveal>
-          <Eyebrow>What's Included</Eyebrow>
           <h2 className="text-3xl sm:text-4xl font-light text-[#1B004E] mb-5">{service.included.heading}</h2>
           {service.included.note && (
             <p className="flex items-start gap-3 rounded-2xl border border-[#ECECEC] bg-[#F9FAFB] p-5 text-base leading-relaxed text-[#444444]">

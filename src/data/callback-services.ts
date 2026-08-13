@@ -13,7 +13,6 @@ export const callbackServiceOptions = [
   "Doctor Teleconsultation",
   "Home Vaccination Services",
   "Specialized Care Programs",
-  "International Family Care",
 ] as const;
 
 export type CallbackServiceOption = (typeof callbackServiceOptions)[number];

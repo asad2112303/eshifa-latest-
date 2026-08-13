@@ -15,6 +15,18 @@ import { serviceList, servicePath, type ServiceSlug } from "@/data/services";
 import { normalizePakistaniPhone } from "@/lib/callback-validation";
 import { trackEvent } from "@/lib/analytics";
 import { callbackServiceOptions } from "@/data/callback-services";
+import {
+  partnershipIntro,
+  partnershipLead,
+  partnershipFeatures,
+  businessModels,
+  lppRequirements,
+  lppPlusRequirements,
+  partnershipNotes,
+  eshifaSupport,
+  expansionRights,
+  type RequirementTable as RequirementTableData,
+} from "@/data/partnership";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -34,6 +46,13 @@ import {
   CheckCircle2,
   Smartphone,
   ChevronDown,
+  HeartPulse,
+  Award,
+  Building2,
+  FileCheck2,
+  SearchCheck,
+  Settings2,
+  Megaphone,
 } from "lucide-react";
 
 const APPLE_STORE_URL = "https://apps.apple.com/pk/app/eshifa/id1525359185";
@@ -126,35 +145,20 @@ const coreValues = [
   { name: "Self-Learning" },
   { name: "Team Working" },
   { name: "Professionalism" },
-  {
-    name: "Global Trust",
-    note: "Trusted by overseas Pakistanis (UK, US, Middle East) who depend on a reliable, accountable home-care presence for their families back home.",
-  },
 ];
 
 const visionStatement = "To be the region's leader by providing Quality Healthcare Services beyond boundaries.";
 const missionStatement = "Healthcare with compassion for all.";
 
 /** Rendered as alternating image/text sections, matching the service-detail layout. */
+/** Rendered side by side in one section: mission on the left, vision on the right. */
 const visionMissionSections = [
-  {
-    eyebrow: "OUR PURPOSE",
-    title: "Our Vision",
-    body: visionStatement,
-    image: "lab.png",
-    alt: "eShifa healthcare professional delivering quality diagnostic care at a patient's home in Pakistan",
-  },
-  {
-    eyebrow: "OUR PURPOSE",
-    title: "Our Mission",
-    body: missionStatement,
-    image: "rehab.png",
-    alt: "eShifa nurse supporting an elderly patient with compassionate care at home in Pakistan",
-  },
+  { title: "Our Mission", body: missionStatement, icon: HeartPulse },
+  { title: "Our Vision", body: visionStatement, icon: Globe },
 ];
 
 const aboutParagraphs = [
-  "SIHT (Private) Limited (“the Company”) was incorporated in Pakistan on December 16, 2019, as a private limited company under the Companies Act, 2017. The Company is a wholly owned subsidiary of Shifa International Hospitals Ltd. and Shifa Foundation.",
+  "SIHT (Private) Limited (“the Company”) was incorporated in Pakistan on December 16, 2019, as a private limited company under the Companies Act, 2017. The Company is a subsidiary of Shifa International Hospitals Ltd. & Shifa Foundation and its registered office is located at Pitras Bukhari Road, H-8/4, Islamabad.",
   "eShifa is a healthcare platform focused on delivering quality, accessible, and convenient healthcare services beyond traditional healthcare settings. Powered by the expertise and healthcare ecosystem of Shifa, eShifa brings a comprehensive range of healthcare services closer to individuals and families by delivering quality and compassionate care at their doorstep.",
   "eShifa is committed to transforming the traditional healthcare experience through innovation, technology, convenience, and patient-centered care. By reducing the need for unnecessary travel and waiting times, eShifa aims to make quality healthcare more accessible while ensuring that patients receive professional and compassionate care when and where they need it.",
   "With a commitment to continuous improvement and innovation, eShifa strives to create a seamless healthcare experience that connects patients with trusted healthcare services beyond the boundaries of conventional healthcare facilities.",
@@ -280,38 +284,43 @@ const whyChooseItems = [
   "Home health services offer convenient medical care options for elderly, frail, and housebound patients",
 ];
 
-const homeFaqItems = [
+/** An answer is either a paragraph, or labelled options rendered as separate lines. */
+type FaqAnswer = string | Array<{ label: string; text: string }>;
+
+const homeFaqItems: Array<{ q: string; a: FaqAnswer }> = [
   {
     q: "What is eShifa?",
-    a: "eShifa is Pakistan's first JCI-accredited home healthcare service, offering home laboratory, nursing, rehabilitation, pharmacy, and medical equipment services, alongside teleconsultation and specialized care programs, across Islamabad, Lahore, and nationwide.",
+    a: "eShifa is a trusted healthcare platform that brings quality, convenient, and patient-centered healthcare services to your doorstep beyond hospital walls.",
   },
   {
     q: "How do I book an eShifa service?",
-    a: `You can book in two ways: download the eShifa app from the Google Play Store or Apple App Store, or call our 24/7 UAN helpline at ${UAN_DISPLAY}.`,
+    a: [
+      {
+        label: "Through the eShifa App",
+        text: "Download the app from the Google Play Store or Apple App Store and book your desired service.",
+      },
+      { label: "By Phone", text: `Call our 24/7 UAN helpline at ${UAN_DISPLAY} to book your service.` },
+    ],
   },
   {
     q: "What specialized care programs does eShifa offer?",
-    a: "eShifa runs eight home-based care programs: Diabetes, Elderly, LRTI, Arthritis, Post Stroke, Mother & Baby, Dengue Home Monitoring, and Home Phototherapy.",
+    a: "eShifa offers specialized home-based care plans for Diabetes, Elderly Care, LRTI, Arthritis, Post-Stroke, Mother & Baby, Dengue Home Monitoring, and Home Phototherapy. Each care plan is customized according to the patient\u2019s health needs and care requirements.",
   },
   {
     q: "Can I rent medical equipment for use at home?",
     a: "Yes. eShifa offers convenient rental of essential medical equipment, including oxygen concentrators, nebulizers, suction machines, BiPAP and CPAP machines, and cardiac monitors.",
   },
   {
-    q: "Is eShifa available in Islamabad and Lahore?",
-    a: "Yes. eShifa operates 24/7 in Islamabad and Lahore, with expanding coverage across Pakistan's major cities and home sample collection across 80+ points nationwide.",
+    q: "Is eShifa available in Islamabad, Lahore, Faisalabad and Peshawar?",
+    a: "Yes. eShifa provides home healthcare services in Islamabad, Lahore, Faisalabad and Peshawar with expanding coverage across major cities of Pakistan and 75+ lab collection centers nationwide.",
   },
   {
-    q: "What does JCI accreditation mean for patients?",
-    a: "JCI accreditation confirms that eShifa meets leading international clinical safety and quality standards for home healthcare.",
-  },
-  {
-    q: "Can overseas Pakistanis manage care through eShifa?",
-    a: "Yes. eShifa provides dedicated coordination for diaspora families in the UK, US, and Middle East with regular updates and managed care plans.",
+    q: "Can overseas Pakistanis manage care for their families through eShifa?",
+    a: "Yes. While eShifa\u2019s healthcare services are provided within Pakistan, overseas Pakistanis can book and coordinate healthcare services for their family members living in Pakistan.",
   },
   {
     q: "How quickly can eShifa send support?",
-    a: "eShifa operates 24/7. Response times vary by location and service; call the care team or submit a callback request for scheduling.",
+    a: "eShifa operates 24/7. Response times vary by location and service; call the care team to book the home health services.",
   },
 ];
 
@@ -590,7 +599,7 @@ export const Navbar = () => {
               <a href="tel:051111111567">Call Now</a>
             </Button>
             <Button asChild className={navButtonClass}>
-              <Link href="/contact">Partner</Link>
+              <Link href="/partner">Partner</Link>
             </Button>
             <Button asChild className={navButtonClass}>
               <a href={storeUrl} target="_blank" rel="noreferrer">
@@ -689,6 +698,13 @@ export const Navbar = () => {
             <Button asChild className="bg-[#0289E8] hover:bg-[#0289E8] text-white rounded-[80px] w-full mt-2">
               <a href="tel:051111111567">Call Now</a>
             </Button>
+            {/* Mirrors the desktop header button — /partner has no nav-list entry. */}
+            <Button
+              asChild
+              className="border border-[#0289E8] bg-white hover:bg-[#F5F5F5] text-[#0289E8] rounded-[80px] w-full"
+            >
+              <Link href="/partner">Partner</Link>
+            </Button>
           </motion.div>
         )}
       </AnimatePresence>
@@ -744,15 +760,13 @@ const Hero = () => {
 
       <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-8 flex items-end pb-16 sm:pb-24">
         <motion.div variants={staggerContainer} initial="hidden" animate="visible">
-          <motion.div variants={staggerItem}>
-            <SectionEyebrow>Healthcare Without Walls</SectionEyebrow>
-          </motion.div>
           <h1 className="text-white text-4xl sm:text-5xl lg:text-6xl font-light leading-[1.05] max-w-4xl">
             <AnimatedWords text="Quality Healthcare at Your Doorstep" />
           </h1>
           <motion.p variants={staggerItem} className="text-lg sm:text-xl text-white/90 mt-6 max-w-3xl leading-relaxed">
-            eShifa is a trusted healthcare platform, bringing quality healthcare services to patients beyond hospital walls. Pakistan's first
-            JCI-accredited home healthcare service, available 24/7 in Islamabad, Lahore, and across the nation.
+            eShifa is a trusted healthcare platform, bringing quality healthcare services to patients beyond hospital
+            walls. Through quality home healthcare services, eShifa makes healthcare more accessible, convenient, and
+            patient-centered&mdash;right at your doorstep
           </motion.p>
           <motion.div variants={staggerItem} className="mt-8 flex flex-wrap gap-3">
             <Button asChild className="rounded-[80px] bg-[#0289E8] hover:bg-[#0289E8] text-white px-7 py-6 font-semibold">
@@ -802,8 +816,10 @@ const HomeWorldClass = () => {
   return (
     <section className="py-24 bg-[#F5F5F5]">
       <div className="max-w-7xl mx-auto px-4 sm:px-8">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <Reveal>
+        {/* Long-form copy, so the image aligns to the top and sticks while the
+            text scrolls past it on large screens. */}
+        <div className="grid lg:grid-cols-2 gap-16 items-start">
+          <Reveal className="lg:sticky lg:top-28">
             <div className="relative">
               <div className="absolute -inset-4 bg-[#1B004E]/10 rounded-[40px] transform -rotate-3 -z-10"></div>
               <Image
@@ -819,20 +835,18 @@ const HomeWorldClass = () => {
           <div>
             <SectionEyebrow>ABOUT ESHIFA</SectionEyebrow>
             <h2 className="text-3xl sm:text-4xl font-light text-[#1B004E] mb-6 leading-tight">Quality Healthcare, Beyond Hospital Walls</h2>
-            <p className="text-lg text-[#444444] leading-relaxed mb-5">
-              Through quality home healthcare services, eShifa makes healthcare more accessible, convenient, and patient-centered — right at
-              your doorstep. Powered by the expertise and healthcare ecosystem of Shifa, eShifa brings a comprehensive range of healthcare
-              services closer to individuals and families.
-            </p>
-            <p className="text-lg text-[#444444] leading-relaxed mb-5">
-              eShifa is committed to transforming the traditional healthcare experience through innovation, technology, convenience, and
-              patient-centered care. By reducing the need for unnecessary travel and waiting times, eShifa aims to make quality healthcare
-              more accessible while ensuring that patients receive professional and compassionate care when and where they need it.
-            </p>
-            <p className="text-lg text-[#444444] leading-relaxed">
-              Backed by the clinical heritage of Shifa International Hospitals and accredited to Joint Commission International (JCI)
-              standards, eShifa is trusted by families in Islamabad, Lahore, and across Pakistan.
-            </p>
+            {/* Same source as the About page, so the two can never drift apart. */}
+            <div className="space-y-5">
+              {aboutParagraphs.map((paragraph) => (
+                <p key={paragraph.slice(0, 40)} className="text-lg text-[#444444] leading-relaxed">
+                  {paragraph}
+                </p>
+              ))}
+              <p className="text-lg text-[#444444] leading-relaxed">
+                Backed by the clinical heritage of Shifa International Hospitals and accredited to Joint Commission International (JCI)
+                standards, eShifa is trusted by families in Islamabad, Lahore, and across Pakistan.
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -845,10 +859,7 @@ const HomeServices = () => (
     <div className="max-w-7xl mx-auto px-4 sm:px-8">
       <Reveal className="text-center max-w-3xl mx-auto mb-14">
         <SectionEyebrow>WHAT WE DO</SectionEyebrow>
-        <h2 className="text-3xl sm:text-4xl font-semibold text-[#1B004E] mb-4">eShifa Services</h2>
-        <p className="text-lg text-[#777777]">
-          Six home healthcare services, each delivered by qualified professionals at your doorstep.
-        </p>
+        <h2 className="text-3xl sm:text-4xl font-semibold text-[#1B004E]">eShifa Services</h2>
       </Reveal>
 
       <ServiceCardGrid tone="grey" />
@@ -882,48 +893,58 @@ const VisionMissionValues = () => {
   return (
     <section className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-8">
-        <div className="space-y-20 mb-24">
-          {visionMissionSections.map((item, index) => {
-            const imageOnRight = index % 2 === 0;
+        {/* Mission and Vision share one section, side by side: mission left, vision right. */}
+        <div className="grid lg:grid-cols-2 gap-6 lg:gap-8">
+          {visionMissionSections.map((item, index) => (
+            <Reveal
+              key={item.title}
+              direction={index === 0 ? "left" : "right"}
+              delay={index * 100}
+              className="h-full"
+            >
+              <article className="group card-lift relative flex h-full flex-col overflow-hidden rounded-[28px] border border-[#ECECEC] bg-white p-8 sm:p-10 hover:border-[#0289E8]/30 hover:shadow-xl">
+                {/* Brand accent along the top edge */}
+                <span aria-hidden="true" className="absolute inset-x-0 top-0 h-1 bg-[#0289E8]" />
+                {/* Soft corner glow for depth, kept well under the text */}
+                <span
+                  aria-hidden="true"
+                  className="pointer-events-none absolute -right-10 -top-10 h-40 w-40 rounded-full bg-[radial-gradient(circle,rgba(2,137,232,0.10),transparent_70%)]"
+                />
 
-            return (
-              <div key={item.title} className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
-                <Reveal direction={imageOnRight ? "right" : "left"} className={imageOnRight ? "lg:order-2" : ""}>
-                  <Image
-                    src={`/images/${item.image}`}
-                    alt={item.alt}
-                    width={800}
-                    height={600}
-                    sizes="(max-width: 1024px) 100vw, 50vw"
-                    className={"rounded-[28px] shadow-xl w-full aspect-[4/3] object-cover"}
-                  />
-                </Reveal>
+                <span className="relative mb-7 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#0289E8]/8 text-[#0289E8] transition-transform duration-200 group-hover:scale-105">
+                  <item.icon className="h-7 w-7" strokeWidth={1.5} aria-hidden="true" />
+                </span>
 
-                <Reveal delay={100} className={imageOnRight ? "lg:order-1" : ""}>
-                  <SectionEyebrow>{item.eyebrow}</SectionEyebrow>
-                  <h2 className="text-3xl sm:text-4xl text-[#1B004E] font-light mb-5">{item.title}</h2>
-                  <p className="text-xl sm:text-2xl text-[#444444] font-light leading-relaxed">{item.body}</p>
-                </Reveal>
-              </div>
-            );
-          })}
+                <h2 className="relative text-2xl sm:text-3xl font-semibold text-[#1B004E] mb-4">{item.title}</h2>
+                <p className="relative text-xl sm:text-2xl font-light leading-relaxed text-[#444444]">{item.body}</p>
+              </article>
+            </Reveal>
+          ))}
         </div>
 
-        <Reveal delay={150}>
+      </div>
+    </section>
+  );
+};
+
+/**
+ * Core values. Split out from the mission/vision section so pages can compose
+ * them independently — the home page shows mission and vision only, while the
+ * About page shows both.
+ */
+const CoreValues = () => {
+  return (
+    <section className="pb-24 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8">
+        <Reveal>
           <SectionEyebrow>CORE VALUES</SectionEyebrow>
           <h2 className="text-3xl sm:text-4xl font-light text-[#1B004E] mb-8">The Values Behind Every Visit</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {coreValues.map((value) => (
-              <div
-                key={value.name}
-                className={`${CARD_ON_WHITE} p-6 ${value.note ? "sm:col-span-2 lg:col-span-3" : ""}`}
-              >
+              <div key={value.name} className={`${CARD_ON_WHITE} p-6`}>
                 <div className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-[#0E7A4E] mt-1 shrink-0" />
-                  <div>
-                    <h3 className="text-xl font-semibold text-[#1B004E]">{value.name}</h3>
-                    {value.note && <p className="text-lg text-[#444444] leading-relaxed mt-2">{value.note}</p>}
-                  </div>
+                  <h3 className="text-xl font-semibold text-[#1B004E]">{value.name}</h3>
                 </div>
               </div>
             ))}
@@ -952,7 +973,6 @@ const CareProgramsSection = () => {
     <section className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <SectionEyebrow>SPECIALIZED CARE PROGRAMS</SectionEyebrow>
           <h2 className="text-3xl sm:text-4xl font-semibold text-[#1B004E] mb-4">Specialized Care Programs</h2>
           <p className="text-lg text-[#777777]">
             Structured, home-based care plans built around a specific condition, with clinical monitoring and coordinated follow-up.
@@ -1017,7 +1037,6 @@ const HowToAccess = () => {
       <div className="relative max-w-5xl mx-auto px-4 sm:px-8">
         <div className="text-center max-w-2xl mx-auto mb-14">
           <SectionEyebrow>HOW TO ACCESS SERVICES</SectionEyebrow>
-          <h2 className="text-3xl sm:text-4xl font-light text-[#1B004E] mb-4">Two Ways to Reach Us</h2>
           {/* Darker than the usual #777777 — the tinted background needs it to stay legible. */}
           <p className="text-lg text-[#444444]">Book a service in a few taps, or speak to our care team directly, any time of day.</p>
         </div>
@@ -1062,7 +1081,17 @@ const HomeFaq = () => {
             <Reveal key={item.q} delay={idx * 50}>
               <article className={`${CARD_ON_GREY} p-6`}>
                 <h3 className="text-xl font-semibold text-[#1B004E] mb-3">{item.q}</h3>
-                <p className="text-lg text-[#444444]">{item.a}</p>
+                {typeof item.a === "string" ? (
+                  <p className="text-lg text-[#444444]">{item.a}</p>
+                ) : (
+                  <ul className="space-y-2">
+                    {item.a.map((option) => (
+                      <li key={option.label} className="text-lg text-[#444444]">
+                        <span className="font-semibold text-[#1B004E]">{option.label}:</span> {option.text}
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </article>
             </Reveal>
           ))}
@@ -1316,7 +1345,6 @@ const ContactPreview = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-8">
         <div className="grid lg:grid-cols-2 gap-16">
           <Reveal>
-            <SectionEyebrow>ESHIFA 24/7 - REQUEST A CALLBACK</SectionEyebrow>
             <h2 className="text-4xl font-semibold text-[#1B004E] mb-4">eShifa 24/7 - Request a Callback</h2>
             <p className="text-lg text-[#444444] font-medium mb-10">
               24/7 access to quality home healthcare. Call our care team or submit your details and we will contact you within minutes.
@@ -1473,6 +1501,7 @@ export const Footer = () => {
     { href: "/doctors", label: "Our Doctors" },
     { href: "/labs", label: "Lab Centers" },
     { href: "/international", label: "International Patients" },
+    { href: "/partner", label: "Partner With Us" },
     { href: "/contact", label: "Contact" },
   ];
 
@@ -1484,7 +1513,7 @@ export const Footer = () => {
             <h4 className="text-xl font-semibold text-white mb-4">About eShifa</h4>
             <div className="h-px bg-white/20 mb-6"></div>
             <p className="text-lg text-white/70 leading-relaxed">
-              Pakistan's first JCI-accredited home healthcare service, delivering quality healthcare to your doorstep, 24/7.
+              eShifa brings quality healthcare services to your doorstep across Pakistan.
             </p>
             <div className="flex items-center gap-3 mt-6">
               <a
@@ -1589,6 +1618,7 @@ export function LandingPage() {
       <Hero />
       <HomeWorldClass />
       <VisionMissionValues />
+      <CoreValues />
       <BrandPromise />
       <HomeServices />
       <CareProgramsSection />
@@ -1607,7 +1637,7 @@ export function ServicesPage() {
       <ImageHero
         eyebrow="HOME HEALTHCARE SERVICES"
         title="Complete Home Healthcare Services - Clinical Care You Can Count On"
-        description="From laboratory and nursing to rehabilitation, pharmacy, and medical equipment, eShifa delivers the full spectrum of home healthcare services with JCI-accredited standards."
+        description="From laboratory and nursing to rehabilitation, pharmacy, and medical equipment, eShifa delivers the full spectrum of home healthcare services."
         image="nursing.png"
       />
 
@@ -1750,7 +1780,6 @@ export function DoctorsPage() {
 
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-8">
-          <SectionEyebrow>HOW YOUR CONSULTATION WORKS</SectionEyebrow>
           <h2 className="text-3xl sm:text-4xl font-light text-[#1B004E] mb-10">How Your Consultation Works</h2>
           <div className="grid lg:grid-cols-3 gap-6">
             <ContentBlock title="Step 1 - Book Your Doctor">
@@ -1779,7 +1808,6 @@ export function DoctorsPage() {
             />
           </Reveal>
           <Reveal delay={100}>
-            <SectionEyebrow>OUR MEDICAL NETWORK</SectionEyebrow>
             <h2 className="text-3xl sm:text-4xl text-[#1B004E] font-light mb-6">Our Medical Network</h2>
             <BulletList items={doctorNetworkItems} />
             <h3 className="text-2xl text-[#1B004E] font-semibold mt-8 mb-3">Urgent Teleconsultation</h3>
@@ -1806,7 +1834,6 @@ export function LabsPage() {
 
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-8">
-          <SectionEyebrow>WHY CHOOSE ESHIFA HOME LAB COLLECTION</SectionEyebrow>
           <h2 className="text-3xl sm:text-4xl text-[#1B004E] font-light mb-8">Why Choose eShifa Home Lab Collection?</h2>
           <BulletList items={labWhyItems} />
         </div>
@@ -1818,7 +1845,6 @@ export function LabsPage() {
             <Image src="/images/lab.png" alt="eShifa certified phlebotomist collecting home blood sample in Islamabad" width={800} height={600} sizes="(max-width: 1024px) 100vw, 50vw" className="rounded-[28px] shadow-xl w-full aspect-[4/3] object-cover" />
           </Reveal>
           <Reveal delay={100} className="lg:order-1">
-            <SectionEyebrow>DIAGNOSTIC TESTS AVAILABLE</SectionEyebrow>
             <h2 className="text-3xl sm:text-4xl text-[#1B004E] font-light mb-6">Diagnostic Tests Available</h2>
             <ContentBlock title="Routine Profiles">
               CBC, lipid panels, LFTs, KFTs, thyroid panels, HbA1c, and glucose monitoring.
@@ -1870,7 +1896,6 @@ export function AboutPage() {
     <>
       <section className="pt-36 pb-20 bg-gradient-to-b from-[#EAF4FF] via-[#F5F5F5] to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-8">
-          <SectionEyebrow>ABOUT ESHIFA</SectionEyebrow>
           <h1 className="text-4xl sm:text-5xl font-light text-[#1B004E] mb-6 leading-tight">Built Around Trust, Quality, and Care - The eShifa Story</h1>
           <p className="text-lg text-[#444444] max-w-4xl leading-relaxed">
             eShifa is a trusted healthcare platform, bringing quality healthcare services to patients beyond hospital walls. Through quality
@@ -1894,6 +1919,7 @@ export function AboutPage() {
       </section>
 
       <VisionMissionValues />
+      <CoreValues />
 
       <BrandPromise />
 
@@ -1950,14 +1976,11 @@ export function ContactPage() {
 
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-8">
-          <SectionEyebrow>OUR SERVICE AREAS</SectionEyebrow>
           <h2 className="text-3xl sm:text-4xl text-[#1B004E] font-light mb-8">Our Service Areas</h2>
           <BulletList
             items={[
-              "Islamabad and Rawalpindi - Core service area",
-              "Lahore - Full service coverage",
-              "Karachi, Faisalabad, Multan, Peshawar - Expanding coverage",
-              "International - Diaspora coordination available globally",
+              "All major cities of Pakistan including Islamabad, Rawalpindi, Lahore, Peshawar and Faisalabad.",
+              "eShifa is also expanding coverage in other cities of Pakistan.",
             ]}
           />
         </div>
@@ -1969,3 +1992,235 @@ export function ContactPage() {
 
 
 
+
+/* --------------------------------------------------------------- Partner */
+
+/**
+ * Commercial terms table. The first column is sticky so the row label stays
+ * readable while the category columns scroll horizontally on narrow screens —
+ * a four-column pricing table cannot fit a phone without scrolling, and losing
+ * the label makes the figures meaningless.
+ */
+const RequirementTable = ({ table }: { table: RequirementTableData }) => (
+  <Reveal className="overflow-x-auto rounded-2xl border border-[#ECECEC] bg-white">
+    <table className="w-full min-w-[720px] border-collapse text-left">
+      <caption className="sr-only">{table.caption}</caption>
+      <thead>
+        <tr className="bg-[#1B004E] text-white">
+          <th scope="col" className="sticky left-0 z-10 bg-[#1B004E] px-5 py-4 text-sm font-semibold uppercase tracking-wide">
+            Description
+          </th>
+          {table.columns.map((column) => (
+            <th key={column} scope="col" className="px-5 py-4 text-sm font-semibold uppercase tracking-wide">
+              {column}
+            </th>
+          ))}
+        </tr>
+      </thead>
+      <tbody>
+        {table.rows.map((row, index) => (
+          <tr key={row.label} className={index % 2 === 0 ? "bg-white" : "bg-[#F9FAFB]"}>
+            <th
+              scope="row"
+              className={`sticky left-0 z-10 border-t border-[#ECECEC] px-5 py-4 align-top text-base font-semibold text-[#1B004E] ${
+                index % 2 === 0 ? "bg-white" : "bg-[#F9FAFB]"
+              }`}
+            >
+              {row.label}
+            </th>
+            {row.values.map((value, valueIndex) => (
+              <td
+                key={`${row.label}-${table.columns[valueIndex]}`}
+                className="border-t border-[#ECECEC] px-5 py-4 align-top text-base leading-relaxed text-[#444444]"
+              >
+                {value}
+              </td>
+            ))}
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </Reveal>
+);
+
+/** Paired with `eshifaSupport` by index — six entries, six icons. */
+const supportIcons = [Award, Building2, FileCheck2, SearchCheck, Settings2, Megaphone];
+
+export function PartnerPage() {
+  return (
+    <>
+      <section className="pt-36 pb-20 bg-gradient-to-b from-[#EAF4FF] via-[#F5F5F5] to-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-8">
+          <h1 className="text-4xl sm:text-5xl font-light text-[#1B004E] mb-6 leading-tight">
+            Healthcare Partnership with eShifa
+          </h1>
+          <p className="text-lg text-[#444444] max-w-4xl leading-relaxed">{partnershipLead}</p>
+          <div className="mt-8 flex flex-wrap gap-3">
+            <Button asChild className="rounded-[80px] bg-[#0289E8] hover:bg-[#0289E8] text-white px-7 py-6 font-semibold">
+              <Link href="/contact">Become a Partner</Link>
+            </Button>
+            <Button
+              asChild
+              className="rounded-[80px] border border-[#0289E8] bg-white text-[#0289E8] hover:bg-[#F5F5F5] px-7 py-6 font-semibold"
+            >
+              <a href={`tel:${UAN_DISPLAY.replace(/-/g, "")}`}>Call {UAN_DISPLAY}</a>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-8">
+          <SectionEyebrow>WHO YOU PARTNER WITH</SectionEyebrow>
+          <h2 className="text-3xl sm:text-4xl text-[#1B004E] font-light mb-8">Backed by Shifa International Hospitals</h2>
+          <div className="space-y-5">
+            {partnershipIntro.map((paragraph, index) => (
+              <Reveal key={paragraph.slice(0, 40)} delay={index * 60}>
+                <p className="text-lg text-[#444444] leading-relaxed">{paragraph}</p>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-[#F5F5F5]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-8">
+          <Reveal className="max-w-3xl mb-12">
+            <h2 className="text-3xl sm:text-4xl text-[#1B004E] font-light">Healthcare Partnership Features with eShifa</h2>
+          </Reveal>
+          <motion.ul
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={VIEWPORT_ONCE}
+            className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5"
+          >
+            {partnershipFeatures.map((feature) => (
+              <motion.li key={feature} variants={staggerItem} className={`${CARD_ON_GREY} flex items-start gap-4 p-6`}>
+                <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-[#0289E8]/8 text-[#0289E8]">
+                  <CheckCircle2 className="h-5 w-5" aria-hidden="true" />
+                </span>
+                <span className="text-base leading-relaxed text-[#1B004E] font-medium">{feature}</span>
+              </motion.li>
+            ))}
+          </motion.ul>
+        </div>
+      </section>
+
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-8">
+          <Reveal className="max-w-3xl mb-12">
+            <h2 className="text-3xl sm:text-4xl text-[#1B004E] font-light mb-4">Business Models</h2>
+            <p className="text-lg text-[#444444] leading-relaxed">
+              eShifa is offering the following business models of sustainability, profitability and yet ensured quality.
+            </p>
+          </Reveal>
+          <div className="grid md:grid-cols-2 gap-6">
+            {businessModels.map((model, index) => (
+              <Reveal key={model.code} delay={index * 80}>
+                <article className={`${CARD_ON_WHITE} h-full p-7`}>
+                  <span className="inline-flex items-center rounded-full bg-[#0289E8]/10 px-3 py-1 text-sm font-semibold text-[#0289E8]">
+                    {model.code}
+                  </span>
+                  <h3 className="mt-4 text-2xl font-semibold text-[#1B004E]">{model.name}</h3>
+                  <p className="mt-3 text-lg leading-relaxed text-[#444444]">{model.description}</p>
+                  {model.categories && (
+                    <ul className="mt-5 flex flex-wrap gap-2">
+                      {model.categories.map((category) => (
+                        <li
+                          key={category}
+                          className="rounded-full border border-[#ECECEC] bg-white px-3 py-1 text-sm font-medium text-[#1B004E]"
+                        >
+                          {category}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </article>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-[#F5F5F5]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-8">
+          <Reveal className="max-w-3xl mb-12">
+            <h2 className="text-3xl sm:text-4xl text-[#1B004E] font-light">Requirements to Become a Healthcare Partner</h2>
+          </Reveal>
+
+          <div className="space-y-10">
+            <div>
+              <h3 className="text-xl font-semibold text-[#1B004E] mb-4">{lppRequirements.caption}</h3>
+              <RequirementTable table={lppRequirements} />
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-[#1B004E] mb-4">{lppPlusRequirements.caption}</h3>
+              <RequirementTable table={lppPlusRequirements} />
+            </div>
+          </div>
+
+          <Reveal className="mt-8 space-y-2">
+            {partnershipNotes.map((note) => (
+              <p key={note} className="text-base text-[#777777] leading-relaxed">
+                * {note}
+              </p>
+            ))}
+          </Reveal>
+        </div>
+      </section>
+
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-8">
+          <Reveal className="max-w-3xl mb-12">
+            <h2 className="text-3xl sm:text-4xl text-[#1B004E] font-light">eShifa Support</h2>
+          </Reveal>
+          <motion.div
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={VIEWPORT_ONCE}
+            className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
+          >
+            {eshifaSupport.map((item, index) => {
+              const Icon = supportIcons[index % supportIcons.length];
+              return (
+                <motion.article key={item.title} variants={staggerItem} className={`${CARD_ON_WHITE} h-full p-6`}>
+                  <div className="w-12 h-12 rounded-xl bg-[#1B004E]/8 text-[#1B004E] flex items-center justify-center mb-4">
+                    <Icon className="w-6 h-6" aria-hidden="true" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-[#1B004E] mb-3">{item.title}</h3>
+                  <p className="text-base leading-relaxed text-[#444444]">{item.body}</p>
+                </motion.article>
+              );
+            })}
+          </motion.div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-[#F5F5F5]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-8">
+          <Reveal className="max-w-3xl mb-12">
+            <h2 className="text-3xl sm:text-4xl text-[#1B004E] font-light">Network Expansion Rights</h2>
+          </Reveal>
+          <div className="grid md:grid-cols-3 gap-6">
+            {expansionRights.map((right, index) => (
+              <Reveal key={right.category} delay={index * 80}>
+                <article className={`${CARD_ON_GREY} h-full p-6`}>
+                  <h3 className="text-xl font-semibold text-[#1B004E] mb-3">{right.category}</h3>
+                  <p className="text-base leading-relaxed text-[#444444]">{right.body}</p>
+                </article>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <CtaBand
+        title="Become an eShifa Healthcare Partner"
+        body="Talk to our partnership team about the model that fits your city, your site and your investment."
+        ctaText="Talk to the Partnership Team"
+      />
+    </>
+  );
+}
