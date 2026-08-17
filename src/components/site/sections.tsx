@@ -273,7 +273,6 @@ const medicalEquipmentItems = [
 ];
 
 const whyChooseItems = [
-  "Pakistan's first JCI-accredited home healthcare provider",
   "In a largely unregulated home healthcare market, eShifa provides access to highly experienced, qualified, and trained healthcare professionals",
   "Home health services are provided at the patient's doorstep",
   "Reduced travel costs for patients",
@@ -880,7 +879,6 @@ const WhyChoose = () => {
   return (
     <section className="py-24 bg-white">
       <div className="max-w-5xl mx-auto px-4 sm:px-8">
-        <SectionEyebrow>WHY ESHIFA</SectionEyebrow>
         <h2 className="text-3xl sm:text-4xl font-light text-[#1B004E] mb-4">Why eShifa? What Sets Us Apart</h2>
         <p className="text-lg text-[#777777] mb-8">The advantages families gain when clinical care comes to them.</p>
         <BulletList items={whyChooseItems} />
@@ -1929,7 +1927,6 @@ export function AboutPage() {
             <h2 className="text-3xl sm:text-4xl text-[#1B004E] font-light mb-6">Why eShifa Is Different</h2>
             <BulletList
               items={[
-                "Pakistan's first JCI accredited home healthcare service",
                 "A wholly owned subsidiary of Shifa International Hospitals Ltd. and Shifa Foundation",
                 "Not a gig platform; frontline professionals are vetted, trained, and clinically accountable",
                 "Serving patients and diaspora families across Pakistan and internationally",
