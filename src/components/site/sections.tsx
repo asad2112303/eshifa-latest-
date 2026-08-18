@@ -53,6 +53,7 @@ import {
   SearchCheck,
   Settings2,
   Megaphone,
+  ExternalLink,
 } from "lucide-react";
 
 const APPLE_STORE_URL = "https://apps.apple.com/pk/app/eshifa/id1525359185";
@@ -60,14 +61,23 @@ const PLAY_STORE_URL = "https://play.google.com/store/search?q=eShifa&c=apps";
 const FACEBOOK_URL = "https://facebook.com/eshifa.official";
 const CONTACT_EMAIL = "info@eshifa.org";
 const UAN_DISPLAY = "051-111-111-567";
+/** Shifa Global handles international patients; that journey lives on its own site. */
+const SHIFA_GLOBAL_URL = "https://shifaglobal.uk/";
 const BRAND_PROMISE = "Quality Healthcare at Your Doorstep";
 
-const navLinks = [
+/**
+ * Primary navigation.
+ *
+ * `external: true` sends the visitor to another site. Those links open in a new
+ * tab so the eShifa session is not lost, and carry rel="noopener" — without it
+ * the opened page can reach back through window.opener and redirect this one.
+ */
+const navLinks: Array<{ href: string; label: string; external?: boolean }> = [
   { href: "/", label: "Home" },
   { href: "/services", label: "Our Services" },
   { href: "/doctors", label: "Our Doctors" },
   { href: "/labs", label: "Lab Centers" },
-  { href: "/international", label: "International Patients" },
+  { href: SHIFA_GLOBAL_URL, label: "International Patients", external: true },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ];
@@ -578,6 +588,18 @@ export const Navbar = () => {
             {navLinks.map((item) =>
               item.href === "/services" ? (
                 <ServicesDropdown key={item.href} linkClass={linkClass} location={location} />
+              ) : item.external ? (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`relative inline-flex items-center gap-1 ${linkClass(item.href)}`}
+                >
+                  {item.label}
+                  <ExternalLink className="h-3.5 w-3.5 opacity-70" aria-hidden="true" />
+                  <span className="sr-only">(opens in a new tab)</span>
+                </a>
               ) : (
                 <Link key={item.href} href={item.href} className={`relative ${linkClass(item.href)}`}>
                   {item.label}
@@ -684,6 +706,18 @@ export const Navbar = () => {
                     )}
                   </AnimatePresence>
                 </div>
+              ) : item.external ? (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1.5 text-[#1B004E] font-medium py-2 border-b border-[#EEEEEE]"
+                >
+                  {item.label}
+                  <ExternalLink className="h-3.5 w-3.5 opacity-70" aria-hidden="true" />
+                  <span className="sr-only">(opens in a new tab)</span>
+                </a>
               ) : (
                 <Link
                   key={item.href}
@@ -1145,6 +1179,7 @@ const CallbackForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formError, setFormError] = useState<string | null>(null);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [requestId, setRequestId] = useState<string | null>(null);
 
   const validate = (): CallbackErrors => {
     const next: CallbackErrors = {};
@@ -1172,7 +1207,7 @@ const CallbackForm = () => {
 
     setIsSubmitting(true);
     try {
-      const response = await fetch("/api/callback", {
+      const response = await fetch("/api/callback-requests", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ fullName: name, phone, service, additionalNotes: notes }),
@@ -1181,6 +1216,7 @@ const CallbackForm = () => {
       const payload = (await response.json().catch(() => ({}))) as {
         ok?: boolean;
         message?: string;
+        requestId?: string;
         errors?: Record<string, string>;
       };
 
@@ -1205,6 +1241,7 @@ const CallbackForm = () => {
         source: "contact_form",
       });
 
+      setRequestId(payload.requestId ?? null);
       setIsSubmitted(true);
       setName("");
       setPhone("");
@@ -1301,7 +1338,7 @@ const CallbackForm = () => {
           disabled={isSubmitting}
           className="w-full bg-[#0289E8] hover:bg-[#0289E8] text-white py-6 rounded-[80px] mt-4 disabled:opacity-70"
         >
-          {isSubmitting ? "Sending request..." : "Request a Callback"}
+          {isSubmitting ? "Submitting Request..." : "Request a Callback"}
         </Button>
 
         {formError && (
@@ -1325,10 +1362,16 @@ const CallbackForm = () => {
             className="flex items-start gap-3 rounded-2xl border border-[#0E7A4E]/25 bg-[#F1F9F5] p-4"
           >
             <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-[#0E7A4E]" aria-hidden="true" />
-            <p className="text-sm leading-relaxed text-[#1B004E]">
-              <span className="font-semibold">Request received.</span> Our care team will call you shortly. For
-              anything urgent, call {UAN_DISPLAY}.
-            </p>
+            <div className="text-sm leading-relaxed text-[#1B004E]">
+              <p>
+                <span className="font-semibold">Thank you.</span> Your callback request has been received. Our eShifa
+                care team will contact you shortly.
+              </p>
+              {requestId && (
+                <p className="mt-2 font-mono text-xs text-[#444444]">Request ID: {requestId}</p>
+              )}
+              <p className="mt-2 text-xs text-[#777777]">For anything urgent, call {UAN_DISPLAY}.</p>
+            </div>
           </motion.div>
         )}
       </form>
@@ -1493,12 +1536,13 @@ const CtaBand = ({ title, body, ctaText }: { title: string; body: string; ctaTex
 };
 
 export const Footer = () => {
-  const quickLinks = [
+  const quickLinks: Array<{ href: string; label: string; external?: boolean }> = [
     { href: "/", label: "Home" },
     { href: "/services", label: "Our Services" },
     { href: "/doctors", label: "Our Doctors" },
     { href: "/labs", label: "Lab Centers" },
-    { href: "/international", label: "International Patients" },
+    // Kept in step with the navbar: the same label must not lead two places.
+    { href: SHIFA_GLOBAL_URL, label: "International Patients", external: true },
     { href: "/partner", label: "Partner With Us" },
     { href: "/contact", label: "Contact" },
   ];
@@ -1550,10 +1594,24 @@ export const Footer = () => {
             <ul className="space-y-3 text-white/80">
               {quickLinks.map((item) => (
                 <li key={item.href}>
-                  <Link href={item.href} className="inline-flex items-center gap-2 hover:text-white transition-colors">
-                    <span className="text-xs">{">"}</span>
-                    <span>{item.label}</span>
-                  </Link>
+                  {item.external ? (
+                    <a
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 hover:text-white transition-colors"
+                    >
+                      <span className="text-xs">{">"}</span>
+                      <span>{item.label}</span>
+                      <ExternalLink className="h-3.5 w-3.5 opacity-70" aria-hidden="true" />
+                      <span className="sr-only">(opens in a new tab)</span>
+                    </a>
+                  ) : (
+                    <Link href={item.href} className="inline-flex items-center gap-2 hover:text-white transition-colors">
+                      <span className="text-xs">{">"}</span>
+                      <span>{item.label}</span>
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>
