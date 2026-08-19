@@ -52,8 +52,14 @@ fi
 echo "  ✓ All ${#REQUIRED[@]} variables present"
 
 echo
-echo "  Linking the Vercel project (a browser may open to sign in)..."
-npx --yes vercel link
+echo "  Signing in to Vercel if needed..."
+npx --yes vercel whoami >/dev/null 2>&1 || npx --yes vercel login
+
+echo
+echo "  Linking the project..."
+# --yes accepts the git-detected project instead of showing a picker that would
+# stall the script waiting for a keypress.
+npx --yes vercel link --yes
 
 echo
 echo "  Uploading..."
@@ -76,7 +82,7 @@ echo "        which would break canonical URLs and Open Graph tags."
 
 echo
 echo "  Redeploying (required — NEXT_PUBLIC_* is baked in at build time)..."
-npx --yes vercel --prod --force
+npx --yes vercel --prod --force --yes
 
 echo
 echo "  Done. Verify with:"
