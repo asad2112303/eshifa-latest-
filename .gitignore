@@ -27,3 +27,5 @@ logs/
 # Local tooling
 .replit-artifact/
 
+.vercel
+.env*

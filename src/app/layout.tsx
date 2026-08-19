@@ -47,7 +47,19 @@ export const metadata: Metadata = {
     images: ["/opengraph.jpg"],
   },
   robots: { index: true, follow: true },
-  icons: { icon: "/favicon.svg" },
+  // Generated from the eShifa mark. The wordmark is deliberately excluded:
+  // "eShifa" is unreadable at 16-32px and only muddies the symbol.
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon-32.png", type: "image/png", sizes: "32x32" },
+      { url: "/icon-192.png", type: "image/png", sizes: "192x192" },
+      { url: "/icon-512.png", type: "image/png", sizes: "512x512" },
+    ],
+    // iOS composites transparent icons onto black, so this one carries a white
+    // background rather than relying on transparency.
+    apple: { url: "/apple-icon.png", sizes: "180x180" },
+  },
 };
 
 export const viewport: Viewport = {
