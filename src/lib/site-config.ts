@@ -12,7 +12,17 @@ function resolveSiteUrl(): string {
   const explicit = process.env.NEXT_PUBLIC_SITE_URL;
   if (explicit) return explicit.replace(/\/$/, "");
 
-  // Vercel injects this for preview deployments.
+  // On production, prefer Vercel's stable project domain over the per-deployment
+  // one. VERCEL_URL is unique to each build (eshifa-latest-g67t0m….vercel.app),
+  // so using it here would emit a canonical URL that dies on the next deploy —
+  // and search engines would index an address that no longer resolves.
+  if (process.env.NEXT_PUBLIC_VERCEL_ENV === "production") {
+    const production = process.env.NEXT_PUBLIC_VERCEL_PROJECT_PRODUCTION_URL;
+    if (production) return `https://${production}`;
+  }
+
+  // Preview deployments should point at themselves, so staging never claims to
+  // be production. Here the per-deployment URL is exactly right.
   const vercel = process.env.NEXT_PUBLIC_VERCEL_URL;
   if (vercel) return `https://${vercel}`;
 
