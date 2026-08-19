@@ -116,11 +116,21 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: true, requestId: formatRequestNo(data as number) });
   } catch (error) {
     if (error instanceof SupabaseNotConfiguredError) {
+      // A deployment problem, not a visitor problem. Distinguishing it means a
+      // misconfigured environment is diagnosable from the response instead of
+      // looking identical to a database fault.
       console.error("[callback-requests] Supabase not configured:", error.message);
-    } else {
-      // Log without echoing the submitted payload: it contains patient details.
-      console.error("[callback-requests] insert failed:", error instanceof Error ? error.message : error);
+      return NextResponse.json(
+        {
+          ok: false,
+          message: "Our booking system is temporarily unavailable. Please call us on 051-111-111-567.",
+          code: "not_configured",
+        },
+        { status: 503 },
+      );
     }
+    // Log without echoing the submitted payload: it contains patient details.
+    console.error("[callback-requests] insert failed:", error instanceof Error ? error.message : error);
 
     return NextResponse.json(
       { ok: false, message: "We could not save your request. Please call us on 051-111-111-567." },
