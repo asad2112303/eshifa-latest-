@@ -1,6 +1,5 @@
 import { NextResponse } from "next/server";
-import { missingPublicConfig, supabaseServiceKey } from "@/lib/supabase/env";
-import { missingAdminConfig } from "@/lib/admin/auth";
+import { missingPublicConfig } from "@/lib/supabase/env";
 
 /**
  * Liveness and readiness probe.
@@ -8,9 +7,9 @@ import { missingAdminConfig } from "@/lib/admin/auth";
  * `GET /api/health` stays minimal: it confirms the server is up and exposes
  * nothing about the environment.
  *
- * `GET /api/health?check=config` reports which configuration groups are
- * complete. It returns booleans and variable NAMES only — never a value, a
- * prefix or a length — so it cannot leak a key. This exists because the most
+ * `GET /api/health?check=config` reports whether the callback form can reach
+ * the database. It returns booleans and variable NAMES only — never a value,
+ * prefix or length — so it cannot leak a key. This exists because the most
  * common deployment failure is a missing or stale environment variable, and
  * without it the only symptom is a generic "could not save your request".
  */
@@ -27,44 +26,43 @@ export async function GET(request: Request) {
     );
   }
 
-  const publicMissing = missingPublicConfig();
-  const adminMissing = missingAdminConfig();
-  const hasServiceKey = Boolean(supabaseServiceKey());
+  const missing = missingPublicConfig();
 
-  // Reaching the database proves the credentials are not merely present but
-  // actually valid, and that the schema has been applied.
-  let database: string;
-  try {
-    const { createAdminSupabase } = await import("@/lib/supabase/server");
-    const { error } = await createAdminSupabase()
-      .from("callback_requests")
-      .select("id", { count: "exact", head: true });
+  // Calling the submit function with input it will reject proves the whole
+  // path works — credentials valid, function present, grants correct — without
+  // creating a row. A validation error back from the database IS the success
+  // signal here; anything else means the path is broken.
+  let database = "unknown";
+  if (missing.length === 0) {
+    try {
+      const { createServerSupabase } = await import("@/lib/supabase/server");
+      const supabase = await createServerSupabase();
+      const { error } = await supabase.rpc("submit_callback_request", {
+        p_full_name: "",
+        p_phone_number: "",
+        p_service: "",
+        p_additional_notes: null,
+      });
 
-    database = error
-      ? error.code === "PGRST205"
-        ? "unreachable: table callback_requests does not exist. Run supabase/migrations/0001_setup.sql"
-        : `unreachable: ${error.message}`
-      : "ok";
-  } catch (error) {
-    database = `unreachable: ${error instanceof Error ? error.message : "unknown error"}`;
+      if (!error) database = "ok";
+      else if (error.message.includes("invalid_name")) database = "ok";
+      else if (error.code === "PGRST202")
+        database = "unreachable: submit_callback_request() is missing. Run supabase/migrations/0001_setup.sql";
+      else database = `unreachable: ${error.message}`;
+    } catch (error) {
+      database = `unreachable: ${error instanceof Error ? error.message : "unknown error"}`;
+    }
+  } else {
+    database = "not checked: Supabase configuration is incomplete";
   }
 
-  const ready = publicMissing.length === 0 && adminMissing.length === 0 && hasServiceKey && database === "ok";
+  const ready = missing.length === 0 && database === "ok";
 
   return NextResponse.json(
     {
       status: ready ? "ready" : "not_ready",
       timestamp: new Date().toISOString(),
-      publicForm: {
-        // The public form needs only the publishable key: it writes through
-        // submit_callback_request(), not through a privileged client.
-        ready: publicMissing.length === 0,
-        missing: publicMissing,
-      },
-      adminPortal: {
-        ready: adminMissing.length === 0 && hasServiceKey,
-        missing: [...adminMissing, ...(hasServiceKey ? [] : ["SUPABASE_SECRET_KEY"])],
-      },
+      publicForm: { ready: missing.length === 0, missing },
       database,
     },
     { status: ready ? 200 : 503, headers: { "Cache-Control": "no-store" } },
