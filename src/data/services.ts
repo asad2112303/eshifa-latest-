@@ -93,7 +93,7 @@ export const services: Record<ServiceSlug, ServiceContent> = {
     seo: {
       title: "Home Nursing Services | eShifa",
       description:
-        "Professional home nursing from eShifa — nursing assessment, vital-sign monitoring, medication support, wound care and post-discharge care delivered at home in Pakistan.",
+        "Professional home nursing from eShifa: nursing assessment, vital-sign monitoring, medication support, wound care and post-discharge care delivered at home in Pakistan.",
       ogTitle: "Home Nursing Services | eShifa",
       ogDescription: "Professional nursing care delivered in the comfort of your home, 24/7 across Pakistan.",
     },
@@ -110,10 +110,10 @@ export const services: Record<ServiceSlug, ServiceContent> = {
     about: {
       heading: "Nursing Care Without Leaving Home",
       paragraphs: [
-        "Home Nursing brings professional, clinically guided nursing support to patients who need continued care outside a hospital setting — whether that is after a discharge, during an ongoing treatment plan, or because travelling to a facility has become difficult.",
+        "Home Nursing brings professional, clinically guided nursing support to patients who need continued care outside a hospital setting, whether that is after a discharge, during an ongoing treatment plan, or because travelling to a facility has become difficult.",
         "A qualified nurse attends the patient at home and delivers care according to clinical requirements: assessment, monitoring, support with prescribed treatment, and guidance for the family members who share in day-to-day care.",
-        "Admitted home-care patients receive 24/7 clinical support and escalation, with the medical team — including consultant oversight — providing timely guidance and intervention for changes in clinical condition or other care-related concerns.",
-        "Our trained Home Care Assistants (HCAs) provide compassionate, safe, reliable and personalized support with daily living, hygiene, mobility, feeding, positioning, comfort and family assistance — bringing professional care to patients and elderly people in the comfort of their home.",
+        "Admitted home-care patients receive 24/7 clinical support and escalation, with the medical team, including consultant oversight, providing timely guidance and intervention for changes in clinical condition or other care-related concerns.",
+        "Our trained Home Care Assistants (HCAs) provide compassionate, safe, reliable and personalized support with daily living, hygiene, mobility, feeding, positioning, comfort and family assistance, bringing professional care to patients and elderly people in the comfort of their home.",
         "Because care happens in familiar surroundings, patients avoid unnecessary travel and waiting, and families stay directly involved in the recovery process.",
       ],
     },
@@ -160,7 +160,7 @@ export const services: Record<ServiceSlug, ServiceContent> = {
       points: [
         "Care delivered by experienced, qualified and trained healthcare professionals",
         "Part of the Shifa International Hospitals healthcare ecosystem",
-        "Not a gig platform — frontline staff are vetted and clinically accountable",
+        "Not a gig platform: frontline staff are vetted and clinically accountable",
         "Service tracking through the eShifa app, with a 24/7 helpline for coordination",
       ],
     },
@@ -183,7 +183,7 @@ export const services: Record<ServiceSlug, ServiceContent> = {
       },
       {
         q: "How often can a nurse visit?",
-        a: "Visit frequency is arranged around the patient's clinical requirements — from a single visit to a recurring schedule. Our care coordinators will discuss what is appropriate for the case.",
+        a: "Visit frequency is arranged around the patient's clinical requirements, from a single visit to a recurring schedule. Our care coordinators will discuss what is appropriate for the case.",
       },
       {
         q: "Can the family be shown how to help with care?",
@@ -294,7 +294,7 @@ export const services: Record<ServiceSlug, ServiceContent> = {
       },
       {
         q: "Can elderly patients book home laboratory services?",
-        a: "Yes — this is one of the most common reasons families use the service. Collection techniques are adapted to keep the experience comfortable for elderly and vulnerable patients.",
+        a: "Yes. This is one of the most common reasons families use the service. Collection techniques are adapted to keep the experience comfortable for elderly and vulnerable patients.",
       },
       {
         q: "Do I need a doctor's request to book a test?",
@@ -395,7 +395,7 @@ export const services: Record<ServiceSlug, ServiceContent> = {
       },
       {
         q: "Are all medicines available?",
-        a: "No — availability may vary based on prescription requirements and stock. Our pharmacy team will confirm what can be supplied when your order is reviewed.",
+        a: "No. Availability may vary based on prescription requirements and stock. Our pharmacy team will confirm what can be supplied when your order is reviewed.",
       },
       {
         q: "Can repeat prescriptions be delivered?",
@@ -426,14 +426,14 @@ export const services: Record<ServiceSlug, ServiceContent> = {
     seo: {
       title: "Home Rehabilitation Services | eShifa",
       description:
-        "Home rehabilitation from eShifa — physiotherapy, occupational therapy, speech and language therapy, swallowing therapy, behaviour and autism services, ADL training and pain management, delivered at home.",
+        "Home rehabilitation from eShifa: physiotherapy, occupational therapy, speech and language therapy, swallowing therapy, behaviour and autism services, ADL training and pain management, delivered at home.",
       ogTitle: "Home Rehabilitation Services | eShifa",
       ogDescription: "Physiotherapy, occupational, speech and behavioural therapy delivered in your home.",
     },
     hero: {
       headline: "Professional Rehabilitation, In the Comfort of Your Home",
       supporting:
-        "Receive personalized rehabilitation designed to help improve mobility, communication, swallowing, daily function and independence — without the inconvenience of frequent travel.",
+        "Receive personalized rehabilitation designed to help improve mobility, communication, swallowing, daily function and independence, without the inconvenience of frequent travel.",
       primaryCta: { label: "Book Home Rehabilitation", href: CONTACT },
       secondaryCta: { label: "Speak With Our Team", href: CONTACT },
       trustIndicator: "Physiotherapy · Occupational · Speech & language · Behavioural",
@@ -443,8 +443,8 @@ export const services: Record<ServiceSlug, ServiceContent> = {
     about: {
       heading: "Recovery, Guided at Home",
       paragraphs: [
-        "Home Rehabilitation brings the full range of therapy services to the patient — physiotherapy, occupational therapy, speech and language therapy, swallowing assessment, behaviour therapy, autism support and pain management — so treatment happens in the environment where the patient actually needs to function.",
-        "A therapist assesses the patient, agrees a rehabilitation plan appropriate to the case, and guides them through it — adjusting as progress is reviewed. Depending on the referral, that may mean therapeutic exercise, communication and swallowing work, behavioural strategies, or training in the activities of daily living.",
+        "Home Rehabilitation brings the full range of therapy services to the patient: physiotherapy, occupational therapy, speech and language therapy, swallowing assessment, behaviour therapy, autism support and pain management, so treatment happens in the environment where the patient actually needs to function.",
+        "A therapist assesses the patient, agrees a rehabilitation plan appropriate to the case, and guides them through it, adjusting as progress is reviewed. Depending on the referral, that may mean therapeutic exercise, communication and swallowing work, behavioural strategies, or training in the activities of daily living.",
         "Practising in the home has a practical advantage: skills are trained against the real stairs, doorways, furniture and routines the patient lives with, rather than a clinic setting.",
       ],
     },
@@ -510,7 +510,7 @@ export const services: Record<ServiceSlug, ServiceContent> = {
       },
       {
         q: "Can physiotherapy really be provided at home?",
-        a: "Yes. A therapist attends with the equipment appropriate to the plan, and works with the patient in their own environment — which is often an advantage for mobility training.",
+        a: "Yes. A therapist attends with the equipment appropriate to the plan, and works with the patient in their own environment, which is often an advantage for mobility training.",
       },
       {
         q: "How many sessions will I need?",
@@ -663,7 +663,7 @@ export const services: Record<ServiceSlug, ServiceContent> = {
     seo: {
       title: "Home Vaccination Services | eShifa",
       description:
-        "Professional home vaccination from eShifa — appointment coordination, pre-vaccination screening, appropriate vaccine handling, safe administration and post-vaccination guidance.",
+        "Professional home vaccination from eShifa: appointment coordination, pre-vaccination screening, appropriate vaccine handling, safe administration and post-vaccination guidance.",
       ogTitle: "Home Vaccination Services | eShifa",
       ogDescription: "Routine and travel vaccinations administered safely at home by trained clinical staff.",
     },
@@ -738,7 +738,7 @@ export const services: Record<ServiceSlug, ServiceContent> = {
       },
       {
         q: "Which vaccines are available?",
-        a: "Availability depends on the vaccine and current stock — we cannot guarantee that every vaccine is available. Contact our team to confirm before booking.",
+        a: "Availability depends on the vaccine and current stock, and we cannot guarantee that every vaccine is available. Contact our team to confirm before booking.",
       },
       {
         q: "How are vaccines transported?",

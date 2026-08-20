@@ -23,7 +23,7 @@ export default function NotConfigured({ variant = "setup" }: { variant?: "setup"
         <p className="mb-6 text-base leading-relaxed text-[#444444]">
           {denied
             ? "Your account is not authorized to use the eShifa admin portal. Contact your administrator if you believe this is a mistake."
-            : "Supabase credentials are missing. Add them to the environment and restart the server — see README-ADMIN.md."}
+            : "Supabase credentials are missing. Add them to the environment and restart the server. See README-ADMIN.md."}
         </p>
 
         <Link

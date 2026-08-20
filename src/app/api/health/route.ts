@@ -42,7 +42,7 @@ export async function GET(request: Request) {
 
     database = error
       ? error.code === "PGRST205"
-        ? "unreachable: table callback_requests does not exist — run supabase/migrations/0001_setup.sql"
+        ? "unreachable: table callback_requests does not exist. Run supabase/migrations/0001_setup.sql"
         : `unreachable: ${error.message}`
       : "ok";
   } catch (error) {

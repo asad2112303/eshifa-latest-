@@ -800,7 +800,7 @@ const Hero = () => {
           <motion.p variants={staggerItem} className="text-lg sm:text-xl text-white/90 mt-6 max-w-3xl leading-relaxed">
             eShifa is a trusted healthcare platform, bringing quality healthcare services to patients beyond hospital
             walls. Through quality home healthcare services, eShifa makes healthcare more accessible, convenient, and
-            patient-centered&mdash;right at your doorstep
+            patient-centered, right at your doorstep
           </motion.p>
           <motion.div variants={staggerItem} className="mt-8 flex flex-wrap gap-3">
             <Button asChild className="rounded-[80px] bg-[#0289E8] hover:bg-[#0289E8] text-white px-7 py-6 font-semibold">
@@ -1958,7 +1958,7 @@ export function AboutPage() {
           <h1 className="text-4xl sm:text-5xl font-light text-[#1B004E] mb-6 leading-tight">Built Around Trust, Quality, and Care - The eShifa Story</h1>
           <p className="text-lg text-[#444444] max-w-4xl leading-relaxed">
             eShifa is a trusted healthcare platform, bringing quality healthcare services to patients beyond hospital walls. Through quality
-            home healthcare services, eShifa makes healthcare more accessible, convenient, and patient-centered — right at your doorstep.
+            home healthcare services, eShifa makes healthcare more accessible, convenient, and patient-centered, right at your doorstep.
           </p>
         </div>
       </section>

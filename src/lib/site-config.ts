@@ -35,7 +35,7 @@ export const siteConfig = {
   url: resolveSiteUrl(),
   slogan: "Quality Healthcare at Your Doorstep",
   description:
-    "Pakistan's first JCI-accredited home healthcare — laboratory, nursing, rehabilitation, pharmacy, teleconsultation and vaccination at home. 24/7 nationwide.",
+    "Pakistan's first JCI-accredited home healthcare: laboratory, nursing, rehabilitation, pharmacy, teleconsultation and vaccination at home. 24/7 nationwide.",
   contact: {
     uanDisplay: "051-111-111-567",
     uanTel: "tel:051111111567",

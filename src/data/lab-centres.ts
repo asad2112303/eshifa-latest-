@@ -57,7 +57,7 @@ export const labCentres: LabCentre[] = [
     city: "Islamabad",
     province: "Islamabad",
     area: "E-18",
-    address: "Mirabella Complex, Block B, Gulshan–e-Sehat, E-18, Islamabad",
+    address: "Mirabella Complex, Block B, Gulshan-e-Sehat, E-18, Islamabad",
     phones: ["051-6120416", "0334-7237033"],
     email: "pnj.e18@shifalabs.org",
   },

@@ -57,10 +57,10 @@ export interface RequirementTable {
 }
 
 const REGISTRATION_NOTE =
-  "+ Registration charges as per location — Healthcare Regulatory Authority fee";
+  "+ Registration charges as per location (Healthcare Regulatory Authority fee)";
 
 export const lppRequirements: RequirementTable = {
-  caption: "eShifa Labs Collection Point (LPP) — Categories A, B and C",
+  caption: "eShifa Labs Collection Point (LPP): Categories A, B and C",
   columns: ["LPP Category A", "LPP Category B", "LPP Category C"],
   rows: [
     {
@@ -74,9 +74,9 @@ export const lppRequirements: RequirementTable = {
     {
       label: "One Time Franchise Onboarding Fee",
       values: [
-        `PKR 525,000 (PKR 400,000 refundable + PKR 125,000 processing fee — non-refundable) ${REGISTRATION_NOTE}`,
-        `PKR 425,000 (PKR 300,000 refundable + PKR 125,000 processing fee — non-refundable) ${REGISTRATION_NOTE}`,
-        `PKR 325,000 (PKR 200,000 refundable + PKR 125,000 processing fee — non-refundable) ${REGISTRATION_NOTE}`,
+        `PKR 525,000 (PKR 400,000 refundable + PKR 125,000 processing fee, non-refundable) ${REGISTRATION_NOTE}`,
+        `PKR 425,000 (PKR 300,000 refundable + PKR 125,000 processing fee, non-refundable) ${REGISTRATION_NOTE}`,
+        `PKR 325,000 (PKR 200,000 refundable + PKR 125,000 processing fee, non-refundable) ${REGISTRATION_NOTE}`,
       ],
     },
     {
@@ -126,7 +126,7 @@ export const lppPlusRequirements: RequirementTable = {
     {
       label: "One Time Franchise Onboarding Fee",
       values: [
-        `PKR 1,000,000 (PKR 400,000 refundable + PKR 200,000 processing fee — non-refundable + PKR 400,000 for Telemedicine Kiosk) ${REGISTRATION_NOTE}`,
+        `PKR 1,000,000 (PKR 400,000 refundable + PKR 200,000 processing fee, non-refundable, + PKR 400,000 for Telemedicine Kiosk) ${REGISTRATION_NOTE}`,
       ],
     },
     {
