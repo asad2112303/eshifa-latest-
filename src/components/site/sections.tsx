@@ -11,6 +11,7 @@ import { springSmooth, VIEWPORT_ONCE } from "@/motion/transitions";
 import { ServiceIcon } from "@/components/icons/ServiceIcon";
 import { ServiceGlyph } from "@/components/icons/service-glyphs";
 import { ServiceCardGrid } from "@/components/service/sections";
+import LabCentreFinder from "@/components/site/lab-centre-finder";
 import { serviceList, servicePath, type ServiceSlug } from "@/data/services";
 import { normalizePakistaniPhone } from "@/lib/callback-validation";
 import { trackEvent } from "@/lib/analytics";
@@ -1914,6 +1915,8 @@ export function LabsPage() {
           </Reveal>
         </div>
       </section>
+
+      <LabCentreFinder />
 
       <CtaBand title="Schedule Your Home Lab Collection" body="Select your preferred time and location. Our support team will confirm your slot quickly." ctaText="Book a Home Lab Test" />
     </>
