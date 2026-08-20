@@ -110,8 +110,10 @@ export const services: Record<ServiceSlug, ServiceContent> = {
     about: {
       heading: "Nursing Care Without Leaving Home",
       paragraphs: [
-        "Home Nursing brings professional nursing support to patients who need continued care outside a hospital setting — whether that is after a discharge, during an ongoing treatment plan, or because travelling to a facility has become difficult.",
+        "Home Nursing brings professional, clinically guided nursing support to patients who need continued care outside a hospital setting — whether that is after a discharge, during an ongoing treatment plan, or because travelling to a facility has become difficult.",
         "A qualified nurse attends the patient at home and delivers care according to clinical requirements: assessment, monitoring, support with prescribed treatment, and guidance for the family members who share in day-to-day care.",
+        "Admitted home-care patients receive 24/7 clinical support and escalation, with the medical team — including consultant oversight — providing timely guidance and intervention for changes in clinical condition or other care-related concerns.",
+        "Our trained Home Care Assistants (HCAs) provide compassionate, safe, reliable and personalized support with daily living, hygiene, mobility, feeding, positioning, comfort and family assistance — bringing professional care to patients and elderly people in the comfort of their home.",
         "Because care happens in familiar surroundings, patients avoid unnecessary travel and waiting, and families stay directly involved in the recovery process.",
       ],
     },
@@ -165,7 +167,7 @@ export const services: Record<ServiceSlug, ServiceContent> = {
     faqs: [
       {
         q: "What nursing services can be provided at home?",
-        a: "Depending on clinical assessment, a home visit can cover nursing assessment, vital-sign monitoring, medication support as prescribed, wound care, catheterization, post-surgical support and general nursing care.",
+        a: "Depending on clinical assessment, a home visit can cover nursing assessment, vital-sign monitoring, medication support as prescribed, wound care, post-surgical support and general nursing care.",
       },
       {
         q: "Who can benefit from Home Nursing?",
@@ -424,45 +426,50 @@ export const services: Record<ServiceSlug, ServiceContent> = {
     seo: {
       title: "Home Rehabilitation Services | eShifa",
       description:
-        "Home physiotherapy and rehabilitation from eShifa — mobility assessment, guided therapeutic exercise, strength and balance support and progress monitoring, delivered at home.",
+        "Home rehabilitation from eShifa — physiotherapy, occupational therapy, speech and language therapy, swallowing therapy, behaviour and autism services, ADL training and pain management, delivered at home.",
       ogTitle: "Home Rehabilitation Services | eShifa",
-      ogDescription: "Physiotherapy, speech therapy and occupational therapy delivered in your home.",
+      ogDescription: "Physiotherapy, occupational, speech and behavioural therapy delivered in your home.",
     },
     hero: {
       headline: "Professional Rehabilitation, In the Comfort of Your Home",
       supporting:
-        "Receive personalized rehabilitation and physiotherapy support designed to help improve mobility, strength, function and independence without the inconvenience of frequent travel.",
+        "Receive personalized rehabilitation designed to help improve mobility, communication, swallowing, daily function and independence — without the inconvenience of frequent travel.",
       primaryCta: { label: "Book Home Rehabilitation", href: CONTACT },
       secondaryCta: { label: "Speak With Our Team", href: CONTACT },
-      trustIndicator: "Physiotherapy, speech therapy and occupational therapy",
+      trustIndicator: "Physiotherapy · Occupational · Speech & language · Behavioural",
       image: "rehab.png",
       imageAlt: "eShifa physiotherapist guiding an elderly patient through rehabilitation exercises at home in Pakistan",
     },
     about: {
       heading: "Recovery, Guided at Home",
       paragraphs: [
-        "Home Rehabilitation brings physiotherapy, speech therapy and occupational therapy to the patient, so recovery work happens in the same environment where the patient actually needs to function.",
-        "A therapist assesses mobility, agrees a rehabilitation plan appropriate to the case, and guides the patient through therapeutic exercise — adjusting the plan as progress is reviewed.",
-        "Practising in the home has a practical advantage: mobility is trained against the real stairs, doorways and furniture the patient lives with, rather than a clinic setting.",
+        "Home Rehabilitation brings the full range of therapy services to the patient — physiotherapy, occupational therapy, speech and language therapy, swallowing assessment, behaviour therapy, autism support and pain management — so treatment happens in the environment where the patient actually needs to function.",
+        "A therapist assesses the patient, agrees a rehabilitation plan appropriate to the case, and guides them through it — adjusting as progress is reviewed. Depending on the referral, that may mean therapeutic exercise, communication and swallowing work, behavioural strategies, or training in the activities of daily living.",
+        "Practising in the home has a practical advantage: skills are trained against the real stairs, doorways, furniture and routines the patient lives with, rather than a clinic setting.",
       ],
     },
     benefits: [
       "Rehabilitation delivered in your own home",
-      "Exercises personalized to the assessment",
+      "Physiotherapy, occupational, speech and behavioural therapy",
+      "Therapy personalized to the assessment",
       "No travel required for each session",
       "Recovery in a comfortable, familiar environment",
-      "Professional guidance on safe technique",
       "Progress monitored and the plan adjusted",
     ],
     included: {
       heading: "What's Included",
       note: "The rehabilitation plan depends on clinical assessment of the individual patient.",
       items: [
-        "Mobility assessment",
-        "Rehabilitation planning",
-        "Guided therapeutic exercises",
-        "Strength and balance support",
-        "Functional mobility training",
+        "Assessment and rehabilitation planning",
+        "Physiotherapy and guided therapeutic exercise",
+        "Strength, balance and functional mobility training",
+        "Occupational therapy",
+        "Activities of Daily Living (ADL) training",
+        "Speech and language therapy",
+        "Swallowing evaluation and swallowing therapy",
+        "Behaviour therapy",
+        "Autism support services",
+        "Pain management",
         "Progress monitoring",
         "Patient and family education",
       ],
@@ -479,9 +486,12 @@ export const services: Record<ServiceSlug, ServiceContent> = {
       items: [
         "Post-operative patients continuing recovery at home",
         "Elderly patients working on mobility and balance",
-        "Patients recovering from an injury",
-        "Patients with mobility limitations",
-        "Anyone requiring ongoing physiotherapy support",
+        "Patients recovering from an injury or stroke",
+        "Children and adults needing speech and language therapy",
+        "Patients with swallowing difficulties",
+        "Children requiring behaviour therapy or autism support",
+        "Patients managing long-term pain",
+        "Anyone relearning the activities of daily living",
       ],
     },
     trust: {
@@ -496,7 +506,7 @@ export const services: Record<ServiceSlug, ServiceContent> = {
     faqs: [
       {
         q: "What rehabilitation services are available at home?",
-        a: "Home rehabilitation covers physiotherapy, speech therapy and occupational therapy, including mobility assessment, guided therapeutic exercise, and strength and balance work.",
+        a: "Home rehabilitation covers physiotherapy, occupational therapy, speech and language therapy, swallowing evaluation and therapy, behaviour therapy, autism services, pain management and Activities of Daily Living (ADL) training.",
       },
       {
         q: "Can physiotherapy really be provided at home?",
@@ -546,7 +556,7 @@ export const services: Record<ServiceSlug, ServiceContent> = {
         "Connect with a qualified healthcare professional remotely for convenient medical consultation, follow-up discussions and general healthcare guidance without needing to travel to the hospital for every visit.",
       primaryCta: { label: "Book Teleconsultation", href: CONTACT },
       secondaryCta: { label: "Find a Doctor", href: "/doctors" },
-      trustIndicator: "General physicians and specialists · Available 24/7",
+      trustIndicator: "General physicians and specialists · 9am-5pm, Monday to Saturday",
       image: "teleconsultation.png",
       imageAlt: "Patient consulting an eShifa doctor by video teleconsultation from home in Pakistan",
     },
@@ -555,7 +565,7 @@ export const services: Record<ServiceSlug, ServiceContent> = {
       paragraphs: [
         "Doctor Teleconsultation connects patients with qualified physicians and specialists through a secure digital consultation, so a medical conversation does not require a trip to the hospital.",
         "It suits general medical discussion, follow-up after an earlier visit, review of reports, and guidance on whether a condition needs to be seen in person.",
-        "Consultations are documented in your care record, and where labs, medicines or nursing are the next step, eShifa's other services pick up from there without you having to start again elsewhere.",
+        "Consultations are documented in your medical record, and where labs, medicines or nursing are the next step, eShifa's other services pick up from there without you having to start again elsewhere.",
       ],
     },
     benefits: [
@@ -564,7 +574,7 @@ export const services: Record<ServiceSlug, ServiceContent> = {
       "Convenient appointment scheduling",
       "Straightforward follow-up consultations",
       "Access from a phone, tablet or laptop",
-      "Useful for general medical guidance and report review",
+      "Useful for general medical guidance, report review, and specialist consultant teleconsultations",
     ],
     included: {
       heading: "What's Included",
@@ -573,8 +583,8 @@ export const services: Record<ServiceSlug, ServiceContent> = {
         "Consultation with a general physician or specialist",
         "Discussion of your health concern",
         "Review of reports where relevant",
-        "Digital prescription where the doctor considers it appropriate",
-        "Notes recorded in your care record",
+        "A digital prescription issued for your consultation",
+        "Notes recorded in your medical record",
         "Guidance on appropriate next steps",
         "Follow-up consultation where required",
       ],
@@ -622,7 +632,7 @@ export const services: Record<ServiceSlug, ServiceContent> = {
       },
       {
         q: "Can I book follow-up consultations?",
-        a: "Yes. Follow-up consultations can be arranged, and your notes are recorded in your care record so the next doctor has the context.",
+        a: "Yes. Follow-up consultations can be arranged, and your notes are recorded in your medical record so the next doctor has the context.",
       },
       {
         q: "When should I visit the hospital instead?",

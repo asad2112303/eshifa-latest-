@@ -214,7 +214,7 @@ const servicesAlternatingSections: AlternatingSection[] = [
     alt: "eShifa certified nurse providing home nursing care in Islamabad Pakistan",
     points: [
       "Disease-based nursing care and general nursing support",
-      "IV cannulation and infusions, wound care, and catheterization",
+      "IV cannulation and infusions, and wound care",
       "Post-surgical care and daily clinical monitoring at the bedside",
     ],
   },
@@ -246,9 +246,9 @@ const servicesAlternatingSections: AlternatingSection[] = [
     image: "rehab.png",
     alt: "eShifa physiotherapist delivering home rehabilitation therapy in Pakistan",
     points: [
-      "Physiotherapy, speech therapy, and occupational therapy",
+      "Physiotherapy, occupational, speech and behaviour therapy",
       "Personalized rehabilitation plans delivered in your home",
-      "Focused on supporting recovery and improving quality of life",
+      "Swallowing therapy, autism support, pain management and ADL training",
     ],
   },
   {
@@ -258,7 +258,7 @@ const servicesAlternatingSections: AlternatingSection[] = [
     alt: "Patient consulting an eShifa certified physician by video teleconsultation in Pakistan",
     points: [
       "General physician and specialist consultations",
-      "Digital prescriptions recorded in your care record",
+      "Digital prescriptions recorded in your medical record",
       "Care continues without interruption through integrated services",
     ],
   },
@@ -1843,7 +1843,7 @@ export function DoctorsPage() {
               Select doctor type, preferred slot, and consultation format (teleconsult or home visit) in minutes.
             </ContentBlock>
             <ContentBlock title="Step 2 - Receive Your Consultation">
-              Connect securely and receive digital notes, a care plan, and prescription documented in your care record.
+              Connect securely and receive digital notes, a care plan, and prescription documented in your medical record.
             </ContentBlock>
             <ContentBlock title="Step 3 - Continue Your Care">
               If labs, medications, or nursing are needed, eShifa's integrated services handle the next steps.
@@ -1867,8 +1867,8 @@ export function DoctorsPage() {
           <Reveal delay={100}>
             <h2 className="text-3xl sm:text-4xl text-[#1B004E] font-light mb-6">Our Medical Network</h2>
             <BulletList items={doctorNetworkItems} />
-            <h3 className="text-2xl text-[#1B004E] font-semibold mt-8 mb-3">Urgent Teleconsultation</h3>
-            <p className="text-lg text-[#444444]">Need a doctor now? Connect with a certified physician within minutes, 24/7 across Pakistan.</p>
+            <h3 className="text-2xl text-[#1B004E] font-semibold mt-8 mb-3">Teleconsultation Hours</h3>
+            <p className="text-lg text-[#444444]">Teleconsultations run 9am to 5pm, Monday to Saturday. Outside those hours, call our 24/7 helpline on 051-111-111-567 and our team will arrange the right care.</p>
           </Reveal>
         </div>
       </section>
