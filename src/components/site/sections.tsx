@@ -474,7 +474,7 @@ const ServicesDropdown = ({
             transition={{ duration: 0.16, ease: [0.22, 1, 0.36, 1] }}
             className="absolute left-1/2 top-full z-50 w-[560px] -translate-x-1/2 pt-4"
           >
-            <div className="rounded-2xl border border-[#ECECEC] bg-white p-3 shadow-xl">
+            <div className="whitespace-normal rounded-2xl border border-[#ECECEC] bg-white p-3 shadow-xl">
               <ul className="grid grid-cols-2 gap-1">
                 {serviceList.map((service) => (
                   <li key={service.slug}>
@@ -555,7 +555,7 @@ const ResourcesDropdown = ({ linkClass }: { linkClass: (href: string) => string 
             transition={{ duration: 0.16, ease: [0.22, 1, 0.36, 1] }}
             className="absolute right-0 top-full z-50 w-[620px] pt-4"
           >
-            <div className="rounded-2xl border border-[#ECECEC] bg-white p-4 shadow-xl">
+            <div className="whitespace-normal rounded-2xl border border-[#ECECEC] bg-white p-4 shadow-xl">
               <p className="px-1 pb-3 text-xs font-semibold uppercase tracking-wide text-[#9AA1AC]">
                 Resources for Patient &amp; Family Education
               </p>
