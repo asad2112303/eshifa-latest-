@@ -13,7 +13,7 @@ import { ServiceGlyph } from "@/components/icons/service-glyphs";
 import { ServiceCardGrid } from "@/components/service/sections";
 import LabCentreFinder from "@/components/site/lab-centre-finder";
 import { serviceList, servicePath, type ServiceSlug } from "@/data/services";
-import { normalizePakistaniPhone } from "@/lib/callback-validation";
+import { normalizePakistaniPhone, LIMITS } from "@/lib/callback-validation";
 import { trackEvent } from "@/lib/analytics";
 import { callbackServiceOptions } from "@/data/callback-services";
 import {
@@ -1161,7 +1161,7 @@ const FieldError = ({ id, message }: { id: string; message?: string }) => {
   );
 };
 
-type CallbackErrors = { name?: string; phone?: string; service?: string };
+type CallbackErrors = { name?: string; phone?: string; service?: string; notes?: string };
 
 /**
  * Callback request form.
@@ -1181,6 +1181,7 @@ const CallbackForm = () => {
   const [formError, setFormError] = useState<string | null>(null);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [requestId, setRequestId] = useState<string | null>(null);
+  const [isDuplicate, setIsDuplicate] = useState(false);
 
   const validate = (): CallbackErrors => {
     const next: CallbackErrors = {};
@@ -1330,8 +1331,18 @@ const CallbackForm = () => {
             value={notes}
             onChange={(e) => setNotes(e.target.value)}
             placeholder="Briefly describe your requirements..."
+            // The server rejects anything longer. Capping here stops an
+            // over-long note as it is typed, rather than failing on submit.
+            maxLength={LIMITS.additionalNotes}
+            aria-describedby={errors.notes ? "cb-notes-error" : undefined}
             className="min-h-[110px] bg-[#F5F5F5] border-transparent focus:bg-white"
           />
+          <FieldError id="cb-notes-error" message={errors.notes} />
+          {notes.length > LIMITS.additionalNotes - 100 && (
+            <p className="text-right text-xs text-[#777777]">
+              {LIMITS.additionalNotes - notes.length} characters remaining
+            </p>
+          )}
         </div>
 
         <Button
@@ -1364,14 +1375,27 @@ const CallbackForm = () => {
           >
             <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-[#0E7A4E]" aria-hidden="true" />
             <div className="text-sm leading-relaxed text-[#1B004E]">
-              <p>
-                <span className="font-semibold">Thank you.</span> Your callback request has been received. Our eShifa
-                care team will contact you shortly.
-              </p>
-              {requestId && (
-                <p className="mt-2 font-mono text-xs text-[#444444]">Request ID: {requestId}</p>
+              {isDuplicate ? (
+                /* Nothing new was stored: an earlier request from this number is
+                   already with the team. Saying "received" here would hide the
+                   fact that a correction never reached anyone. */
+                <p>
+                  <span className="font-semibold">You already have a request with us.</span> We received an
+                  earlier callback request from this number, so we have not created a second one. Our team
+                  will still call you. If you need to change any details, call {UAN_DISPLAY}.
+                </p>
+              ) : (
+                <>
+                  <p>
+                    <span className="font-semibold">Thank you.</span> Your callback request has been received. Our
+                    eShifa care team will contact you shortly.
+                  </p>
+                  {requestId && (
+                    <p className="mt-2 font-mono text-xs text-[#444444]">Request ID: {requestId}</p>
+                  )}
+                  <p className="mt-2 text-xs text-[#777777]">For anything urgent, call {UAN_DISPLAY}.</p>
+                </>
               )}
-              <p className="mt-2 text-xs text-[#777777]">For anything urgent, call {UAN_DISPLAY}.</p>
             </div>
           </motion.div>
         )}

@@ -63,6 +63,8 @@ export interface ServiceContent {
     items: string[];
   };
   steps: ServiceStep[];
+  /** Overrides the "From Booking to Care" heading above the steps. */
+  stepsHeading?: string;
   audience: {
     heading: string;
     items: string[];
@@ -213,7 +215,7 @@ export const services: Record<ServiceSlug, ServiceContent> = {
     hero: {
       headline: "Reliable Laboratory Services From the Comfort of Home",
       supporting:
-        "Make diagnostic testing more convenient with professional home laboratory services. A trained healthcare professional can collect required samples from your home and coordinate them for laboratory testing.",
+        "Get your laboratory tests done without leaving home. Our trained healthcare professionals visit your home at a convenient time, collect your sample safely, and arrange its transportation to the appropriate laboratory for testing.",
       primaryCta: { label: "Book a Home Lab Test", href: CONTACT },
       secondaryCta: { label: "View Available Tests", href: "/labs" },
       trustIndicator: "Extensive laboratory network across Pakistan",
@@ -234,14 +236,12 @@ export const services: Record<ServiceSlug, ServiceContent> = {
       "Scheduling around your availability",
       "No travel or waiting at a collection centre",
       "Professional sample labelling and handling",
-      "Straightforward access to diagnostic services",
     ],
     included: {
       heading: "What's Included",
-      note: "Available collections depend on the test requested and current service coverage.",
+      note: "Home collection is available for selected laboratory tests, depending on the test requirements and service availability in your area.",
       items: [
         "Blood sample collection",
-        "Other approved sample collection",
         "Sample labelling",
         "Safe sample handling",
         "Transportation coordination",
@@ -249,12 +249,13 @@ export const services: Record<ServiceSlug, ServiceContent> = {
         "Report delivery through the app or SMS",
       ],
     },
+    stepsHeading: "From Booking to Report",
     steps: [
       { title: "Select or request your test", body: "Tell us which test you need, or share the request from your doctor." },
       { title: "Schedule home collection", body: "Choose a convenient time for the visit through the app or the helpline." },
-      { title: "A professional collects the sample", body: "A trained healthcare professional attends and collects the sample at home." },
+      { title: "A trained healthcare professional collects your sample", body: "A trained healthcare professional attends and collects the sample at home." },
       { title: "The sample is processed", body: "Your sample is labelled, handled and transported to the laboratory for processing." },
-      { title: "Results are delivered", body: "Reports reach you through the eShifa app or SMS so you can share them with your doctor." },
+      { title: "Reports are delivered", body: "Reports reach you through the eShifa app or SMS so you can share them with your doctor." },
     ],
     audience: {
       heading: "Who This Service Is For",
@@ -271,7 +272,7 @@ export const services: Record<ServiceSlug, ServiceContent> = {
       points: [
         "Collection carried out by trained healthcare professionals",
         "An extensive laboratory network across Pakistan",
-        "Secure handling of patient records, accessible from anywhere",
+        "Secure handling of patient records with convenient access to your reports",
         "Reports delivered digitally through the app or SMS",
       ],
     },
@@ -282,15 +283,19 @@ export const services: Record<ServiceSlug, ServiceContent> = {
       },
       {
         q: "Do I need to fast before my test?",
-        a: "Fasting depends entirely on the test. Follow the instructions given by your doctor, and mention the test when booking so our team can confirm any preparation required.",
+        a: "Some laboratory tests require fasting, while others do not. When you book your test, our team will advise you about any preparation required.",
       },
       {
         q: "How are samples transported?",
         a: "Samples are labelled at the point of collection and handled according to proper procedure during transport to the laboratory, including cold-chain handling where a test requires it.",
       },
       {
+        q: "Is my sample really going to the proper laboratory?",
+        a: "Yes. Your sample is properly identified at the time of collection and safely handled and transported to the appropriate laboratory within our network for processing, following established procedures to help maintain sample integrity and patient safety.",
+      },
+      {
         q: "When will I receive my results?",
-        a: "Reporting time varies by test. Your report is delivered through the eShifa app or by SMS once laboratory processing is complete, and our helpline can confirm the expected timing for your specific test.",
+        a: "Report delivery time depends on the test requested and the laboratory processing requirements. Our team can advise you about the expected turnaround time when you book your test.",
       },
       {
         q: "Can elderly patients book home laboratory services?",

@@ -121,10 +121,26 @@ export async function POST(request: Request) {
       // submission is the user's own request arriving twice, so it is reported
       // as success — resubmitting should not look like a failure to them.
       if (error.message.includes("duplicate_submission")) {
-        // 200, not 201: the visitor's request is already recorded, so this is a
-        // success from their point of view but nothing new was created.
+        // 200, not 201: an earlier request from this number is already
+        // recorded, so nothing new was created. The throttle keys on the phone
+        // number alone, so this also catches a corrected resubmission — the
+        // client must say so rather than imply the new details were stored.
         return NextResponse.json({ ok: true, requestId: null, duplicate: true });
       }
+      const invalidField = (
+        [
+          ["invalid_name", "fullName", "Please check the name entered."],
+          ["invalid_phone", "phone", "Enter a valid Pakistani mobile number, e.g. 0300 1234567."],
+          ["invalid_service", "service", "Please select a valid service."],
+          ["invalid_notes", "additionalNotes", "Please shorten your notes."],
+        ] as const
+      ).find(([code]) => error.message.includes(code));
+
+      if (invalidField) {
+        const [, field, message] = invalidField;
+        return NextResponse.json({ ok: false, errors: { [field]: message } }, { status: 422 });
+      }
+
       if (error.message.includes("rate_limited")) {
         return NextResponse.json(
           { ok: false, message: "We are receiving a lot of requests. Please try again in a moment." },

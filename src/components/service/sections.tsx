@@ -212,7 +212,7 @@ export function ServiceProcess({ service }: { service: ServiceContent }) {
       <div className="max-w-7xl mx-auto px-4 sm:px-8">
         <Reveal className="text-center max-w-2xl mx-auto mb-12">
           <Eyebrow>How It Works</Eyebrow>
-          <h2 className="text-3xl sm:text-4xl font-light text-[#1B004E]">From Booking to Care</h2>
+          <h2 className="text-3xl sm:text-4xl font-light text-[#1B004E]">{service.stepsHeading ?? "From Booking to Care"}</h2>
         </Reveal>
 
         <motion.ol
