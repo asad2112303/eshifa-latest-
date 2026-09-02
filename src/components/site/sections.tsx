@@ -12,6 +12,7 @@ import { ServiceIcon } from "@/components/icons/ServiceIcon";
 import { ServiceGlyph } from "@/components/icons/service-glyphs";
 import { ServiceCardGrid } from "@/components/service/sections";
 import LabCentreFinder from "@/components/site/lab-centre-finder";
+import PartnershipForm from "@/components/site/partnership-form";
 import { serviceList, servicePath, type ServiceSlug } from "@/data/services";
 import { normalizePakistaniPhone, LIMITS } from "@/lib/callback-validation";
 import { trackEvent } from "@/lib/analytics";
@@ -2103,7 +2104,7 @@ export function PartnerPage() {
           <p className="text-lg text-[#444444] max-w-4xl leading-relaxed">{partnershipLead}</p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Button asChild className="rounded-[80px] bg-[#0289E8] hover:bg-[#0289E8] text-white px-7 py-6 font-semibold">
-              <Link href="/contact">Become a Partner</Link>
+              <a href="#partnership-form">Become a Partner</a>
             </Button>
             <Button
               asChild
@@ -2259,6 +2260,23 @@ export function PartnerPage() {
               </Reveal>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-[#F5F7FA]" id="partnership-form">
+        <div className="mx-auto max-w-3xl px-4 sm:px-8">
+          <Reveal className="mb-8 text-center">
+            <SectionEyebrow>APPLY</SectionEyebrow>
+            <h2 className="text-3xl sm:text-4xl text-[#1B004E] font-light">
+              Register Your Interest
+            </h2>
+            <p className="mt-4 text-lg text-[#777777]">
+              Send us your details and our partnership team will get in touch.
+            </p>
+          </Reveal>
+          <Reveal delay={80}>
+            <PartnershipForm />
+          </Reveal>
         </div>
       </section>
 
