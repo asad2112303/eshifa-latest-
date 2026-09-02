@@ -1874,11 +1874,11 @@ export function LandingPage() {
       <Hero />
       <HomeServices />
       <BrandPromise />
-      <CareProgramsSection />
-      <WhyChoose />
-      <HowToAccess />
-      <HomeFaq />
+      {/* The callback request takes the slot Specialized Care Programs used to
+          hold, rather than sitting at the foot of the page. */}
       <ContactPreview />
+      <WhyChoose />
+      <HomeFaq />
     </>
   );
 }
