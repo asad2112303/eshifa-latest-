@@ -13,7 +13,7 @@ import { ServiceGlyph } from "@/components/icons/service-glyphs";
 import { ServiceCardGrid } from "@/components/service/sections";
 import LabCentreFinder from "@/components/site/lab-centre-finder";
 import {
-  patientResources,
+  resourcesByCategory,
   resourcePath,
   resourceDownloadName,
 } from "@/data/patient-resources";
@@ -520,6 +520,7 @@ const ServicesDropdown = ({
  */
 const ResourcesDropdown = ({ linkClass }: { linkClass: (href: string) => string }) => {
   const [open, setOpen] = useState(false);
+  const groups = resourcesByCategory();
 
   return (
     <div
@@ -552,41 +553,50 @@ const ResourcesDropdown = ({ linkClass }: { linkClass: (href: string) => string 
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -8, scale: 0.98 }}
             transition={{ duration: 0.16, ease: [0.22, 1, 0.36, 1] }}
-            className="absolute right-0 top-full z-50 w-[380px] pt-4"
+            className="absolute right-0 top-full z-50 w-[620px] pt-4"
           >
-            <div className="rounded-2xl border border-[#ECECEC] bg-white p-3 shadow-xl">
-              <p className="px-3 pb-2 pt-1 text-xs font-semibold uppercase tracking-wide text-[#9AA1AC]">
+            <div className="rounded-2xl border border-[#ECECEC] bg-white p-4 shadow-xl">
+              <p className="px-1 pb-3 text-xs font-semibold uppercase tracking-wide text-[#9AA1AC]">
                 Resources for Patient &amp; Family Education
               </p>
-              <ul className="space-y-0.5">
-                {patientResources.map((resource) => (
-                  <li key={resource.file}>
-                    <a
-                      href={resourcePath(resource)}
-                      download={resourceDownloadName(resource)}
-                      className="group flex items-start gap-3 rounded-xl p-3 transition-colors hover:bg-[#F5F9FF]"
-                    >
-                      <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#0289E8]/8 text-[#0289E8]">
-                        <FileDown className="h-[18px] w-[18px]" aria-hidden="true" />
-                      </span>
-                      <span className="min-w-0">
-                        <span className="block text-sm font-semibold text-[#1B004E] group-hover:text-[#0289E8]">
-                          {resource.title}
-                        </span>
-                        <span className="mt-0.5 block text-xs leading-snug text-[#777777]">
-                          {resource.description}
-                        </span>
-                        <span className="mt-1 block text-[11px] uppercase tracking-wide text-[#9AA1AC]">
-                          PDF · {resource.sizeLabel}
-                        </span>
-                      </span>
-                    </a>
-                  </li>
+              {/* Two columns: twelve documents in a single list would run past
+                  the bottom of most laptop screens. */}
+              <div className="grid grid-cols-2 gap-x-5 gap-y-4">
+                {groups.map((group) => (
+                  <div key={group.category}>
+                    <p className="px-1 pb-1 text-[11px] font-semibold uppercase tracking-wide text-[#0289E8]">
+                      {group.category}
+                    </p>
+                    <ul>
+                      {group.items.map((resource) => (
+                        <li key={resource.file}>
+                          <a
+                            href={resourcePath(resource)}
+                            download={resourceDownloadName(resource)}
+                            className="group flex items-start gap-2.5 rounded-lg px-1 py-1.5 transition-colors hover:bg-[#F5F9FF]"
+                          >
+                            <FileDown
+                              className="mt-0.5 h-4 w-4 shrink-0 text-[#0289E8]"
+                              aria-hidden="true"
+                            />
+                            <span className="min-w-0">
+                              <span className="block text-[13px] font-medium leading-snug text-[#1B004E] group-hover:text-[#0289E8]">
+                                {resource.title}
+                              </span>
+                              <span className="block text-[11px] text-[#9AA1AC]">
+                                PDF · {resource.pages} page{resource.pages === 1 ? "" : "s"} · {resource.sizeLabel}
+                              </span>
+                            </span>
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 ))}
-              </ul>
+              </div>
               <Link
                 href="/resources"
-                className="mt-1 flex items-center justify-between rounded-xl bg-[#F9FAFB] px-4 py-3 text-sm font-semibold text-[#1B004E] transition-colors hover:bg-[#F1F5FB]"
+                className="mt-3 flex items-center justify-between rounded-xl bg-[#F9FAFB] px-4 py-3 text-sm font-semibold text-[#1B004E] transition-colors hover:bg-[#F1F5FB]"
               >
                 View all resources
                 <ArrowRight aria-hidden="true" className="h-4 w-4" />
@@ -835,19 +845,30 @@ export const Navbar = () => {
                             All resources
                           </Link>
                         </li>
-                        {patientResources.map((resource) => (
-                          <li key={resource.file}>
-                            <a
-                              href={resourcePath(resource)}
-                              download={resourceDownloadName(resource)}
-                              className="flex items-center gap-3 py-2 pl-3 text-sm text-[#444444]"
-                            >
-                              <FileDown className="h-[18px] w-[18px] shrink-0 text-[#0289E8]" aria-hidden="true" />
-                              <span>
-                                {resource.title}
-                                <span className="block text-xs text-[#9AA1AC]">PDF · {resource.sizeLabel}</span>
-                              </span>
-                            </a>
+                        {resourcesByCategory().map((group) => (
+                          <li key={group.category}>
+                            <p className="px-3 pb-1 pt-3 text-[11px] font-semibold uppercase tracking-wide text-[#0289E8]">
+                              {group.category}
+                            </p>
+                            <ul>
+                              {group.items.map((resource) => (
+                                <li key={resource.file}>
+                                  <a
+                                    href={resourcePath(resource)}
+                                    download={resourceDownloadName(resource)}
+                                    className="flex items-center gap-3 py-2 pl-3 text-sm text-[#444444]"
+                                  >
+                                    <FileDown className="h-[18px] w-[18px] shrink-0 text-[#0289E8]" aria-hidden="true" />
+                                    <span>
+                                      {resource.title}
+                                      <span className="block text-xs text-[#9AA1AC]">
+                                        PDF · {resource.pages} page{resource.pages === 1 ? "" : "s"} · {resource.sizeLabel}
+                                      </span>
+                                    </span>
+                                  </a>
+                                </li>
+                              ))}
+                            </ul>
                           </li>
                         ))}
                       </motion.ul>
