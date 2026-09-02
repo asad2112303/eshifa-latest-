@@ -188,6 +188,13 @@ body {
   font-size: 15px;
 }
 
+/* The navbar carries eight items plus three buttons, which wraps at common
+   laptop widths at 15px. 13.5px keeps it on one line without dropping to a
+   size that reads as fine print. */
+.navbar-text {
+  font-size: 13.5px;
+}
+
 .footer-text {
   font-size: 14px;
 }

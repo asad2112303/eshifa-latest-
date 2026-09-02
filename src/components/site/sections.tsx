@@ -630,7 +630,7 @@ export const Navbar = () => {
   const hasTransparentHero = transparentHeroRoutes.includes(location);
   const solidNav = scrolled || !hasTransparentHero;
 
-  const navButtonClass = `rounded-[80px] px-4 py-2 nav-text font-semibold border transition-all ${
+  const navButtonClass = `rounded-[80px] px-3.5 py-2 navbar-text font-semibold border transition-all ${
     solidNav
       ? "bg-[#0289E8] hover:bg-[#0289E8] text-white border-[#0289E8] shadow-sm"
       : "bg-transparent hover:bg-transparent text-white border-white/60"
@@ -675,7 +675,7 @@ export const Navbar = () => {
             />
           </Link>
 
-          <nav className="hidden lg:flex items-center gap-7 nav-text font-medium">
+          <nav className="hidden xl:flex items-center gap-5 navbar-text font-medium whitespace-nowrap 2xl:gap-6">
             {navLinks.map((item) =>
               item.href === "/services" ? (
                 <ServicesDropdown key={item.href} linkClass={linkClass} location={location} />
@@ -708,13 +708,19 @@ export const Navbar = () => {
             )}
           </nav>
 
-          <div className="hidden lg:flex items-center gap-3">
+          <div className="hidden xl:flex items-center gap-2.5">
             <Button asChild className={navButtonClass}>
               <a href="tel:051111111567">Call Now</a>
             </Button>
             <Button asChild className={navButtonClass}>
               <Link href="/partner">Partner</Link>
             </Button>
+            {/* Hidden between lg and xl. Eight nav items plus three buttons
+                overflow the bar at 1024px, and this is the least urgent of the
+                three: Call Now and Partner both lead somewhere a visitor
+                cannot reach otherwise, while the app is also linked from the
+                footer and the hero. It returns at xl, and the mobile menu
+                carries it at every width below lg. */}
             <Button asChild className={navButtonClass}>
               <a href={storeUrl} target="_blank" rel="noreferrer">
                 Download App
@@ -725,7 +731,7 @@ export const Navbar = () => {
           <button
             aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
             aria-expanded={mobileMenuOpen}
-            className={`lg:hidden transition-colors ${solidNav ? "text-[#1B004E]" : "text-white"}`}
+            className={`xl:hidden transition-colors ${solidNav ? "text-[#1B004E]" : "text-white"}`}
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             <AnimatePresence mode="wait" initial={false}>
@@ -751,7 +757,7 @@ export const Navbar = () => {
             initial="hidden"
             animate="visible"
             exit="exit"
-            className="lg:hidden bg-white border-t border-[#EEEEEE] shadow-lg absolute top-full left-0 right-0 p-4 flex flex-col gap-3 max-h-[75vh] overflow-y-auto"
+            className="xl:hidden bg-white border-t border-[#EEEEEE] shadow-lg absolute top-full left-0 right-0 p-4 flex flex-col gap-3 max-h-[75vh] overflow-y-auto"
           >
             {navLinks.map((item) =>
               item.href === "/services" ? (
