@@ -1872,8 +1872,8 @@ export function LandingPage() {
   return (
     <>
       <Hero />
-      <BrandPromise />
       <HomeServices />
+      <BrandPromise />
       <CareProgramsSection />
       <WhyChoose />
       <HowToAccess />
