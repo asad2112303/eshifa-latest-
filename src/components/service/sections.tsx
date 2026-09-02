@@ -439,20 +439,45 @@ export function ServiceFinalCTA({ service }: { service: ServiceContent }) {
  * related-services strip. The whole card is a single link, so the entire surface
  * is clickable and there is exactly one tab stop per card.
  */
-export function ServiceCard({ service, tone = "white" }: { service: ServiceContent; tone?: "white" | "grey" }) {
+/**
+ * @param showBlurb  false on the home page, where the grid is a directory
+ *                   rather than an explainer: the illustration and the name
+ *                   carry it, and each card links through to the full page.
+ */
+export function ServiceCard({
+  service,
+  tone = "white",
+  showBlurb = true,
+}: {
+  service: ServiceContent;
+  tone?: "white" | "grey";
+  showBlurb?: boolean;
+}) {
   return (
     <Link
       href={servicePath(service.slug)}
       className={`${CARD} ${tone === "grey" ? "bg-white" : "bg-[#F9FAFB]"} flex h-full flex-col p-8 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0289E8] focus-visible:ring-offset-2`}
     >
-      <span className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-[#0289E8]/8 text-[#0289E8] transition-transform duration-200 group-hover:scale-105">
-        <ServiceGlyph slug={service.slug} size={32} strokeWidth={1.5} />
+      {/* Decorative: the heading below already names the service, so alt=""
+          stops a screen reader announcing it twice. */}
+      <span className="mb-5 flex items-center justify-center overflow-hidden rounded-2xl bg-[#0289E8]/[0.06] p-2 transition-transform duration-300 group-hover:scale-[1.03]">
+        <Image
+          src={`/images/services/${service.slug}.png`}
+          alt=""
+          width={640}
+          height={640}
+          sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 30vw"
+          className="h-40 w-full object-contain"
+        />
       </span>
 
       <h3 className="mb-3 text-xl font-semibold text-[#1B004E] transition-colors group-hover:text-[#0289E8]">
         {service.name}
       </h3>
-      <p className="mb-6 flex-1 text-base leading-relaxed text-[#777777]">{service.cardBlurb}</p>
+      {showBlurb && (
+        <p className="mb-6 flex-1 text-base leading-relaxed text-[#777777]">{service.cardBlurb}</p>
+      )}
+      {!showBlurb && <span className="flex-1" />}
 
       <span className="inline-flex items-center gap-2 text-base font-semibold text-[#0289E8]">
         Learn More
@@ -466,7 +491,13 @@ export function ServiceCard({ service, tone = "white" }: { service: ServiceConte
 }
 
 /** The six-card grid, shared by /services and the home page. */
-export function ServiceCardGrid({ tone = "white" }: { tone?: "white" | "grey" }) {
+export function ServiceCardGrid({
+  tone = "white",
+  showBlurb = true,
+}: {
+  tone?: "white" | "grey";
+  showBlurb?: boolean;
+}) {
   return (
     <motion.div
       variants={staggerContainer}
@@ -477,7 +508,7 @@ export function ServiceCardGrid({ tone = "white" }: { tone?: "white" | "grey" })
     >
       {serviceList.map((service) => (
         <motion.div key={service.slug} variants={staggerItem}>
-          <ServiceCard service={service} tone={tone} />
+          <ServiceCard service={service} tone={tone} showBlurb={showBlurb} />
         </motion.div>
       ))}
     </motion.div>

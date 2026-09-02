@@ -1069,7 +1069,7 @@ const HomeServices = () => (
         <h2 className="text-3xl sm:text-4xl font-semibold text-[#1B004E]">eShifa Services</h2>
       </Reveal>
 
-      <ServiceCardGrid tone="grey" />
+      <ServiceCardGrid tone="grey" showBlurb={false} />
 
       <div className="mt-12 text-center">
         <Button
