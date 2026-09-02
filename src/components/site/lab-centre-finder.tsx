@@ -2,11 +2,10 @@
 
 import { useMemo, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowRight, MapPin, Phone, Search, X } from "lucide-react";
+import { MapPin, Phone, Search, X } from "lucide-react";
 import {
   PROVINCES,
   centreCountByProvince,
-  directionsUrl,
   labCentres,
   type LabCentre,
 } from "@/data/lab-centres";
@@ -232,8 +231,10 @@ function CentreCard({ centre }: { centre: LabCentre }) {
 
       <p className="mt-4 text-sm leading-relaxed text-[#555555]">{centre.address}</p>
 
+      {/* mt-auto pins the phone row to the bottom edge, so cards whose
+          addresses differ in length still line up across the row. */}
       {centre.phones.length > 0 && (
-        <div className="mt-4 flex flex-wrap items-center gap-x-3 gap-y-1.5">
+        <div className="mt-auto flex flex-wrap items-center gap-x-3 gap-y-1.5 pt-4">
           <Phone className="h-4 w-4 shrink-0 text-[#777777]" aria-hidden="true" />
           {centre.phones.map((phone) => (
             <a
@@ -246,21 +247,6 @@ function CentreCard({ centre }: { centre: LabCentre }) {
           ))}
         </div>
       )}
-
-      {/* mt-auto keeps the action on the bottom edge so cards of differing
-          address lengths still line up across the row. */}
-      <a
-        href={directionsUrl(centre)}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="mt-auto inline-flex items-center gap-2 pt-5 text-sm font-semibold text-[#0289E8] transition-colors hover:text-[#1B004E]"
-      >
-        Get Directions
-        <ArrowRight className="h-4 w-4" aria-hidden="true" />
-        <span className="sr-only">
-          to the {centre.city} centre (opens Google Maps in a new tab)
-        </span>
-      </a>
     </article>
   );
 }

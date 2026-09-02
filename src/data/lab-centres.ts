@@ -732,14 +732,3 @@ export function centreCountByProvince(): Record<string, number> {
     return acc;
   }, {});
 }
-
-/**
- * Google Maps search URL for a centre.
- *
- * A search query rather than coordinates: the sheet has no latitude or
- * longitude, and a guessed pin would send patients to the wrong place.
- */
-export function directionsUrl(centre: LabCentre): string {
-  const query = [centre.address, centre.city, "Pakistan"].filter(Boolean).join(", ");
-  return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`;
-}
