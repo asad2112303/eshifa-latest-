@@ -12,6 +12,11 @@ import { ServiceIcon } from "@/components/icons/ServiceIcon";
 import { ServiceGlyph } from "@/components/icons/service-glyphs";
 import { ServiceCardGrid } from "@/components/service/sections";
 import LabCentreFinder from "@/components/site/lab-centre-finder";
+import {
+  patientResources,
+  resourcePath,
+  resourceDownloadName,
+} from "@/data/patient-resources";
 import PartnershipForm from "@/components/site/partnership-form";
 import { serviceList, servicePath, type ServiceSlug } from "@/data/services";
 import { normalizePakistaniPhone, LIMITS } from "@/lib/callback-validation";
@@ -56,6 +61,7 @@ import {
   Settings2,
   Megaphone,
   ExternalLink,
+  FileDown,
 } from "lucide-react";
 
 const APPLE_STORE_URL = "https://apps.apple.com/pk/app/eshifa/id1525359185";
@@ -79,6 +85,8 @@ const navLinks: Array<{ href: string; label: string; external?: boolean }> = [
   { href: "/services", label: "Our Services" },
   { href: "/doctors", label: "Our Doctors" },
   { href: "/labs", label: "Lab Centers" },
+  // Rendered as a dropdown of downloadable leaflets; there is no /resources page.
+  { href: "/resources", label: "Patient Resources" },
   { href: SHIFA_GLOBAL_URL, label: "International Patients", external: true },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
@@ -502,10 +510,100 @@ const ServicesDropdown = ({
   );
 };
 
+
+/**
+ * Patient and family education leaflets.
+ *
+ * Every item downloads a PDF rather than navigating, so `download` is set and
+ * the size is stated up front: someone on mobile data should know what a tap
+ * will cost before it starts.
+ */
+const ResourcesDropdown = ({ linkClass }: { linkClass: (href: string) => string }) => {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <div
+      className="relative"
+      onMouseEnter={() => setOpen(true)}
+      onMouseLeave={() => setOpen(false)}
+      onFocus={() => setOpen(true)}
+      onBlur={(e) => {
+        if (!e.currentTarget.contains(e.relatedTarget as Node)) setOpen(false);
+      }}
+      onKeyDown={(e) => {
+        if (e.key === "Escape") setOpen(false);
+      }}
+    >
+      <button
+        type="button"
+        aria-haspopup="true"
+        aria-expanded={open}
+        onClick={() => setOpen((v) => !v)}
+        className={`relative inline-flex items-center gap-1 ${linkClass("/resources")}`}
+      >
+        Patient Resources
+        <ChevronDown aria-hidden="true" className={`w-4 h-4 transition-transform ${open ? "rotate-180" : ""}`} />
+      </button>
+
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            initial={{ opacity: 0, y: -8, scale: 0.98 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: -8, scale: 0.98 }}
+            transition={{ duration: 0.16, ease: [0.22, 1, 0.36, 1] }}
+            className="absolute right-0 top-full z-50 w-[380px] pt-4"
+          >
+            <div className="rounded-2xl border border-[#ECECEC] bg-white p-3 shadow-xl">
+              <p className="px-3 pb-2 pt-1 text-xs font-semibold uppercase tracking-wide text-[#9AA1AC]">
+                Resources for Patient &amp; Family Education
+              </p>
+              <ul className="space-y-0.5">
+                {patientResources.map((resource) => (
+                  <li key={resource.file}>
+                    <a
+                      href={resourcePath(resource)}
+                      download={resourceDownloadName(resource)}
+                      className="group flex items-start gap-3 rounded-xl p-3 transition-colors hover:bg-[#F5F9FF]"
+                    >
+                      <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#0289E8]/8 text-[#0289E8]">
+                        <FileDown className="h-[18px] w-[18px]" aria-hidden="true" />
+                      </span>
+                      <span className="min-w-0">
+                        <span className="block text-sm font-semibold text-[#1B004E] group-hover:text-[#0289E8]">
+                          {resource.title}
+                        </span>
+                        <span className="mt-0.5 block text-xs leading-snug text-[#777777]">
+                          {resource.description}
+                        </span>
+                        <span className="mt-1 block text-[11px] uppercase tracking-wide text-[#9AA1AC]">
+                          PDF · {resource.sizeLabel}
+                        </span>
+                      </span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+              <Link
+                href="/resources"
+                className="mt-1 flex items-center justify-between rounded-xl bg-[#F9FAFB] px-4 py-3 text-sm font-semibold text-[#1B004E] transition-colors hover:bg-[#F1F5FB]"
+              >
+                View all resources
+                <ArrowRight aria-hidden="true" className="h-4 w-4" />
+              </Link>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+};
+
 export const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [servicesAccordionOpen, setServicesAccordionOpen] = useState(false);
+  const [resourcesAccordionOpen, setResourcesAccordionOpen] = useState(false);
   const storeUrl = useStoreUrl();
   const location = usePathname() ?? "/";
 
@@ -581,6 +679,8 @@ export const Navbar = () => {
             {navLinks.map((item) =>
               item.href === "/services" ? (
                 <ServicesDropdown key={item.href} linkClass={linkClass} location={location} />
+              ) : item.href === "/resources" ? (
+                <ResourcesDropdown key={item.href} linkClass={linkClass} />
               ) : item.external ? (
                 <a
                   key={item.href}
@@ -693,6 +793,55 @@ export const Navbar = () => {
                               <ServiceGlyph slug={service.slug} size={18} strokeWidth={1.75} className="text-[#0289E8]" />
                               {service.name}
                             </Link>
+                          </li>
+                        ))}
+                      </motion.ul>
+                    )}
+                  </AnimatePresence>
+                </div>
+              ) : item.href === "/resources" ? (
+                <div key={item.href} className="border-b border-[#EEEEEE]">
+                  <button
+                    type="button"
+                    aria-expanded={resourcesAccordionOpen}
+                    aria-controls="mobile-resources-panel"
+                    onClick={() => setResourcesAccordionOpen((v) => !v)}
+                    className="flex w-full items-center justify-between py-2 font-medium text-[#1B004E]"
+                  >
+                    Patient Resources
+                    <ChevronDown
+                      aria-hidden="true"
+                      className={`h-5 w-5 text-[#0289E8] transition-transform duration-200 ${resourcesAccordionOpen ? "rotate-180" : ""}`}
+                    />
+                  </button>
+                  <AnimatePresence initial={false}>
+                    {resourcesAccordionOpen && (
+                      <motion.ul
+                        id="mobile-resources-panel"
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.2, ease: [0.22, 1, 0.36, 1] }}
+                        className="overflow-hidden"
+                      >
+                        <li>
+                          <Link href="/resources" className="block py-2 pl-3 text-sm font-semibold text-[#0289E8]">
+                            All resources
+                          </Link>
+                        </li>
+                        {patientResources.map((resource) => (
+                          <li key={resource.file}>
+                            <a
+                              href={resourcePath(resource)}
+                              download={resourceDownloadName(resource)}
+                              className="flex items-center gap-3 py-2 pl-3 text-sm text-[#444444]"
+                            >
+                              <FileDown className="h-[18px] w-[18px] shrink-0 text-[#0289E8]" aria-hidden="true" />
+                              <span>
+                                {resource.title}
+                                <span className="block text-xs text-[#9AA1AC]">PDF · {resource.sizeLabel}</span>
+                              </span>
+                            </a>
                           </li>
                         ))}
                       </motion.ul>
@@ -1558,6 +1707,8 @@ export const Footer = () => {
     { href: "/services", label: "Our Services" },
     { href: "/doctors", label: "Our Doctors" },
     { href: "/labs", label: "Lab Centers" },
+  // Rendered as a dropdown of downloadable leaflets; there is no /resources page.
+  { href: "/resources", label: "Patient Resources" },
     // Kept in step with the navbar: the same label must not lead two places.
     { href: SHIFA_GLOBAL_URL, label: "International Patients", external: true },
     { href: "/partner", label: "Partner With Us" },
