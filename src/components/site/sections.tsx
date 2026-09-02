@@ -2276,6 +2276,20 @@ export function PartnerPage() {
     <>
       <section className="pt-36 pb-20 bg-gradient-to-b from-[#EAF4FF] via-[#F5F5F5] to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-8">
+          {/* Intrinsic size 699x171, rendered at its natural width and never
+              upscaled: it carries the Urdu wordmark, which turns to mush when
+              a raster is stretched. priority because it sits above the fold. */}
+          <Reveal className="mb-8">
+            <Image
+              src="/images/eshifa-labs-banner.png"
+              alt="eShifa Labs, an outreach partner of Shifa International Hospitals Ltd. Also shown in Urdu as ای شفا لیب"
+              width={699}
+              height={171}
+              priority
+              sizes="(max-width: 720px) 100vw, 699px"
+              className="h-auto w-full max-w-[699px] rounded-xl shadow-sm"
+            />
+          </Reveal>
           <h1 className="text-4xl sm:text-5xl font-light text-[#1B004E] mb-6 leading-tight">
             Healthcare Partnership with eShifa
           </h1>
