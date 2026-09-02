@@ -1014,7 +1014,13 @@ const BulletList = ({ items }: { items: string[] }) => (
   </ul>
 );
 
-const HomeWorldClass = () => {
+/**
+ * The "About eShifa" section: image, heading, the shared paragraphs, and the
+ * Shifa International heritage note. Lives on the About page only — it used to
+ * open the home page as well, which meant a visitor read the same company
+ * description twice before reaching what eShifa actually does.
+ */
+const AboutEshifaSection = () => {
   return (
     <section className="py-24 bg-[#F5F5F5]">
       <div className="max-w-7xl mx-auto px-4 sm:px-8">
@@ -1867,7 +1873,6 @@ export function LandingPage() {
   return (
     <>
       <Hero />
-      <HomeWorldClass />
       <VisionMissionValues />
       <CoreValues />
       <BrandPromise />
@@ -2130,19 +2135,7 @@ export function AboutPage() {
         </div>
       </section>
 
-      <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-8">
-          <SectionEyebrow>WHO WE ARE</SectionEyebrow>
-          <h2 className="text-3xl sm:text-4xl text-[#1B004E] font-light mb-8">About eShifa</h2>
-          <div className="space-y-5">
-            {aboutParagraphs.map((paragraph, index) => (
-              <Reveal key={paragraph.slice(0, 40)} delay={index * 60}>
-                <p className="text-lg text-[#444444] leading-relaxed">{paragraph}</p>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
+      <AboutEshifaSection />
 
       <VisionMissionValues />
       <CoreValues />
