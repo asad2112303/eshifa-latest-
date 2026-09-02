@@ -340,15 +340,6 @@ const doctorNetworkItems = [
   "Teleconsult Support - dedicated coordination for patients requiring multi-disciplinary input",
 ];
 
-const labWhyItems = [
-  "Certified, trained phlebotomists with hospital-grade protocols",
-  "80+ home collection points across Pakistan",
-  "Secure sample handling and cold-chain transport",
-  "Digital reports delivered to you and your doctor",
-  "Ideal for seniors, children, pregnant women, and busy professionals",
-  "Available in Islamabad, Lahore, and expanding cities",
-];
-
 const internationalCards = [
   {
     title: "Dedicated Care Coordinator",
@@ -1912,33 +1903,6 @@ export function LabsPage() {
         description="Certified phlebotomists, secure sample handling, and timely digital reports reviewed by your care team."
         image="lab.png"
       />
-
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-8">
-          <h2 className="text-3xl sm:text-4xl text-[#1B004E] font-light mb-8">Why Choose eShifa Home Lab Collection?</h2>
-          <BulletList items={labWhyItems} />
-        </div>
-      </section>
-
-      <section className="py-20 bg-[#F5F5F5]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-8 grid lg:grid-cols-2 gap-12 items-center">
-          <Reveal className="lg:order-2">
-            <Image src="/images/lab.png" alt="eShifa certified phlebotomist collecting home blood sample in Islamabad" width={800} height={600} sizes="(max-width: 1024px) 100vw, 50vw" className="rounded-[28px] shadow-xl w-full aspect-[4/3] object-cover" />
-          </Reveal>
-          <Reveal delay={100} className="lg:order-1">
-            <h2 className="text-3xl sm:text-4xl text-[#1B004E] font-light mb-6">Diagnostic Tests Available</h2>
-            <ContentBlock title="Routine Profiles">
-              CBC, lipid panels, LFTs, KFTs, thyroid panels, HbA1c, and glucose monitoring.
-            </ContentBlock>
-            <ContentBlock title="Specialised Tests">
-              Hormonal panels, tumour markers, vitamin screens, coagulation studies, and infectious disease panels.
-            </ContentBlock>
-            <ContentBlock title="Home Collection for Seniors and Children">
-              Comfortable, low-stress collection techniques for vulnerable patients.
-            </ContentBlock>
-          </Reveal>
-        </div>
-      </section>
 
       <LabCentreFinder />
 
