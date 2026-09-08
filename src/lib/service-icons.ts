@@ -11,7 +11,6 @@ import {
   Pill,
   Stethoscope,
   Sun,
-  Syringe,
   Thermometer,
   Video,
   Wind,
@@ -40,7 +39,6 @@ export const serviceIcons = {
   "home-pharmacy-services": Pill,
   "home-medical-equipment": BriefcaseMedical,
   "doctor-teleconsultation": Video,
-  "home-vaccination-services": Syringe,
   "specialized-care-programs": ClipboardPlus,
 
   // ---- Specialized care programs ----

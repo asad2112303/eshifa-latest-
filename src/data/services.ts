@@ -17,7 +17,7 @@ export type ServiceSlug =
   | "home-pharmacy"
   | "home-rehabilitation"
   | "doctor-teleconsultation"
-  | "home-vaccination";
+  | "specialized-care-programs";
 
 export interface ServiceStep {
   title: string;
@@ -656,121 +656,124 @@ export const services: Record<ServiceSlug, ServiceContent> = {
       heading: "Speak With a Doctor From Home",
       body: "Book a teleconsultation with a qualified physician or specialist at a time that suits you.",
     },
-    related: ["home-laboratory", "home-pharmacy", "home-vaccination"],
+    related: ["home-laboratory", "home-pharmacy", "specialized-care-programs"],
   },
 
   /* ------------------------------------------------------------------ */
-  "home-vaccination": {
-    slug: "home-vaccination",
-    name: "Home Vaccination Services",
-    shortName: "Home Vaccination",
-    cardBlurb: "Professional vaccination services delivered safely and conveniently at home.",
+  "specialized-care-programs": {
+    slug: "specialized-care-programs",
+    name: "Specialized Care Programs",
+    shortName: "Care Programs",
+    cardBlurb: "Structured, condition-specific care plans delivered and monitored at home.",
     seo: {
-      title: "Home Vaccination Services | eShifa",
+      title: "Specialized Care Programs | eShifa",
       description:
-        "Professional home vaccination from eShifa: appointment coordination, pre-vaccination screening, appropriate vaccine handling, safe administration and post-vaccination guidance.",
-      ogTitle: "Home Vaccination Services | eShifa",
-      ogDescription: "Routine and travel vaccinations administered safely at home by trained clinical staff.",
+        "Condition-specific home care programs from eShifa: diabetes, elderly, post-stroke, arthritis, LRTI, dengue monitoring, mother and baby, and home phototherapy care plans with clinical monitoring and coordinated follow-up.",
+      ogTitle: "Specialized Care Programs | eShifa",
+      ogDescription:
+        "Structured home-based care plans built around a specific condition, with clinical monitoring and coordinated follow-up.",
     },
     hero: {
-      headline: "Safe Vaccinations, Delivered to Your Home",
+      headline: "Care Plans Built Around the Condition",
       supporting:
-        "Receive professional vaccination services conveniently at home. Our trained healthcare professionals help make vaccination more accessible for individuals and families while following appropriate clinical and safety procedures.",
-      primaryCta: { label: "Book Home Vaccination", href: CONTACT },
-      secondaryCta: { label: "Check Vaccine Availability", href: CONTACT },
-      trustIndicator: "Appropriate vaccine handling and safe sharps disposal",
-      image: "vaccination.png",
-      imageAlt: "eShifa nurse administering a vaccination to a patient at home with a vaccine carrier in Pakistan",
+        "Structured, home-based programs for specific conditions, combining regular clinical monitoring, medication support and coordinated follow-up so care continues consistently at home.",
+      primaryCta: { label: "Discuss a Care Program", href: CONTACT },
+      secondaryCta: { label: "Ask Which Program Fits", href: CONTACT },
+      trustIndicator: "Clinical monitoring with coordinated follow-up",
+      image: "care-plans/elderly-care-plan.png",
+      imageAlt: "eShifa caregiver supporting a patient at home in Pakistan as part of a specialized care program",
     },
     about: {
-      heading: "Vaccination Without the Waiting Room",
+      heading: "One Plan, Coordinated Around a Condition",
       paragraphs: [
-        "Home Vaccination brings routine and travel vaccinations to the patient, administered by trained healthcare professionals following appropriate clinical and safety procedures.",
-        "Vaccines require careful handling to remain effective. Visits are equipped for appropriate vaccine transport and handling, sterile administration, and safe sharps disposal afterwards.",
-        "For families vaccinating several members, for elderly patients, and for anyone who finds a clinic visit difficult, home administration removes a practical barrier to staying protected.",
+        "A specialized care program brings the parts of home care that a condition needs — nursing visits, monitoring, medication support, therapy and follow-up — together into a single plan instead of separate one-off visits.",
+        "Each program is built around a specific condition, so the monitoring and the goals are matched to it: blood sugar patterns for diabetes, mobility and speech after a stroke, respiratory assessment for a chest infection, recovery for a mother and newborn.",
+        "Programs are delivered at home and reviewed as the patient progresses, with escalation to clinical care when the situation calls for it.",
       ],
     },
     benefits: [
-      "Vaccination administered in your home",
-      "Trained healthcare professionals",
-      "Convenient appointment scheduling",
-      "Practical for vaccinating a whole family",
-      "No travel or waiting room required",
-      "Professional vaccine handling procedures",
+      "A single plan instead of disconnected visits",
+      "Monitoring matched to the specific condition",
+      "Medication support and adherence follow-up",
+      "Care delivered in familiar surroundings",
+      "Coordinated escalation when required",
+      "Support for families managing long-term conditions",
     ],
     included: {
-      heading: "What's Included",
-      note: "Availability depends on the vaccine requested. We cannot guarantee that every vaccine is available.",
+      heading: "Programs Available",
+      note: "Programs are matched to the patient after assessment, and suitability is confirmed by our clinical team.",
       items: [
-        "Appointment coordination",
-        "Basic pre-vaccination screening",
-        "Appropriate vaccine handling and transport",
-        "Professional vaccine administration",
-        "Safe sharps disposal",
-        "Post-vaccination guidance",
+        "Diabetes Care Plan",
+        "Elderly Care Plan",
+        "Post Stroke Care Plan",
+        "Arthritis Care Plan",
+        "LRTI Care Plan",
+        "Dengue Home Monitoring",
+        "Mother & Baby Care Plan",
+        "Home Phototherapy Care Plan",
       ],
     },
     steps: [
-      { title: "Book your vaccination", body: "Request the vaccine you need through the app or the 24/7 helpline." },
-      { title: "Availability is confirmed", body: "Our team confirms whether the vaccine can be supplied and arranges a time." },
-      { title: "Pre-vaccination screening", body: "Basic screening is carried out before administration on the day of the visit." },
-      { title: "Vaccine is administered", body: "A trained professional administers the vaccine and disposes of sharps safely." },
-      { title: "Post-vaccination guidance", body: "You receive guidance on what to expect and what to watch for afterwards." },
+      { title: "Tell us about the patient", body: "Share the condition, current treatment and the support needed through the app or the 24/7 helpline." },
+      { title: "Assessment and program match", body: "Our clinical team assesses the patient and recommends the program that fits." },
+      { title: "The plan is agreed", body: "Visit frequency, monitoring and the goals of the program are set out before care begins." },
+      { title: "Care is delivered at home", body: "Scheduled visits carry out monitoring, medication support and any therapy the plan includes." },
+      { title: "Progress is reviewed", body: "The plan is reviewed as the patient progresses and escalated to clinical care when required." },
     ],
     audience: {
-      heading: "Who This Service Is For",
+      heading: "Who These Programs Are For",
       items: [
-        "Families vaccinating several members together",
-        "Elderly patients and those with limited mobility",
-        "Travellers needing vaccination before departure",
-        "Patients continuing a routine vaccination schedule",
-        "Anyone who prefers to avoid a clinic waiting room",
+        "Patients managing a long-term condition at home",
+        "Elderly and dependent patients needing regular monitoring",
+        "Patients recovering after a stroke or a hospital stay",
+        "Mothers and newborns needing postnatal support",
+        "Families coordinating care for a relative",
       ],
     },
     trust: {
-      heading: "Why Choose eShifa for Home Vaccination",
+      heading: "Why Choose eShifa for Specialized Care",
       points: [
-        "Administered by trained, qualified clinical staff",
-        "Appropriate vaccine handling and cold-chain transport",
-        "Safe sharps disposal handled by the visiting professional",
+        "Delivered by trained, qualified clinical staff",
+        "Monitoring and follow-up coordinated under one plan",
+        "Escalation pathway when a patient's condition changes",
         "Part of the Shifa International Hospitals healthcare ecosystem",
       ],
     },
     faqs: [
       {
-        q: "Who can receive vaccination at home?",
-        a: "Home vaccination is available for individuals and families. Basic pre-vaccination screening is carried out on the day, and suitability for a particular vaccine is confirmed at that point.",
+        q: "What is a specialized care program?",
+        a: "It is a structured home-based care plan built around a specific condition, bringing monitoring, medication support, therapy and follow-up together into one coordinated plan rather than separate visits.",
       },
       {
-        q: "Which vaccines are available?",
-        a: "Availability depends on the vaccine and current stock, and we cannot guarantee that every vaccine is available. Contact our team to confirm before booking.",
+        q: "Which programs are available?",
+        a: "Programs include diabetes, elderly, post-stroke, arthritis and LRTI care plans, dengue home monitoring, mother and baby care, and home phototherapy. Contact our team to confirm which is appropriate.",
       },
       {
-        q: "How are vaccines transported?",
-        a: "Vaccines are transported in appropriate carriers to maintain the required handling conditions, and are administered by the professional who brings them.",
+        q: "How is the right program chosen?",
+        a: "Our clinical team assesses the patient's condition, current treatment and support needs, then recommends the program that fits. Suitability is confirmed before care begins.",
       },
       {
-        q: "Can multiple family members book together?",
-        a: "Yes. Booking several family members into a single visit is one of the practical advantages of home vaccination.",
+        q: "How long does a program last?",
+        a: "Duration depends on the condition and the patient's progress. The plan is reviewed as care continues and adjusted where needed.",
       },
       {
-        q: "What should I prepare before vaccination?",
-        a: "Have any vaccination records available, wear clothing that allows easy access to the upper arm, and mention relevant medical history or allergies during screening.",
+        q: "Who delivers the care at home?",
+        a: "Visits are carried out by trained, qualified clinical staff, with the mix of nursing, therapy and monitoring set by the program.",
       },
       {
-        q: "What should I do after receiving the vaccine?",
-        a: "You will be given post-vaccination guidance on what to expect and what to watch for. Contact our helpline if you have any concerns after the visit.",
+        q: "What happens if the patient's condition changes?",
+        a: "The plan includes coordinated follow-up, and care is escalated to clinical review when the patient's condition calls for it.",
       },
       {
-        q: "Is sharps waste taken away afterwards?",
-        a: "Yes. Safe sharps disposal is part of the visit and is handled by the attending professional.",
+        q: "Can a program be arranged for a family member?",
+        a: "Yes. Families commonly arrange programs for an elderly relative or for a patient recovering at home. Contact the 24/7 helpline to start.",
       },
     ],
     finalCta: {
-      heading: "Book Your Vaccination at Home",
-      body: "Contact our team to confirm vaccine availability and arrange a convenient appointment.",
+      heading: "Start a Specialized Care Program",
+      body: "Contact our team to discuss the condition and find the program that fits.",
     },
-    related: ["doctor-teleconsultation", "home-nursing", "home-laboratory"],
+    related: ["home-nursing", "home-rehabilitation", "doctor-teleconsultation"],
   },
 };
 
@@ -781,12 +784,26 @@ export const serviceOrder: ServiceSlug[] = [
   "home-pharmacy",
   "home-rehabilitation",
   "doctor-teleconsultation",
-  "home-vaccination",
+  "specialized-care-programs",
 ];
 
 export const serviceList: ServiceContent[] = serviceOrder.map((slug) => services[slug]);
 
-export const servicePath = (slug: ServiceSlug) => `/services/${slug}`;
+/**
+ * Slugs that live as a section on /services instead of their own detail page.
+ * Specialized Care Programs is presented as the care-plan grid on /services, so every
+ * link to it jumps to that section rather than to a standalone page.
+ */
+export const sectionOnlyServices = ["specialized-care-programs"] as const satisfies readonly ServiceSlug[];
+
+export const isSectionOnlyService = (slug: ServiceSlug) =>
+  (sectionOnlyServices as readonly ServiceSlug[]).includes(slug);
+
+/** Slugs that get a pre-rendered /services/[slug] detail page. */
+export const servicePageSlugs: ServiceSlug[] = serviceOrder.filter((slug) => !isSectionOnlyService(slug));
+
+export const servicePath = (slug: ServiceSlug) =>
+  isSectionOnlyService(slug) ? `/services#${slug}` : `/services/${slug}`;
 
 export function isServiceSlug(value: string): value is ServiceSlug {
   return Object.prototype.hasOwnProperty.call(services, value);

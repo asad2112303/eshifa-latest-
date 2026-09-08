@@ -11,7 +11,6 @@ export const callbackServiceOptions = [
   "Home Pharmacy Services",
   "Home Medical Equipment",
   "Doctor Teleconsultation",
-  "Home Vaccination Services",
   "Specialized Care Programs",
 ] as const;
 

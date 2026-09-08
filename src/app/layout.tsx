@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     template: "%s | eShifa",
   },
   description:
-    "Pakistan's first JCI-accredited home healthcare: laboratory, nursing, rehabilitation, pharmacy, teleconsultation and vaccination at home. 24/7 nationwide. UAN: 051-111-111-567.",
+    "Pakistan's first JCI-accredited home healthcare: laboratory, nursing, rehabilitation, pharmacy, teleconsultation and specialized care programs at home. 24/7 nationwide. UAN: 051-111-111-567.",
   keywords: [
     "home healthcare Pakistan",
     "home nursing Pakistan",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     "home rehabilitation Pakistan",
     "home pharmacy delivery",
     "doctor teleconsultation Pakistan",
-    "home vaccination Pakistan",
+    "specialized care programs Pakistan",
     "JCI accredited home care",
   ],
   authors: [{ name: "eShifa" }],
@@ -37,13 +37,13 @@ export const metadata: Metadata = {
     url: "/",
     title: "Quality Healthcare at Your Doorstep | eShifa Pakistan",
     description:
-      "Pakistan's first JCI-accredited home healthcare: laboratory, nursing, rehabilitation, pharmacy, teleconsultation and vaccination at home.",
+      "Pakistan's first JCI-accredited home healthcare: laboratory, nursing, rehabilitation, pharmacy, teleconsultation and specialized care programs at home.",
     images: [{ url: "/opengraph.jpg", width: 1200, height: 630, alt: "eShifa home healthcare" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Quality Healthcare at Your Doorstep | eShifa Pakistan",
-    description: "JCI-accredited home healthcare in Pakistan: nursing, labs, pharmacy, rehab, teleconsult, vaccination.",
+    description: "JCI-accredited home healthcare in Pakistan: nursing, labs, pharmacy, rehab, teleconsult, specialized care programs.",
     images: ["/opengraph.jpg"],
   },
   robots: { index: true, follow: true },

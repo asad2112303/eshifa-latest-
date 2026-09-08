@@ -271,17 +271,6 @@ const servicesAlternatingSections: AlternatingSection[] = [
       "Care continues without interruption through integrated services",
     ],
   },
-  {
-    title: "Home Vaccination Services",
-    slug: "home-vaccination",
-    image: "vaccination.png",
-    alt: "eShifa nurse administering a vaccination at home with a cold-chain carrier in Pakistan",
-    points: [
-      "Routine vaccinations administered at home",
-      "Travel vaccinations arranged before you depart",
-      "Given safely by certified clinical staff",
-    ],
-  },
 ];
 
 const medicalEquipmentItems = [
@@ -1176,7 +1165,10 @@ const BrandPromise = () => {
 
 const CareProgramsSection = () => {
   return (
-    <section className="py-24 bg-white">
+    /* Anchor target for every "Specialized Care Programs" link on the site — the programs
+       live here as a section rather than on their own detail page. `scroll-mt` keeps the
+       heading clear of the sticky header when the browser jumps to the hash. */
+    <section id="specialized-care-programs" className="scroll-mt-28 py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl sm:text-4xl font-semibold text-[#1B004E] mb-4">Specialized Care Programs</h2>
@@ -2264,22 +2256,27 @@ const supportIcons = [Award, Building2, FileCheck2, SearchCheck, Settings2, Mega
 export function PartnerPage() {
   return (
     <>
-      <section className="pt-36 pb-20 bg-gradient-to-b from-[#EAF4FF] via-[#F5F5F5] to-white">
+      {/* The banner is the hero. It sits on white rather than the gradient
+          below, because its own background is white and it would otherwise
+          read as a pale box floating on tinted blue.
+
+          pt-28 clears the fixed navbar, which is solid on this route. */}
+      <section className="bg-white pt-28 pb-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-8">
-          {/* Intrinsic size 699x171, rendered at its natural width and never
-              upscaled: it carries the Urdu wordmark, which turns to mush when
-              a raster is stretched. priority because it sits above the fold. */}
-          <Reveal className="mb-8">
-            <Image
-              src="/images/eshifa-labs-banner.png"
-              alt="eShifa Labs, an outreach partner of Shifa International Hospitals Ltd. Also shown in Urdu as ای شفا لیب"
-              width={699}
-              height={171}
-              priority
-              sizes="(max-width: 720px) 100vw, 699px"
-              className="h-auto w-full max-w-[699px] rounded-xl shadow-sm"
-            />
-          </Reveal>
+          <Image
+            src="/images/partner-hero.jpg"
+            alt="eShifa Labs, an outreach partner of Shifa International Hospitals Ltd. Shown in Urdu as ای شفا لیب"
+            width={1924}
+            height={792}
+            priority
+            sizes="(max-width: 1280px) 100vw, 1280px"
+            className="h-auto w-full rounded-2xl"
+          />
+        </div>
+      </section>
+
+      <section className="pb-20 bg-gradient-to-b from-[#EAF4FF] via-[#F5F5F5] to-white pt-14">
+        <div className="max-w-7xl mx-auto px-4 sm:px-8">
           <h1 className="text-4xl sm:text-5xl font-light text-[#1B004E] mb-6 leading-tight">
             Healthcare Partnership with eShifa
           </h1>

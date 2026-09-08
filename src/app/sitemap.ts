@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { serviceOrder, servicePath } from "@/data/services";
+import { servicePageSlugs, servicePath } from "@/data/services";
 import { absoluteUrl } from "@/lib/site-config";
 
 /**
@@ -29,7 +29,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: freq,
       priority,
     })),
-    ...serviceOrder.map((slug) => ({
+    ...servicePageSlugs.map((slug) => ({
       url: absoluteUrl(servicePath(slug)),
       lastModified: now,
       changeFrequency: "monthly" as const,

@@ -7,7 +7,7 @@ import * as React from "react";
  * Purpose-drawn glyphs for the six eShifa service pages.
  *
  * These are composites the Lucide set has no single equivalent for — "home +
- * nursing", "home + laboratory", "shield + syringe" — so they are drawn here to
+ * nursing", "home + laboratory", "care plan + monitoring trace" — so they are drawn here to
  * the same contract as every other icon on the site: 24x24 viewBox, no fill,
  * currentColor stroke, round caps and joins, so weight and colour stay uniform.
  */
@@ -77,15 +77,13 @@ export const TeleconsultGlyph = withBase(
   </>,
 );
 
-/** Home Vaccination — protective shield with a syringe. */
-export const VaccinationGlyph = withBase(
-  "VaccinationGlyph",
+/** Specialized Care Programs — care plan on a clipboard with a monitoring trace. */
+export const CareProgramsGlyph = withBase(
+  "CareProgramsGlyph",
   <>
-    <path d="M12 21.2c4.6-2.2 6.8-5.6 6.8-9.6V5.7L12 3.2 5.2 5.7v5.9c0 4 2.2 7.4 6.8 9.6Z" />
-    <path d="M14.9 8.3 9.7 13.5" />
-    <path d="M13.4 6.9 16.3 9.8" />
-    <path d="M10.9 9.4l2.9 2.9" />
-    <path d="M9.5 13.7 8.2 15" />
+    <path d="M9.2 4.6H7.4A1.4 1.4 0 0 0 6 6v13.2a1.4 1.4 0 0 0 1.4 1.4h9.2a1.4 1.4 0 0 0 1.4-1.4V6a1.4 1.4 0 0 0-1.4-1.4h-1.8" />
+    <path d="M9.8 3.2h4.4a.6.6 0 0 1 .6.6v1.6a.6.6 0 0 1-.6.6H9.8a.6.6 0 0 1-.6-.6V3.8a.6.6 0 0 1 .6-.6Z" />
+    <path d="M8.6 14.2h1.9l1.1-2.4 1.5 4.2 1-1.8h1.3" />
   </>,
 );
 
@@ -98,7 +96,7 @@ export const serviceGlyphs: Record<
   "home-pharmacy": HomePharmacyGlyph,
   "home-rehabilitation": HomeRehabGlyph,
   "doctor-teleconsultation": TeleconsultGlyph,
-  "home-vaccination": VaccinationGlyph,
+  "specialized-care-programs": CareProgramsGlyph,
 };
 
 /** Renders the glyph for a service slug. Decorative by default. */

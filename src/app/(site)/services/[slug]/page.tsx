@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { services, serviceOrder, servicePath, isServiceSlug } from "@/data/services";
+import { services, servicePageSlugs, servicePath, isServiceSlug } from "@/data/services";
 import { absoluteUrl, siteConfig } from "@/lib/site-config";
 import {
   ServiceHero,
@@ -15,12 +15,12 @@ import {
   ServiceFinalCTA,
 } from "@/components/service/sections";
 
-/** Pre-render all six service pages at build time. */
+/** Pre-render every service that has its own detail page (section-only services are excluded). */
 export function generateStaticParams() {
-  return serviceOrder.map((slug) => ({ slug }));
+  return servicePageSlugs.map((slug) => ({ slug }));
 }
 
-/** Any slug outside the six returns a 404 rather than rendering. */
+/** Any slug without its own detail page returns a 404 rather than rendering. */
 export const dynamicParams = false;
 
 /** Next 15+ delivers route params asynchronously. */
