@@ -4,6 +4,10 @@ import { createServerSupabase, SupabaseNotConfiguredError } from "@/lib/supabase
 import { clean, cleanMultiline, normalizePakistaniPhone } from "@/lib/callback-validation";
 import { PARTNERSHIP_LIMITS, validatePartnership } from "@/lib/partnership-validation";
 import { CAPTCHA_COOKIE } from "./captcha/route";
+import {
+  notifyTeamOfPartnershipEnquiry,
+  sendPartnershipThankYou,
+} from "@/lib/notifications";
 
 /** Writes to the database, so never statically optimised. */
 export const dynamic = "force-dynamic";
@@ -164,8 +168,32 @@ export async function POST(request: Request) {
       throw error;
     }
 
+    const reference = `ESP-${data as number}`;
+
+    // Awaited, but neither can throw: sendEmail swallows its own failures. The
+    // enquiry is already saved, so a mail problem must not surface as an error
+    // to the applicant.
+    await Promise.all([
+      sendPartnershipThankYou({
+        to: clean(candidate.email).toLowerCase(),
+        fullName: clean(candidate.fullName),
+        reference,
+        country: clean(candidate.country),
+        proposedLocation: cleanMultiline(candidate.proposedLocation) || null,
+      }),
+      notifyTeamOfPartnershipEnquiry({
+        reference,
+        fullName: clean(candidate.fullName),
+        email: clean(candidate.email).toLowerCase(),
+        phone: normalizePakistaniPhone(candidate.phone) ?? clean(candidate.phone),
+        country: clean(candidate.country),
+        proposedLocation: cleanMultiline(candidate.proposedLocation) || null,
+        message: cleanMultiline(candidate.message),
+      }),
+    ]);
+
     const response = NextResponse.json(
-      { ok: true, requestId: `ESP-${data as number}` },
+      { ok: true, requestId: reference },
       { status: 201 },
     );
     // Burn the challenge so the same answer cannot be replayed.

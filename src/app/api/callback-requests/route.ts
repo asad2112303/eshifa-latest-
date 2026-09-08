@@ -9,6 +9,7 @@ import {
 } from "@/lib/callback-validation";
 import { callbackServiceOptions } from "@/data/callback-services";
 import { formatRequestNo } from "@/lib/supabase/types";
+import { notifyTeamOfCallbackRequest } from "@/lib/notifications";
 
 /** Writes to the database, so never statically optimised. */
 export const dynamic = "force-dynamic";
@@ -150,12 +151,21 @@ export async function POST(request: Request) {
       throw error;
     }
 
+    const reference = formatRequestNo(data as number);
+
+    // The ESH- number is the ticket reference. There is no message to the
+    // patient: this form collects a phone number and no email address.
+    await notifyTeamOfCallbackRequest({
+      reference,
+      fullName: clean(candidate.fullName),
+      phone: normalizedPhone ?? clean(candidate.phone),
+      service: clean(candidate.service),
+      notes: cleanMultiline(candidate.additionalNotes) || null,
+    });
+
     // 201: a record was created. Only the friendly number is returned — never
     // the internal uuid, which would let anyone enumerate other requests.
-    return NextResponse.json(
-      { ok: true, requestId: formatRequestNo(data as number) },
-      { status: 201 },
-    );
+    return NextResponse.json({ ok: true, requestId: reference }, { status: 201 });
   } catch (error) {
     if (error instanceof SupabaseNotConfiguredError) {
       // A deployment problem, not a visitor problem. Distinguishing it means a
