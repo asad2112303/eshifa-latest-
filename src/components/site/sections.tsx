@@ -282,6 +282,9 @@ const medicalEquipmentItems = [
 ];
 
 const whyChooseItems = [
+  "A wholly owned subsidiary of Shifa International Hospitals Ltd. and Shifa Foundation",
+  "Not a gig platform; frontline professionals are vetted, trained, and clinically accountable",
+  "Serving patients and diaspora families across Pakistan and internationally",
   "In a largely unregulated home healthcare market, eShifa provides access to highly experienced, qualified, and trained healthcare professionals",
   "Home health services are provided at the patient's doorstep",
   "Reduced travel costs for patients",
@@ -1869,7 +1872,6 @@ export function LandingPage() {
       {/* The callback request takes the slot Specialized Care Programs used to
           hold, rather than sitting at the foot of the page. */}
       <ContactPreview />
-      <WhyChoose />
       <HomeFaq />
     </>
   );
@@ -2128,22 +2130,13 @@ export function AboutPage() {
 
       <VisionMissionValues />
       <CoreValues />
+      <WhyChoose />
 
       <BrandPromise />
 
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-8 grid lg:grid-cols-2 gap-12">
+        <div className="max-w-5xl mx-auto px-4 sm:px-8">
           <Reveal>
-            <h2 className="text-3xl sm:text-4xl text-[#1B004E] font-light mb-6">Why eShifa Is Different</h2>
-            <BulletList
-              items={[
-                "A wholly owned subsidiary of Shifa International Hospitals Ltd. and Shifa Foundation",
-                "Not a gig platform; frontline professionals are vetted, trained, and clinically accountable",
-                "Serving patients and diaspora families across Pakistan and internationally",
-              ]}
-            />
-          </Reveal>
-          <Reveal delay={100}>
             <h2 className="text-3xl sm:text-4xl text-[#1B004E] font-light mb-6">Company Overview & Legal Identity</h2>
             <dl className="space-y-5">
               {companyFacts.map((fact) => (
