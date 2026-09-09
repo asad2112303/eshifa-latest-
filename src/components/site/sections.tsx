@@ -733,7 +733,8 @@ export const Navbar = () => {
           <button
             aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
             aria-expanded={mobileMenuOpen}
-            className={`xl:hidden transition-colors ${solidNav ? "text-[#1B004E]" : "text-white"}`}
+            // -m-2.5 keeps the icon where it was while giving the tap area 44px.
+            className={`xl:hidden -m-2.5 p-2.5 transition-colors ${solidNav ? "text-[#1B004E]" : "text-white"}`}
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             <AnimatePresence mode="wait" initial={false}>
@@ -932,7 +933,7 @@ const Hero = () => {
   const overlayOpacity = Math.min(0.35 + y / 1500, 0.75);
 
   return (
-    <section className="relative h-screen w-full overflow-hidden text-white">
+    <section className="relative h-[100svh] min-h-[600px] w-full overflow-hidden text-white">
       <div className="absolute inset-0 will-change-transform" style={{ transform: `translate3d(0, ${imgTranslate}px, 0) scale(${imgScale})` }}>
         <Image
           src={"/images/hero.png"}
@@ -952,22 +953,29 @@ const Hero = () => {
         }}
       ></div>
 
-      <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-8 flex items-end pb-16 sm:pb-24">
+      {/* Bottom scrim: the overlay above tints the whole image evenly, which is
+          not enough for seven lines of body copy over a busy photograph. */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-[#1B004E]/85 via-[#1B004E]/45 to-transparent sm:h-1/2"
+      />
+
+      <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-8 flex items-end pb-20 sm:pb-24">
         <motion.div variants={staggerContainer} initial="hidden" animate="visible">
           <h1 className="text-white text-4xl sm:text-5xl lg:text-6xl font-light leading-[1.05] max-w-4xl">
-            <AnimatedWords text="Quality Healthcare at Your Doorstep" />
+            <AnimatedWords text="Quality Healthcare at Your Home" />
           </h1>
           <motion.p variants={staggerItem} className="text-lg sm:text-xl text-white/90 mt-6 max-w-3xl leading-relaxed">
             eShifa is a trusted healthcare platform, bringing quality healthcare services to patients beyond hospital
             walls. Through quality home healthcare services, eShifa makes healthcare more accessible, convenient, and
             patient-centered, right at your doorstep
           </motion.p>
-          <motion.div variants={staggerItem} className="mt-8 flex flex-wrap gap-3">
-            <Button asChild className="rounded-[80px] bg-[#0289E8] hover:bg-[#0289E8] text-white px-7 py-6 font-semibold">
-              <Link href="/contact">Book Your Home Visit Now</Link>
+          <motion.div variants={staggerItem} className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+            <Button asChild className="w-full sm:w-auto rounded-[80px] bg-[#0289E8] hover:bg-[#0289E8] text-white px-7 py-6 font-semibold">
+              <a href={`tel:${UAN_DISPLAY.replace(/-/g, "")}`}>Call Now</a>
             </Button>
-            <Button asChild className="rounded-[80px] border border-white/60 bg-transparent text-white hover:bg-white/10 px-7 py-6">
-              <Link href="/services">Explore Services</Link>
+            <Button asChild className="w-full sm:w-auto rounded-[80px] border border-white/60 bg-transparent text-white hover:bg-white/10 px-7 py-6">
+              <Link href="/contact">Book Your Visit</Link>
             </Button>
           </motion.div>
         </motion.div>
@@ -977,7 +985,7 @@ const Hero = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.9, duration: 0.5 }}
-        className="absolute bottom-8 right-6 sm:right-12 lg:right-16"
+        className="absolute bottom-8 right-6 hidden sm:block sm:right-12 lg:right-16"
       >
         <Link href="/services" className="group inline-flex items-center gap-2 text-white/90 nav-text font-light border-b border-white/40 pb-1 hover:border-white">
           <span>Discover eShifa</span>
@@ -1476,7 +1484,7 @@ const CallbackForm = () => {
             onChange={(e) => setService(e.target.value)}
             aria-invalid={!!errors.service}
             aria-describedby={errors.service ? "cb-service-error" : undefined}
-            className={`w-full h-10 rounded-md border bg-[#F5F5F5] px-3 text-sm outline-none focus:border-[#1B004E]/30 focus:bg-white ${
+            className={`w-full h-11 sm:h-10 rounded-md border bg-[#F5F5F5] px-3 text-sm outline-none focus:border-[#1B004E]/30 focus:bg-white ${
               errors.service ? "border-[#C0392B]" : "border-transparent"
             }`}
           >
@@ -1628,7 +1636,7 @@ const ContactPreview = () => {
 
 const ImageHero = ({ eyebrow, title, description, image }: { eyebrow: string; title: string; description: string; image: string }) => {
   return (
-    <section className="relative h-screen w-full overflow-hidden text-white">
+    <section className="relative h-[100svh] min-h-[600px] w-full overflow-hidden text-white">
       <motion.div
         initial={{ opacity: 0, scale: 1.04 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -1758,7 +1766,7 @@ export const Footer = () => {
                 target="_blank"
                 rel="noreferrer"
                 aria-label="eShifa on Facebook"
-                className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center hover:border-white/40 transition-colors"
+                className="w-11 h-11 rounded-full border border-white/20 flex items-center justify-center hover:border-white/40 transition-colors"
               >
                 <FaFacebookF className="w-4 h-4" />
               </a>
@@ -1773,7 +1781,7 @@ export const Footer = () => {
                 <li key={service.slug}>
                   <Link
                     href={servicePath(service.slug)}
-                    className="inline-flex items-start gap-2 hover:text-white transition-colors"
+                    className="inline-flex min-h-11 items-start gap-2 py-1 hover:text-white transition-colors"
                   >
                     <span className="text-xs mt-1.5">{">"}</span>
                     <span>{service.name}</span>
@@ -1794,7 +1802,7 @@ export const Footer = () => {
                       href={item.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 hover:text-white transition-colors"
+                      className="inline-flex min-h-11 items-center gap-2 hover:text-white transition-colors"
                     >
                       <span className="text-xs">{">"}</span>
                       <span>{item.label}</span>
@@ -1802,7 +1810,7 @@ export const Footer = () => {
                       <span className="sr-only">(opens in a new tab)</span>
                     </a>
                   ) : (
-                    <Link href={item.href} className="inline-flex items-center gap-2 hover:text-white transition-colors">
+                    <Link href={item.href} className="inline-flex min-h-11 items-center gap-2 hover:text-white transition-colors">
                       <span className="text-xs">{">"}</span>
                       <span>{item.label}</span>
                     </Link>
@@ -1818,19 +1826,19 @@ export const Footer = () => {
             <ul className="space-y-4 text-white/80">
               <li className="flex items-start gap-3">
                 <Phone className="w-4 h-4 text-[#2F8AD8] shrink-0 mt-1" />
-                <a href="tel:051111111567" className="hover:text-white transition-colors">
+                <a href="tel:051111111567" className="inline-flex min-h-11 items-center hover:text-white transition-colors">
                   UAN: {UAN_DISPLAY}
                 </a>
               </li>
               <li className="flex items-start gap-3">
                 <Mail className="w-4 h-4 text-[#2F8AD8] shrink-0 mt-1" />
-                <a href={`mailto:${CONTACT_EMAIL}`} className="hover:text-white transition-colors">
+                <a href={`mailto:${CONTACT_EMAIL}`} className="inline-flex min-h-11 items-center hover:text-white transition-colors">
                   {CONTACT_EMAIL}
                 </a>
               </li>
               <li className="flex items-start gap-3">
                 <Globe className="w-4 h-4 text-[#2F8AD8] shrink-0 mt-1" />
-                <a href="https://www.eshifa.org" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">
+                <a href="https://www.eshifa.org" target="_blank" rel="noreferrer" className="inline-flex min-h-11 items-center hover:text-white transition-colors">
                   www.eshifa.org
                 </a>
               </li>
