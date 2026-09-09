@@ -965,12 +965,7 @@ const Hero = () => {
           <h1 className="text-white text-4xl sm:text-5xl lg:text-6xl font-light leading-[1.05] max-w-4xl">
             <AnimatedWords text="Quality Healthcare at Your Home" />
           </h1>
-          <motion.p variants={staggerItem} className="text-lg sm:text-xl text-white/90 mt-6 max-w-3xl leading-relaxed">
-            eShifa is a trusted healthcare platform, bringing quality healthcare services to patients beyond hospital
-            walls. Through quality home healthcare services, eShifa makes healthcare more accessible, convenient, and
-            patient-centered, right at your doorstep
-          </motion.p>
-          <motion.div variants={staggerItem} className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+          <motion.div variants={staggerItem} className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <Button asChild className="w-full sm:w-auto rounded-[80px] bg-[#0289E8] hover:bg-[#0289E8] text-white px-7 py-6 font-semibold">
               <a href={`tel:${UAN_DISPLAY.replace(/-/g, "")}`}>Call Now</a>
             </Button>
