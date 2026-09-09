@@ -1274,31 +1274,128 @@ const HowToAccess = () => {
   );
 };
 
-const HomeFaq = () => {
+type HomeFaqAnswer = string | Array<{ label: string; text: string }>;
+
+/**
+ * One question, collapsed by default.
+ *
+ * Matches the accordion already used on the service pages, including its ARIA
+ * wiring: the button owns aria-expanded and aria-controls, and the panel is a
+ * region labelled by the button, so a screen reader announces the state rather
+ * than reading seven answers straight through.
+ */
+const HomeFaqItem = ({
+  item,
+  index,
+  isOpen,
+  onToggle,
+}: {
+  item: { q: string; a: HomeFaqAnswer };
+  index: number;
+  isOpen: boolean;
+  onToggle: () => void;
+}) => {
+  const panelId = `home-faq-panel-${index}`;
+  const buttonId = `home-faq-button-${index}`;
+
   return (
-    <section className="py-24 bg-[#F5F5F5]">
-      <div className="max-w-5xl mx-auto px-4 sm:px-8">
-        <SectionEyebrow>FAQ</SectionEyebrow>
-        <h2 className="text-3xl sm:text-4xl font-light text-[#1B004E] mb-10">Frequently Asked Questions</h2>
-        <div className="space-y-5">
+    <div
+      className={`overflow-hidden rounded-2xl border bg-white transition-colors ${
+        isOpen ? "border-[#0289E8]/35" : "border-[#E6E9EF]"
+      }`}
+    >
+      <h3>
+        <button
+          id={buttonId}
+          type="button"
+          aria-expanded={isOpen}
+          aria-controls={panelId}
+          onClick={onToggle}
+          className="flex w-full items-center justify-between gap-4 p-5 text-left transition-colors hover:bg-[#F7FAFE] sm:p-6"
+        >
+          <span className="text-base font-semibold text-[#1B004E] sm:text-lg">{item.q}</span>
+          <span
+            aria-hidden="true"
+            className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full transition-colors ${
+              isOpen ? "bg-[#0289E8] text-white" : "bg-[#0289E8]/10 text-[#0289E8]"
+            }`}
+          >
+            <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`} />
+          </span>
+        </button>
+      </h3>
+
+      <AnimatePresence initial={false}>
+        {isOpen && (
+          <motion.div
+            id={panelId}
+            role="region"
+            aria-labelledby={buttonId}
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.22, ease: [0.22, 1, 0.36, 1] }}
+            className="overflow-hidden"
+          >
+            <div className="px-5 pb-5 sm:px-6 sm:pb-6">
+              {typeof item.a === "string" ? (
+                <p className="text-base leading-relaxed text-[#555555]">{item.a}</p>
+              ) : (
+                <ul className="space-y-2.5">
+                  {item.a.map((option) => (
+                    <li key={option.label} className="text-base leading-relaxed text-[#555555]">
+                      <span className="font-semibold text-[#1B004E]">{option.label}:</span> {option.text}
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+};
+
+const HomeFaq = () => {
+  // One panel at a time: seven open answers is the wall of text this replaces.
+  // The first starts open so the control reads as interactive rather than as a
+  // list of headings someone has to guess at.
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
+
+  return (
+    <section className="bg-[#F5F7FA] py-20 sm:py-24">
+      <div className="mx-auto max-w-3xl px-4 sm:px-8">
+        <div className="mb-10 text-center">
+          <SectionEyebrow>FAQ</SectionEyebrow>
+          <h2 className="text-3xl font-light text-[#1B004E] sm:text-4xl">Frequently Asked Questions</h2>
+          <p className="mx-auto mt-4 max-w-xl text-lg text-[#777777]">
+            The questions families ask us most. If yours is not here, our team is on the phone 24/7.
+          </p>
+        </div>
+
+        <div className="space-y-3">
           {homeFaqItems.map((item, idx) => (
-            <Reveal key={item.q} delay={idx * 50}>
-              <article className={`${CARD_ON_GREY} p-6`}>
-                <h3 className="text-xl font-semibold text-[#1B004E] mb-3">{item.q}</h3>
-                {typeof item.a === "string" ? (
-                  <p className="text-lg text-[#444444]">{item.a}</p>
-                ) : (
-                  <ul className="space-y-2">
-                    {item.a.map((option) => (
-                      <li key={option.label} className="text-lg text-[#444444]">
-                        <span className="font-semibold text-[#1B004E]">{option.label}:</span> {option.text}
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </article>
+            <Reveal key={item.q} delay={idx * 40}>
+              <HomeFaqItem
+                item={item}
+                index={idx}
+                isOpen={openIndex === idx}
+                onToggle={() => setOpenIndex(openIndex === idx ? null : idx)}
+              />
             </Reveal>
           ))}
+        </div>
+
+        <div className="mt-10 rounded-2xl border border-[#E6E9EF] bg-white p-6 text-center">
+          <p className="text-base text-[#444444]">Still have a question?</p>
+          <a
+            href={`tel:${UAN_DISPLAY.replace(/-/g, "")}`}
+            className="mt-3 inline-flex min-h-11 items-center gap-2 rounded-[80px] bg-[#0289E8] px-7 font-semibold text-white transition-colors hover:bg-[#0277CC]"
+          >
+            <Phone className="h-4 w-4" aria-hidden="true" />
+            Call {UAN_DISPLAY}
+          </a>
         </div>
       </div>
     </section>
