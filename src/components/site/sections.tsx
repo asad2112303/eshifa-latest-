@@ -1289,17 +1289,24 @@ const HomeFaqItem = ({
   index,
   isOpen,
   onToggle,
+  onHover,
 }: {
   item: { q: string; a: HomeFaqAnswer };
   index: number;
   isOpen: boolean;
   onToggle: () => void;
+  onHover: () => void;
 }) => {
   const panelId = `home-faq-panel-${index}`;
   const buttonId = `home-faq-button-${index}`;
 
   return (
     <div
+      // Hover opens the answer on a mouse. It deliberately does not close on
+      // leave: panels snapping shut as the pointer crosses them would shift the
+      // page under the reader. Touch devices never fire this, and the button
+      // below still toggles, so tap and keyboard behaviour are unchanged.
+      onMouseEnter={onHover}
       className={`overflow-hidden rounded-2xl border bg-white transition-colors ${
         isOpen ? "border-[#0289E8]/35" : "border-[#E6E9EF]"
       }`}
@@ -1311,6 +1318,8 @@ const HomeFaqItem = ({
           aria-expanded={isOpen}
           aria-controls={panelId}
           onClick={onToggle}
+          // Opening on keyboard focus keeps hover and keyboard equivalent.
+          onFocus={onHover}
           className="flex w-full items-center justify-between gap-4 p-5 text-left transition-colors hover:bg-[#F7FAFE] sm:p-6"
         >
           <span className="text-base font-semibold text-[#1B004E] sm:text-lg">{item.q}</span>
@@ -1382,6 +1391,7 @@ const HomeFaq = () => {
                 index={idx}
                 isOpen={openIndex === idx}
                 onToggle={() => setOpenIndex(openIndex === idx ? null : idx)}
+                onHover={() => setOpenIndex(idx)}
               />
             </Reveal>
           ))}
