@@ -62,6 +62,12 @@ import {
   Megaphone,
   ExternalLink,
   FileDown,
+  User,
+  Stethoscope,
+  Plus,
+  Lock,
+  Clock,
+  Users,
 } from "lucide-react";
 
 const APPLE_STORE_URL = "https://apps.apple.com/pk/app/eshifa/id1525359185";
@@ -1539,96 +1545,154 @@ const CallbackForm = () => {
   const fieldClass = (hasError: boolean) =>
     `bg-[#F5F5F5] focus:bg-white ${hasError ? "border-[#C0392B]" : "border-transparent"}`;
 
+  // The note is hidden behind a toggle: most people have nothing to add, and an
+  // empty textarea made the card look longer than the work it asks for.
+  const [showNotes, setShowNotes] = useState(false);
+
   return (
-    <div className="bg-white rounded-3xl p-8 shadow-2xl border border-[#EEEEEE]">
-      <h3 className="text-2xl font-semibold text-[#1B004E] mb-6">Request a Callback</h3>
-      <form className="space-y-4" onSubmit={handleSubmit} noValidate>
-        <div className="space-y-2">
-          <label htmlFor="cb-name" className="block text-sm font-medium text-[#1B004E]">
+    <div className="rounded-3xl border border-[#E8ECF2] bg-white p-6 shadow-[0_18px_50px_-24px_rgba(27,0,78,0.28)] sm:p-8">
+      <h3 className="text-2xl font-semibold text-[#1B004E]">Request a Callback</h3>
+      <p className="mt-1.5 text-sm text-[#777777]">It only takes a few seconds.</p>
+
+      <form className="mt-6 space-y-5" onSubmit={handleSubmit} noValidate>
+        <div>
+          <label htmlFor="cb-name" className="block text-sm font-semibold text-[#1B004E]">
             Full Name
           </label>
-          <Input
-            id="cb-name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            placeholder="Enter your name"
-            aria-invalid={!!errors.name}
-            aria-describedby={errors.name ? "cb-name-error" : undefined}
-            className={fieldClass(!!errors.name)}
-          />
+          <div className="relative mt-2">
+            <User
+              aria-hidden="true"
+              className="pointer-events-none absolute left-3.5 top-1/2 h-[18px] w-[18px] -translate-y-1/2 text-[#9AA1AC]"
+            />
+            <Input
+              id="cb-name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              placeholder="Enter your name"
+              autoComplete="name"
+              aria-invalid={!!errors.name}
+              aria-describedby={errors.name ? "cb-name-error" : undefined}
+              className={`h-12 pl-11 ${fieldClass(!!errors.name)}`}
+            />
+          </div>
           <FieldError id="cb-name-error" message={errors.name} />
         </div>
 
-        <div className="space-y-2">
-          <label htmlFor="cb-phone" className="block text-sm font-medium text-[#1B004E]">
+        <div>
+          <label htmlFor="cb-phone" className="block text-sm font-semibold text-[#1B004E]">
             Phone Number
           </label>
-          <Input
-            id="cb-phone"
-            type="tel"
-            value={phone}
-            onChange={(e) => setPhone(e.target.value)}
-            placeholder="+92 3XX XXXXXXX"
-            aria-invalid={!!errors.phone}
-            aria-describedby={errors.phone ? "cb-phone-error" : undefined}
-            className={fieldClass(!!errors.phone)}
-          />
+          <div className="mt-2 flex gap-2">
+            {/* Fixed country marker, not a control: eShifa serves Pakistan, and
+                the validator accepts 03XX, 3XX and 92XXX alike, so making this
+                selectable would only invite a mismatch with what is typed. */}
+            <span className="inline-flex h-12 shrink-0 items-center gap-2 rounded-md border border-transparent bg-[#F5F5F5] px-3 text-sm font-medium text-[#1B004E]">
+              <span aria-hidden="true">🇵🇰</span>
+              +92
+            </span>
+            <div className="relative flex-1">
+              <Phone
+                aria-hidden="true"
+                className="pointer-events-none absolute left-3.5 top-1/2 h-[18px] w-[18px] -translate-y-1/2 text-[#9AA1AC]"
+              />
+              <Input
+                id="cb-phone"
+                type="tel"
+                inputMode="tel"
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
+                placeholder="03XX XXXXXXX"
+                autoComplete="tel"
+                aria-invalid={!!errors.phone}
+                aria-describedby={errors.phone ? "cb-phone-error" : undefined}
+                className={`h-12 pl-11 ${fieldClass(!!errors.phone)}`}
+              />
+            </div>
+          </div>
           <FieldError id="cb-phone-error" message={errors.phone} />
         </div>
 
-        <div className="space-y-2">
-          <label htmlFor="cb-service" className="block text-sm font-medium text-[#1B004E]">
-            How can we help?
+        <div>
+          <label htmlFor="cb-service" className="block text-sm font-semibold text-[#1B004E]">
+            Service Needed
           </label>
-          <select
-            id="cb-service"
-            value={service}
-            onChange={(e) => setService(e.target.value)}
-            aria-invalid={!!errors.service}
-            aria-describedby={errors.service ? "cb-service-error" : undefined}
-            className={`w-full h-11 sm:h-10 rounded-md border bg-[#F5F5F5] px-3 text-sm outline-none focus:border-[#1B004E]/30 focus:bg-white ${
-              errors.service ? "border-[#C0392B]" : "border-transparent"
-            }`}
-          >
-            <option value="">Select a service</option>
-            {callbackServiceOptions.map((option) => (
-              <option key={option} value={option}>
-                {option}
-              </option>
-            ))}
-          </select>
+          <div className="relative mt-2">
+            <Stethoscope
+              aria-hidden="true"
+              className="pointer-events-none absolute left-3.5 top-1/2 h-[18px] w-[18px] -translate-y-1/2 text-[#9AA1AC]"
+            />
+            <select
+              id="cb-service"
+              value={service}
+              onChange={(e) => setService(e.target.value)}
+              aria-invalid={!!errors.service}
+              aria-describedby={errors.service ? "cb-service-error" : undefined}
+              className={`h-12 w-full appearance-none rounded-md border bg-[#F5F5F5] pl-11 pr-10 text-sm text-[#1B004E] outline-none focus:bg-white ${
+                errors.service ? "border-[#C0392B]" : "border-transparent focus:border-[#0289E8]"
+              }`}
+            >
+              <option value="">Select a service</option>
+              {callbackServiceOptions.map((option) => (
+                <option key={option} value={option}>
+                  {option}
+                </option>
+              ))}
+            </select>
+            <ChevronDown
+              aria-hidden="true"
+              className="pointer-events-none absolute right-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-[#777777]"
+            />
+          </div>
           <FieldError id="cb-service-error" message={errors.service} />
         </div>
 
-        <div className="space-y-2">
-          <label htmlFor="cb-notes" className="block text-sm font-medium text-[#1B004E]">
-            Additional Notes
-          </label>
-          <Textarea
-            id="cb-notes"
-            value={notes}
-            onChange={(e) => setNotes(e.target.value)}
-            placeholder="Briefly describe your requirements..."
-            // The server rejects anything longer. Capping here stops an
-            // over-long note as it is typed, rather than failing on submit.
-            maxLength={LIMITS.additionalNotes}
-            aria-describedby={errors.notes ? "cb-notes-error" : undefined}
-            className="min-h-[110px] bg-[#F5F5F5] border-transparent focus:bg-white"
-          />
-          <FieldError id="cb-notes-error" message={errors.notes} />
-          {notes.length > LIMITS.additionalNotes - 100 && (
-            <p className="text-right text-xs text-[#777777]">
-              {LIMITS.additionalNotes - notes.length} characters remaining
-            </p>
-          )}
-        </div>
+        {showNotes ? (
+          <div>
+            <label htmlFor="cb-notes" className="block text-sm font-semibold text-[#1B004E]">
+              Add a note
+            </label>
+            <Textarea
+              id="cb-notes"
+              value={notes}
+              onChange={(e) => setNotes(e.target.value)}
+              placeholder="Briefly describe your requirements..."
+              // The server rejects anything longer. Capping here stops an
+              // over-long note as it is typed, rather than failing on submit.
+              maxLength={LIMITS.additionalNotes}
+              aria-describedby={errors.notes ? "cb-notes-error" : undefined}
+              className="mt-2 min-h-[96px] bg-[#F5F5F5] border-transparent focus:bg-white"
+            />
+            <FieldError id="cb-notes-error" message={errors.notes} />
+            {notes.length > LIMITS.additionalNotes - 100 && (
+              <p className="text-right text-xs text-[#777777]">
+                {LIMITS.additionalNotes - notes.length} characters remaining
+              </p>
+            )}
+          </div>
+        ) : (
+          <button
+            type="button"
+            onClick={() => setShowNotes(true)}
+            className="inline-flex min-h-11 items-center gap-1.5 text-sm font-semibold text-[#0289E8] hover:underline"
+          >
+            <Plus aria-hidden="true" className="h-4 w-4" />
+            Add a note (optional)
+          </button>
+        )}
 
         <Button
           type="submit"
           disabled={isSubmitting}
-          className="w-full bg-[#0289E8] hover:bg-[#0289E8] text-white py-6 rounded-[80px] mt-4 disabled:opacity-70"
+          className="group w-full rounded-[80px] bg-[#0289E8] py-6 text-base font-semibold text-white hover:bg-[#0277CC] disabled:opacity-70"
         >
-          {isSubmitting ? "Submitting Request..." : "Request a Callback"}
+          {isSubmitting ? (
+            "Submitting Request..."
+          ) : (
+            <span className="inline-flex items-center gap-2">
+              Request My Callback
+              <ArrowRight aria-hidden="true" className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </span>
+          )}
         </Button>
 
         {formError && (
@@ -1677,57 +1741,88 @@ const CallbackForm = () => {
             </div>
           </motion.div>
         )}
+
+        {/* Reassurance sits under the button, where hesitation actually happens. */}
+        <div className="space-y-2.5 border-t border-[#EEF1F5] pt-5">
+          <p className="flex items-start gap-2.5 text-sm text-[#777777]">
+            <Lock aria-hidden="true" className="mt-0.5 h-4 w-4 shrink-0 text-[#9AA1AC]" />
+            Your information is private and secure.
+          </p>
+          <p className="flex items-start gap-2.5 text-sm text-[#777777]">
+            <Clock aria-hidden="true" className="mt-0.5 h-4 w-4 shrink-0 text-[#9AA1AC]" />
+            Our care team usually responds within a few minutes.
+          </p>
+        </div>
       </form>
     </div>
   );
 };
 
 const ContactPreview = () => {
+  const points = [
+    { icon: Clock, label: "Available 24/7" },
+    { icon: Users, label: "Qualified Care Team" },
+    { icon: Smartphone, label: "Book via App or Phone" },
+  ];
+
   return (
-    <section className="py-24 bg-white relative overflow-hidden">
-      <div className="absolute top-0 right-0 w-1/2 h-full bg-[#F5F5F5] -skew-x-12 transform origin-top-right -z-10 hidden lg:block"></div>
-      <div className="max-w-7xl mx-auto px-4 sm:px-8">
-        <div className="grid lg:grid-cols-2 gap-16">
+    <section className="relative overflow-hidden bg-gradient-to-b from-white via-[#F8FAFF] to-white py-20 sm:py-24">
+      {/* Soft brand shapes, well behind the content and hidden from assistive
+          tech: they give the section depth without competing with the form. */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -left-24 top-1/3 h-72 w-72 rounded-full bg-[#0289E8]/[0.06] blur-2xl"
+      />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -right-20 bottom-0 h-80 w-80 rounded-full bg-[#0289E8]/[0.05] blur-2xl"
+      />
+
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-8">
+        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <Reveal>
-            <h2 className="text-4xl font-semibold text-[#1B004E] mb-4">eShifa 24/7 - Request a Callback</h2>
-            <p className="text-lg text-[#444444] font-medium mb-10">
-              24/7 access to quality home healthcare. Call our care team or submit your details and we will contact you within minutes.
+            <span className="inline-flex items-center gap-2 rounded-full bg-[#0289E8]/10 px-4 py-2 text-sm font-semibold text-[#0289E8]">
+              <span aria-hidden="true" className="h-2 w-2 rounded-full bg-[#0E7A4E]" />
+              24/7 Home Healthcare
+            </span>
+
+            <h2 className="mt-6 text-4xl font-semibold leading-[1.1] text-[#1B004E] sm:text-5xl">
+              Need Care at Home?
+              <span className="block text-[#0289E8]">We&rsquo;ll Call You Back.</span>
+            </h2>
+
+            <p className="mt-5 text-lg text-[#555555]">
+              Share your number and our care team will call you shortly.
             </p>
 
-            <div className="space-y-8">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-[#0E7A4E]/10 rounded-full flex items-center justify-center shrink-0">
-                  <Phone className="w-6 h-6 text-[#0E7A4E]" />
-                </div>
-                <div>
-                  <div className="text-sm text-[#777777] font-medium mb-1">Call Us Now</div>
-                  <div className="text-base font-semibold text-[#1B004E]">{UAN_DISPLAY}</div>
-                </div>
-              </div>
+            <ul className="mt-9 space-y-5">
+              {points.map(({ icon: Icon, label }) => (
+                <li key={label} className="flex items-center gap-4">
+                  <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#0289E8]/10 text-[#0289E8]">
+                    <Icon className="h-5 w-5" aria-hidden="true" />
+                  </span>
+                  <span className="text-lg font-semibold text-[#1B004E]">{label}</span>
+                </li>
+              ))}
+            </ul>
 
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-[#1B004E]/10 rounded-full flex items-center justify-center shrink-0">
-                  <Mail className="w-6 h-6 text-[#1B004E]" />
-                </div>
-                <div>
-                  <div className="text-sm text-[#777777] font-medium mb-1">Email Us</div>
-                  <div className="text-base font-medium text-[#1B004E]">{CONTACT_EMAIL}</div>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-[#00E5B9]/10 rounded-full flex items-center justify-center shrink-0">
-                  <MapPin className="w-6 h-6 text-[#00E5B9]" />
-                </div>
-                <div>
-                  <div className="text-sm text-[#777777] font-medium mb-1">Head Office</div>
-                  <div className="text-base font-medium text-[#1B004E] max-w-sm">Plot No. 17 and 18, 2nd Floor, EOBI Building, I-8 Markaz, Islamabad</div>
-                </div>
+            <div className="mt-9 flex items-center gap-4 border-t border-[#E8ECF2] pt-7">
+              <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#0289E8]/10 text-[#0289E8]">
+                <Phone className="h-5 w-5" aria-hidden="true" />
+              </span>
+              <div>
+                <div className="text-sm text-[#777777]">Prefer calling?</div>
+                <a
+                  href={`tel:${UAN_DISPLAY.replace(/-/g, "")}`}
+                  className="text-2xl font-bold text-[#0289E8] hover:underline sm:text-3xl"
+                >
+                  {UAN_DISPLAY}
+                </a>
               </div>
             </div>
           </Reveal>
 
-          <Reveal delay={200}>
+          <Reveal delay={150}>
             <CallbackForm />
           </Reveal>
         </div>
