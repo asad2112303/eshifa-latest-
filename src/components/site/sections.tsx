@@ -636,7 +636,10 @@ export const Navbar = () => {
   }, [location]);
 
   const hasTransparentHero = transparentHeroRoutes.includes(location);
-  const solidNav = scrolled || !hasTransparentHero;
+  // The open drawer counts as scrolled. Left transparent, the bar keeps its
+  // inverted logo and white close icon over the hero photograph while a solid
+  // white panel hangs directly beneath it, which reads as two headers.
+  const solidNav = scrolled || mobileMenuOpen || !hasTransparentHero;
 
   const navButtonClass = `rounded-[80px] px-3.5 py-2 navbar-text font-semibold border transition-all ${
     solidNav
@@ -723,12 +726,11 @@ export const Navbar = () => {
             <Button asChild className={navButtonClass}>
               <Link href="/partner">Partner</Link>
             </Button>
-            {/* Hidden between lg and xl. Eight nav items plus three buttons
-                overflow the bar at 1024px, and this is the least urgent of the
-                three: Call Now and Partner both lead somewhere a visitor
-                cannot reach otherwise, while the app is also linked from the
-                footer and the hero. It returns at xl, and the mobile menu
-                carries it at every width below lg. */}
+            {/* Hidden below xl. Eight nav items plus three buttons overflow the
+                bar at 1024px, and this is the least urgent of the three: Call
+                Now and Partner both lead somewhere a visitor cannot reach
+                otherwise, while the app is also linked from the footer. It
+                returns at xl, and the drawer below carries it under that. */}
             <Button asChild className={navButtonClass}>
               <a href={storeUrl} target="_blank" rel="noreferrer">
                 Download App
@@ -766,7 +768,7 @@ export const Navbar = () => {
             initial="hidden"
             animate="visible"
             exit="exit"
-            className="xl:hidden bg-white border-t border-[#EEEEEE] shadow-lg absolute top-full left-0 right-0 p-4 flex flex-col gap-3 max-h-[75vh] overflow-y-auto"
+            className="xl:hidden bg-white border-t border-[#EEEEEE] shadow-lg absolute top-full left-0 right-0 p-4 flex flex-col gap-2 max-h-[75vh] overflow-y-auto"
           >
             {navLinks.map((item) =>
               item.href === "/services" ? (
@@ -776,7 +778,7 @@ export const Navbar = () => {
                     aria-expanded={servicesAccordionOpen}
                     aria-controls="mobile-services-panel"
                     onClick={() => setServicesAccordionOpen((v) => !v)}
-                    className="flex w-full items-center justify-between py-2 font-medium text-[#1B004E]"
+                    className="flex w-full items-center justify-between py-2.5 font-medium text-[#1B004E]"
                   >
                     Our Services
                     <ChevronDown
@@ -821,7 +823,7 @@ export const Navbar = () => {
                     aria-expanded={resourcesAccordionOpen}
                     aria-controls="mobile-resources-panel"
                     onClick={() => setResourcesAccordionOpen((v) => !v)}
-                    className="flex w-full items-center justify-between py-2 font-medium text-[#1B004E]"
+                    className="flex w-full items-center justify-between py-2.5 font-medium text-[#1B004E]"
                   >
                     Patient Resources
                     <ChevronDown
@@ -880,7 +882,7 @@ export const Navbar = () => {
                   href={item.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-1.5 text-[#1B004E] font-medium py-2 border-b border-[#EEEEEE]"
+                  className="flex items-center gap-1.5 text-[#1B004E] font-medium py-2.5 border-b border-[#EEEEEE]"
                 >
                   {item.label}
                   <ExternalLink className="h-3.5 w-3.5 opacity-70" aria-hidden="true" />
@@ -890,21 +892,31 @@ export const Navbar = () => {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`text-[#1B004E] font-medium py-2 border-b border-[#EEEEEE] ${location === item.href ? "text-[#0E7A4E]" : ""}`}
+                  className={`text-[#1B004E] font-medium py-2.5 border-b border-[#EEEEEE] ${location === item.href ? "text-[#0E7A4E]" : ""}`}
                 >
                   {item.label}
                 </Link>
               ),
             )}
-            <Button asChild className="bg-[#0289E8] hover:bg-[#0289E8] text-white rounded-[80px] w-full mt-2">
+            <Button asChild className="min-h-11 bg-[#0289E8] hover:bg-[#0289E8] text-white rounded-[80px] w-full mt-2">
               <a href="tel:051111111567">Call Now</a>
             </Button>
             {/* Mirrors the desktop header button — /partner has no nav-list entry. */}
             <Button
               asChild
-              className="border border-[#0289E8] bg-white hover:bg-[#F5F5F5] text-[#0289E8] rounded-[80px] w-full"
+              className="min-h-11 border border-[#0289E8] bg-white hover:bg-[#F5F5F5] text-[#0289E8] rounded-[80px] w-full"
             >
               <Link href="/partner">Partner</Link>
+            </Button>
+            {/* The third desktop button. It matters more on a phone than on a
+                desktop, not less: this is the device the app installs on. */}
+            <Button
+              asChild
+              className="min-h-11 border border-[#0289E8] bg-white hover:bg-[#F5F5F5] text-[#0289E8] rounded-[80px] w-full"
+            >
+              <a href={storeUrl} target="_blank" rel="noreferrer">
+                Download App
+              </a>
             </Button>
           </motion.div>
         )}
