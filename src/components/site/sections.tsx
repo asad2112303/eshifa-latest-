@@ -1791,9 +1791,11 @@ const ContactPreview = () => {
               </span>
               <div>
                 <div className="text-sm text-[#777777]">Prefer calling?</div>
+                {/* min-h-11 rather than bare text: at 24px the line box is only
+                    30px tall, which is under the 44px a thumb needs. */}
                 <a
                   href={`tel:${UAN_DISPLAY.replace(/-/g, "")}`}
-                  className="text-2xl font-bold text-[#0289E8] hover:underline sm:text-3xl"
+                  className="inline-flex min-h-11 items-center text-2xl font-bold text-[#0289E8] hover:underline sm:text-3xl"
                 >
                   {UAN_DISPLAY}
                 </a>
