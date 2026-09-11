@@ -1141,6 +1141,31 @@ const CoreValues = () => {
   );
 };
 
+/**
+ * A full-bleed photograph between the services grid and the brand promise.
+ *
+ * It carries no copy of its own on purpose: it is a breath between two dense
+ * sections, and a picture of what the rest of the page describes. The crop is
+ * anchored high in the frame because the band is far wider than the
+ * photograph — everything that matters, both faces and the cuff, sits in its
+ * upper two thirds. The single object-position covers both cases: wide
+ * viewports crop vertically and use only the Y value, the narrowest ones crop
+ * horizontally and use only the X.
+ */
+const HomeVisitBand = () => (
+  <section className="w-full overflow-hidden bg-[#F2F8FF]">
+    <Reveal className="relative h-[230px] sm:h-[360px] lg:h-[480px] xl:h-[560px]">
+      <Image
+        src="/images/home-visit.jpg"
+        alt="An eShifa nurse checking an elderly woman's blood pressure in her own living room"
+        fill
+        sizes="100vw"
+        className="object-cover object-[68%_16%]"
+      />
+    </Reveal>
+  </section>
+);
+
 const BrandPromise = () => {
   return (
     /* #ED3237 is sampled directly from the red in the eShifa logo. */
@@ -2052,6 +2077,7 @@ export function LandingPage() {
     <>
       <Hero />
       <HomeServices />
+      <HomeVisitBand />
       <BrandPromise />
       {/* The callback request takes the slot Specialized Care Programs used to
           hold, rather than sitting at the foot of the page. */}
