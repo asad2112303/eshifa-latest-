@@ -1774,10 +1774,6 @@ const ContactPreview = () => {
               <span className="block text-[#0289E8]">We&rsquo;ll Call You Back.</span>
             </h2>
 
-            <p className="mt-5 text-lg text-[#555555]">
-              Share your number and our care team will call you shortly.
-            </p>
-
             <ul className="mt-9 space-y-5">
               {points.map(({ icon: Icon, label }) => (
                 <li key={label} className="flex items-center gap-4">
