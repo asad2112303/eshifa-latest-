@@ -31,12 +31,12 @@ export default function NotFound() {
         </motion.p>
 
         <motion.div variants={staggerItem} className="flex flex-wrap justify-center gap-3">
-          <Button asChild className="rounded-[80px] bg-[#0289E8] hover:bg-[#0289E8] px-7 py-6 font-semibold text-white">
+          <Button asChild className="rounded-[80px] bg-[#0289E8] hover:bg-[#0289E8] px-7 py-4 sm:py-6 font-semibold text-white">
             <Link href="/">Back to Home</Link>
           </Button>
           <Button
             asChild
-            className="rounded-[80px] border border-[#0289E8] bg-white px-7 py-6 font-semibold text-[#0289E8] hover:bg-[#F5F5F5]"
+            className="rounded-[80px] border border-[#0289E8] bg-white px-7 py-4 sm:py-6 font-semibold text-[#0289E8] hover:bg-[#F5F5F5]"
           >
             <a href="tel:051111111567">Call 051-111-111-567</a>
           </Button>

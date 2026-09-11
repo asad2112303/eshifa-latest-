@@ -359,7 +359,7 @@ export default function PartnershipForm() {
             <button
               type="button"
               onClick={loadChallenge}
-              className="inline-flex items-center gap-2 rounded-[80px] border border-[#0289E8] px-4 py-2 text-sm font-semibold text-[#0289E8] transition-colors hover:bg-[#0289E8]/5"
+              className="inline-flex min-h-11 items-center gap-2 rounded-[80px] border border-[#0289E8] px-4 py-2 text-sm font-semibold text-[#0289E8] transition-colors hover:bg-[#0289E8]/5"
             >
               <RefreshCw className="h-4 w-4" aria-hidden="true" />
               New question
@@ -377,7 +377,7 @@ export default function PartnershipForm() {
         <Button
           type="submit"
           disabled={isSubmitting}
-          className="w-full rounded-[80px] bg-[#0289E8] py-6 font-semibold text-white hover:bg-[#0289E8] disabled:opacity-70"
+          className="w-full rounded-[80px] bg-[#0289E8] py-4 sm:py-6 font-semibold text-white hover:bg-[#0289E8] disabled:opacity-70"
         >
           {isSubmitting ? (
             <span className="inline-flex items-center gap-2">

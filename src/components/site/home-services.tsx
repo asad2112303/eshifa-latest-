@@ -173,10 +173,10 @@ const HomeServices = () => (
 
           <Link
             href="/services"
-            className="group inline-flex shrink-0 items-center gap-4 self-start rounded-full bg-white py-2 pl-7 pr-2 text-[15px] font-semibold text-[#071B55] shadow-[0_14px_34px_-16px_rgba(7,27,85,0.4)] ring-1 ring-[#0289E8]/10 transition duration-300 hover:shadow-[0_18px_40px_-16px_rgba(7,27,85,0.45)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0289E8] md:self-auto"
+            className="group inline-flex shrink-0 items-center gap-3 self-start rounded-full bg-white py-1.5 pl-6 pr-1.5 text-sm font-semibold text-[#071B55] shadow-[0_14px_34px_-16px_rgba(7,27,85,0.4)] ring-1 ring-[#0289E8]/10 transition duration-300 hover:shadow-[0_18px_40px_-16px_rgba(7,27,85,0.45)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0289E8] sm:gap-4 sm:py-2 sm:pl-7 sm:pr-2 sm:text-[15px] md:self-auto"
           >
             View All Services
-            <span className="flex h-11 w-11 items-center justify-center rounded-full bg-[#0289E8] text-white transition-transform duration-300 group-hover:translate-x-0.5">
+            <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#0289E8] text-white transition-transform duration-300 group-hover:translate-x-0.5 sm:h-11 sm:w-11">
               <ArrowRight className="h-[18px] w-[18px]" strokeWidth={2.2} aria-hidden="true" />
             </span>
           </Link>

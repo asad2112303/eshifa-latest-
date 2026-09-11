@@ -77,12 +77,12 @@ export function ServiceHero({ service }: { service: ServiceContent }) {
             </motion.p>
 
             <motion.div variants={staggerItem} className="flex flex-wrap gap-3">
-              <Button asChild className="rounded-[80px] bg-[#0289E8] hover:bg-[#0289E8] text-white px-7 py-6 font-semibold">
+              <Button asChild className="rounded-[80px] bg-[#0289E8] hover:bg-[#0289E8] text-white px-7 py-4 sm:py-6 font-semibold">
                 <Link href={service.hero.primaryCta.href}>{service.hero.primaryCta.label}</Link>
               </Button>
               <Button
                 asChild
-                className="rounded-[80px] border border-[#0289E8] bg-white text-[#0289E8] hover:bg-[#F5F5F5] px-7 py-6 font-semibold"
+                className="rounded-[80px] border border-[#0289E8] bg-white text-[#0289E8] hover:bg-[#F5F5F5] px-7 py-4 sm:py-6 font-semibold"
               >
                 <Link href={service.hero.secondaryCta.href}>{service.hero.secondaryCta.label}</Link>
               </Button>
@@ -417,12 +417,12 @@ export function ServiceFinalCTA({ service }: { service: ServiceContent }) {
           <p className="text-lg text-white max-w-2xl">{service.finalCta.body}</p>
         </div>
         <div className="flex flex-wrap gap-3 shrink-0">
-          <Button asChild className="rounded-[80px] bg-white hover:bg-white/90 text-[#1B004E] font-semibold px-8 py-6">
+          <Button asChild className="rounded-[80px] bg-white hover:bg-white/90 text-[#1B004E] font-semibold px-8 py-4 sm:py-6">
             <Link href="/contact">{service.hero.primaryCta.label}</Link>
           </Button>
           <Button
             asChild
-            className="rounded-[80px] border border-white bg-transparent text-white hover:bg-white/10 font-semibold px-8 py-6"
+            className="rounded-[80px] border border-white bg-transparent text-white hover:bg-white/10 font-semibold px-8 py-4 sm:py-6"
           >
             <a href="tel:051111111567">Call 051-111-111-567</a>
           </Button>

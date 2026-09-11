@@ -988,10 +988,10 @@ const Hero = () => {
             <AnimatedWords text="Quality Healthcare at Your Home" />
           </h1>
           <motion.div variants={staggerItem} className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-            <Button asChild className="w-full sm:w-auto rounded-[80px] bg-[#0289E8] hover:bg-[#0289E8] text-white px-7 py-6 font-semibold">
+            <Button asChild className="w-full sm:w-auto rounded-[80px] bg-[#0289E8] hover:bg-[#0289E8] text-white px-7 py-4 sm:py-6 font-semibold">
               <a href={`tel:${UAN_DISPLAY.replace(/-/g, "")}`}>Call Now</a>
             </Button>
-            <Button asChild className="w-full sm:w-auto rounded-[80px] border border-white/60 bg-transparent text-white hover:bg-white/10 px-7 py-6">
+            <Button asChild className="w-full sm:w-auto rounded-[80px] border border-white/60 bg-transparent text-white hover:bg-white/10 px-7 py-4 sm:py-6">
               <Link href="/contact">Book Your Visit</Link>
             </Button>
           </motion.div>
@@ -1261,10 +1261,10 @@ const HowToAccess = () => {
         </div>
 
         <div className="mt-10 flex flex-wrap justify-center gap-3">
-          <Button asChild className="rounded-[80px] bg-[#0289E8] hover:bg-[#0289E8] text-white px-7 py-6 font-semibold">
+          <Button asChild className="rounded-[80px] bg-[#0289E8] hover:bg-[#0289E8] text-white px-7 py-4 sm:py-6 font-semibold">
             <a href="tel:051111111567">Call {UAN_DISPLAY}</a>
           </Button>
-          <Button asChild className="rounded-[80px] border border-[#0289E8] bg-white text-[#0289E8] hover:bg-[#F5F5F5] px-7 py-6 font-semibold">
+          <Button asChild className="rounded-[80px] border border-[#0289E8] bg-white text-[#0289E8] hover:bg-[#F5F5F5] px-7 py-4 sm:py-6 font-semibold">
             <a href={storeUrl} target="_blank" rel="noreferrer">
               Download the eShifa App
             </a>
@@ -1678,7 +1678,7 @@ const CallbackForm = () => {
         <Button
           type="submit"
           disabled={isSubmitting}
-          className="group w-full rounded-[80px] bg-[#0289E8] py-6 text-base font-semibold text-white hover:bg-[#0277CC] disabled:opacity-70"
+          className="group w-full rounded-[80px] bg-[#0289E8] py-4 sm:py-6 text-base font-semibold text-white hover:bg-[#0277CC] disabled:opacity-70"
         >
           {isSubmitting ? (
             "Submitting Request..."
@@ -1917,7 +1917,7 @@ const CtaBand = ({ title, body, ctaText }: { title: string; body: string; ctaTex
         {/* White on red: the site's blue button would sit at 1.12:1 here and vanish. */}
         <Button
           asChild
-          className="rounded-[80px] bg-white hover:bg-white/90 text-[#1B004E] font-semibold px-8 py-6 shrink-0"
+          className="rounded-[80px] bg-white hover:bg-white/90 text-[#1B004E] font-semibold px-8 py-4 sm:py-6 shrink-0"
         >
           <Link href="/contact">{ctaText}</Link>
         </Button>
@@ -2473,12 +2473,12 @@ export function PartnerPage() {
           </h1>
           <p className="text-lg text-[#444444] max-w-4xl leading-relaxed">{partnershipLead}</p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <Button asChild className="rounded-[80px] bg-[#0289E8] hover:bg-[#0289E8] text-white px-7 py-6 font-semibold">
+            <Button asChild className="rounded-[80px] bg-[#0289E8] hover:bg-[#0289E8] text-white px-7 py-4 sm:py-6 font-semibold">
               <a href="#partnership-form">Become a Partner</a>
             </Button>
             <Button
               asChild
-              className="rounded-[80px] border border-[#0289E8] bg-white text-[#0289E8] hover:bg-[#F5F5F5] px-7 py-6 font-semibold"
+              className="rounded-[80px] border border-[#0289E8] bg-white text-[#0289E8] hover:bg-[#F5F5F5] px-7 py-4 sm:py-6 font-semibold"
             >
               <a href={`tel:${UAN_DISPLAY.replace(/-/g, "")}`}>Call {UAN_DISPLAY}</a>
             </Button>
