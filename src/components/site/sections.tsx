@@ -10,7 +10,7 @@ import { staggerContainer, staggerItem, fadeDown, drawerAnimation } from "@/moti
 import { springSmooth, VIEWPORT_ONCE } from "@/motion/transitions";
 import { ServiceIcon } from "@/components/icons/ServiceIcon";
 import { ServiceGlyph } from "@/components/icons/service-glyphs";
-import { ServiceCardGrid } from "@/components/service/sections";
+import HomeServices from "@/components/site/home-services";
 import LabCentreFinder from "@/components/site/lab-centre-finder";
 import {
   resourcesByCategory,
@@ -1062,27 +1062,6 @@ const AboutEshifaSection = () => {
     </section>
   );
 };
-
-const HomeServices = () => (
-  <section className="py-24 bg-[#F3F4F6]">
-    <div className="max-w-7xl mx-auto px-4 sm:px-8">
-      <Reveal className="text-center max-w-3xl mx-auto mb-14">
-        <h2 className="text-3xl sm:text-4xl font-semibold text-[#1B004E]">eShifa Services</h2>
-      </Reveal>
-
-      <ServiceCardGrid tone="grey" showBlurb={false} />
-
-      <div className="mt-12 text-center">
-        <Button
-          asChild
-          className="rounded-[80px] border border-[#0289E8] bg-white text-[#0289E8] hover:bg-[#F5F5F5] px-7 py-6 font-semibold"
-        >
-          <Link href="/services">View All Services</Link>
-        </Button>
-      </div>
-    </div>
-  </section>
-);
 
 const WhyChoose = () => {
   return (
