@@ -2214,7 +2214,7 @@ export function DoctorsPage() {
     <>
       <ImageHero
         title="Expert Healthcare, Just a Call Away"
-        description="General physicians and specialists through a seamless digital-first consultation experience, with proper follow-up care built in."
+        description="Convenient Tele Consultation with qualified healthcare professionals from the comfort of your home."
         image="about.png"
       />
 
