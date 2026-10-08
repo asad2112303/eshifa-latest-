@@ -1776,12 +1776,7 @@ const ContactPreview = () => {
       <div className="relative mx-auto max-w-7xl px-4 sm:px-8">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <Reveal>
-            <span className="inline-flex items-center gap-2 rounded-full bg-[#0289E8]/10 px-4 py-2 text-sm font-semibold text-[#0289E8]">
-              <span aria-hidden="true" className="h-2 w-2 rounded-full bg-[#0E7A4E]" />
-              24/7 Home Healthcare
-            </span>
-
-            <h2 className="mt-6 text-4xl font-semibold leading-[1.1] text-[#1B004E] sm:text-5xl">
+            <h2 className="text-4xl font-semibold leading-[1.1] text-[#1B004E] sm:text-5xl">
               Need Care at Home?
               <span className="block text-[#0289E8]">We&rsquo;ll Call You Back.</span>
             </h2>
