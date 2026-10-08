@@ -2066,7 +2066,6 @@ export function LandingPage() {
     <>
       <Hero />
       <HomeServices />
-      <BrandPromise />
       {/* The callback request takes the slot Specialized Care Programs used to
           hold, rather than sitting at the foot of the page. */}
       <ContactPreview />
