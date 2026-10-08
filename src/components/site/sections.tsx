@@ -2223,11 +2223,11 @@ export function DoctorsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-8">
           <h2 className="text-3xl sm:text-4xl font-light text-[#1B004E] mb-10">How Your Consultation Works</h2>
           <div className="grid lg:grid-cols-3 gap-6">
-            <ContentBlock title="Step 1 - Book Your Doctor">
-              Select doctor type, preferred slot, and consultation format (teleconsult or home visit) in minutes.
+            <ContentBlock title="Step 1 - Book Your Consultation">
+              Book through the eShifa App or call our 24/7 Helpline.
             </ContentBlock>
-            <ContentBlock title="Step 2 - Receive Your Consultation">
-              Connect securely and receive digital notes, a care plan, and prescription documented in your medical record.
+            <ContentBlock title="Step 2 - Select Your Doctor & Slot">
+              Select your doctor type and preferred slot, connect securely, and receive your digital prescription.
             </ContentBlock>
             <ContentBlock title="Step 3 - Continue Your Care">
               If labs, medications, or nursing are needed, eShifa's integrated services handle the next steps.
