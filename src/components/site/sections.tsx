@@ -1819,7 +1819,7 @@ const ContactPreview = () => {
   );
 };
 
-const ImageHero = ({ eyebrow, title, description, image }: { eyebrow?: string; title: string; description: string; image: string }) => {
+const ImageHero = ({ eyebrow, title, description, image }: { eyebrow?: string; title: string; description?: string; image: string }) => {
   return (
     <section className="relative h-[100svh] min-h-[600px] w-full overflow-hidden text-white">
       <motion.div
@@ -1843,9 +1843,11 @@ const ImageHero = ({ eyebrow, title, description, image }: { eyebrow?: string; t
           <motion.h1 variants={staggerItem} className="text-white text-4xl sm:text-5xl lg:text-6xl leading-[1.05] font-light max-w-4xl">
             {title}
           </motion.h1>
-          <motion.p variants={staggerItem} className="text-lg sm:text-xl text-white/90 mt-6 max-w-3xl leading-relaxed">
-            {description}
-          </motion.p>
+          {description && (
+            <motion.p variants={staggerItem} className="text-lg sm:text-xl text-white/90 mt-6 max-w-3xl leading-relaxed">
+              {description}
+            </motion.p>
+          )}
           <motion.div variants={staggerItem} className="mt-8 inline-flex items-center gap-2 border-b border-white/40 pb-1 text-white/90">
             <span className="nav-text">Healthcare Without Walls</span>
             <ArrowRight className="w-4 h-4" />
@@ -2213,8 +2215,7 @@ export function DoctorsPage() {
   return (
     <>
       <ImageHero
-        title="Expert Healthcare, Just a Call Away"
-        description="Convenient Tele Consultation with qualified healthcare professionals from the comfort of your home."
+        title="Convenient Tele Consultation with qualified healthcare professionals from the comfort of your home."
         image="about.png"
       />
 
