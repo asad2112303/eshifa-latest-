@@ -217,7 +217,7 @@ export const services: Record<ServiceSlug, ServiceContent> = {
       supporting:
         "Get your laboratory tests done without leaving home. Our trained healthcare professionals visit your home at a convenient time, collect your sample safely, and arrange its transportation to the appropriate laboratory for testing.",
       primaryCta: { label: "Book a Home Lab Test", href: CONTACT },
-      secondaryCta: { label: "View Available Tests", href: "/labs" },
+      secondaryCta: { label: "Explore Lab Tests", href: "/patient-guide" },
       trustIndicator: "Extensive laboratory network across Pakistan",
       image: "lab.png",
       imageAlt: "eShifa healthcare professional collecting a blood sample from a patient at home in Pakistan",
