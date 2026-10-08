@@ -703,23 +703,18 @@ export const Navbar = () => {
 
       <div className={`px-4 sm:px-8 py-3 transition-all duration-300 ${solidNav ? "bg-white shadow-md" : "bg-transparent"}`}>
         <div className="max-w-7xl mx-auto flex items-center justify-between">
-          {/* The lockup carries the JCI seal and tagline on a white ground, so over
-              the hero it sits on a white card instead of the old white-silhouette trick. */}
-          <Link
-            href="/"
-            className={`inline-flex shrink-0 items-center rounded-xl px-1.5 py-1 transition-all duration-300 ${solidNav ? "" : "bg-white shadow-md"}`}
-          >
+          <Link href="/">
             <Image
-              src={"/eshifa-logo-jci.png"}
-              alt={"eShifa, JCI accredited. Healthcare with Compassion for All"}
-              width={1000}
-              height={511}
+              src={"/eshifa-logo.png"}
+              alt={"eShifa Logo"}
+              width={342}
+              height={428}
               priority
-              className="h-12 w-auto"
+              className={`h-14 sm:h-16 w-auto transition-all duration-300 ${solidNav ? "" : "brightness-0 invert drop-shadow-md"}`}
             />
           </Link>
 
-          <nav className="hidden xl:flex items-center gap-3 navbar-text font-medium whitespace-nowrap 2xl:gap-5">
+          <nav className="hidden xl:flex items-center gap-5 navbar-text font-medium whitespace-nowrap 2xl:gap-6">
             {navLinks.map((item) =>
               item.href === "/services" ? (
                 <ServicesDropdown key={item.href} linkClass={linkClass} location={location} />
@@ -1984,15 +1979,6 @@ export const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-6 gap-10 xl:gap-8">
           <div>
-            <Link href="/" className="mb-6 block w-fit rounded-2xl bg-white p-3 shadow-sm">
-              <Image
-                src={"/eshifa-logo-jci.png"}
-                alt={"eShifa, JCI accredited. Healthcare with Compassion for All"}
-                width={1000}
-                height={511}
-                className="h-auto w-60 max-w-full"
-              />
-            </Link>
             <h4 className="text-xl font-semibold text-white mb-4">About eShifa</h4>
             <div className="h-px bg-white/20 mb-6"></div>
             <p className="text-lg text-white/70 leading-relaxed">
