@@ -1,0 +1,4183 @@
+{
+  "source": "https://www.shifa.com.pk/patient-guide?tab=Tests+%26+Procedures",
+  "endpoint": "https://be.shifa.com.pk/api/disease-test/filter",
+  "fetchedAt": "2026-10-07T06:26:05.877Z",
+  "items": [
+    {
+      "id": 1272,
+      "slug": "a1c-test",
+      "title": "A1C test",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "اے 1 سی ٹیسٹ"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "اگر آپ ذیابیطس کے مریض ہیں تو ''اے 1 سی'' ٹیسٹ آپ کی  بیماری پر نظر رکھنے کا مؤثر طریقہ ہے۔ یہ ٹیسٹ پچھلے دو سے تین مہینوں کے دوران خون میں شوگر کی اوسط سطح کو ظاہر کرتا ہے۔ اس کے رزلٹس سے معلوم ہو گا کہ آپ کا شوگر کنٹرول کتنا اچھا ہے۔ اسے مختلف ناموں سے جانا جاتا ہے، جن میں نمایاں ''ایچ بی اے 1 سی'' ہے۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/hba1c-a1c-test/",
+              "href": "https://www.shifanews.com/hba1c-a1c-test/"
+            },
+            {
+              "text": " :مزید پڑھیے"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1274,
+      "slug": "abdominal-ultrasound",
+      "title": "Abdominal ultrasound",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "پیٹ کا الٹرا ساؤنڈ "
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "پیٹ کا الٹرا ساؤنڈ پیٹ کے اندرونی حصوں خاص طور پر پیٹ کی بڑی شریان میں پھیلاؤ کا جائزہ لینے کے لیے استعمال ہوتا ہے۔ 65 سے 75 سال کے ان افراد میں فائدہ مند ہے جو تمباکو نوشی کرتے۔ دیگر افراد میں علامات یا فیملی ہسٹری کی صورت میں یہ ٹیسٹ تجویز کیا جاتا ہے۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/abdominal-ultrasound/",
+              "href": "https://www.shifanews.com/abdominal-ultrasound/\r\n"
+            },
+            {
+              "text": ":مزید پڑھیے"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1805,
+      "slug": "alanine-aminotransferase-alt-blood-test",
+      "title": "Alanine aminotransferase (ALT) blood test",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "ایلانین ٹرانسامینیز ٹیسٹ"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "اے ایل ٹی ایک انزائم ہے جو زیادہ تر جگر میں پایا جاتا ہے۔ صحت مند جگر میں اس کی سطح عام طور پر کم رہتی ہے۔ اے ایل ٹی ٹیسٹ جگر کی صحت جانچنے کے لیے کیا جاتا ہے۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/alanine-aminotransferase-alt-blood-test/",
+              "href": "https://www.shifanews.com/alanine-aminotransferase-alt-blood-test/\r\n"
+            },
+            {
+              "text": " :مزید پڑھیے\r"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1473,
+      "slug": "alanine-transaminase-test-also-alanine-aminotransferase-alt-blood-test",
+      "title": "Alanine transaminase test (also Alanine aminotransferase (ALT) blood test)",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "ایلانین ٹرانسامینیز ٹیسٹ"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "اے ایل ٹی ایک انزائم ہے جو زیادہ تر جگر میں پایا جاتا ہے۔ صحت مند جگر میں اس کی سطح عام طور پر کم رہتی ہے۔ اے ایل ٹی ٹیسٹ جگر کی صحت جانچنے کے لیے کیا جاتا ہے۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/alanine-aminotransferase-alt-blood-test/",
+              "href": "https://www.shifanews.com/alanine-aminotransferase-alt-blood-test/"
+            },
+            {
+              "text": " :مزید پڑھیے"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1479,
+      "slug": "allergy-skin-tests",
+      "title": "Allergy skin tests",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "الرجی کے لیے سکن ٹیسٹ"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "الرجی کے لیے سکن ٹیسٹ میں جلد کے قریب ایسے مشتبہ مادے لائے جاتے ہیں جو الرجی پیدا کر سکتے ہیں۔ جلد پر ان کے ری ایکشن کا جائزہ لیا جاتا ہے۔ اس سے الرجی کی تصدیق میں مدد ملتی ہے۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/allergy-skin-test-urdu/",
+              "href": "https://www.shifanews.com/allergy-skin-test-urdu/\r\n"
+            },
+            {
+              "text": ":مزید پڑھیے"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1813,
+      "slug": "alpha-synuclein-seed-amplification-assay-also-parkinson-s-test",
+      "title": "alpha-Synuclein seed amplification assay (also Parkinson's test)",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "پارکنسنز ٹیسٹ"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "ایک نیا تشخیصی ٹیسٹ پارکنسن کی بیماری کو ابتدائی مراحل میں یا علامات ظاہر ہونے سے پہلے شناخت کرنے کی صلاحیت رکھتا ہے۔ اسے پارکنسنز ٹیسٹ یا ''الفا-سینوکلین سیڈ ایمپلیفیکیشن'' ایسے کہا جاتا ہے۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/parkinsons-test-a-synuclein-seed-amplification-assay-urdu/",
+              "href": "https://www.shifanews.com/parkinsons-test-a-synuclein-seed-amplification-assay-urdu/\r\n"
+            },
+            {
+              "text": " :مزید پڑھیے\r"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1482,
+      "slug": "alt-test-also-alanine-aminotransferase-alt-blood-test",
+      "title": "ALT test (also Alanine aminotransferase (ALT) blood test)",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "اے ایل ٹی ٹیسٹ"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "اے ایل ٹی ایک انزائم ہے جو زیادہ تر جگر میں پایا جاتا ہے۔ صحت مند جگر میں اس کی سطح عام طور پر کم رہتی ہے۔ اے ایل ٹی ٹیسٹ جگر کی صحت جانچنے کے لیے کیا جاتا ہے۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/alanine-aminotransferase-alt-blood-test/",
+              "href": "https://www.shifanews.com/alanine-aminotransferase-alt-blood-test/\r\n"
+            },
+            {
+              "text": ":مزید پڑھیے"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1815,
+      "slug": "amniocentesis",
+      "title": "Amniocentesis",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "امنیوسینٹیسس: بچہ دانی کے پانی اور خلیوں کی جانچ"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "یہ ایک تشخیصی میڈیکل پروسیجر ہے، جس میں دوران حمل بچہ دانی کے پانی اور خلیوں کا نمونہ لے کر بچے کی صحت، جینیاتی بیماریوں اور بعض دیگر طبی مسائل کی جانچ کی جاتی ہے۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/amniocentesis-tests-urdu/",
+              "href": "https://www.shifanews.com/amniocentesis-tests-urdu/\r\n"
+            },
+            {
+              "text": " :مزید پڑھیے\r"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1817,
+      "slug": "ana-test-also-antinuclear-antibody-ana-test",
+      "title": "ANA test (also Antinuclear antibody (ANA) test)",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "اے این اے ٹیسٹ: آٹو امیون بیماریوں کی تشخیص میں معاون "
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "اینٹی نیوکلیئر اینٹی باڈی ٹیسٹ (اے این اے ٹیسٹ) خون کا ایک تشخیصی ٹیسٹ ہے، جو مدافعتی نظام کی غیر معمولی سرگرمی کا پتہ لگانے اور آٹو امیون بیماریوں کی تشخیص میں مدد دیتا ہے۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/ana-test-tests-urdu/",
+              "href": "https://www.shifanews.com/ana-test-tests-urdu/\r\n"
+            },
+            {
+              "text": " :مزید پڑھیے\r"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1819,
+      "slug": "angiogram-coronary-also-coronary-angiogram",
+      "title": "Angiogram, coronary (also Coronary angiogram)",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "سی ٹی کورونری انجیوگرام: دل کی شریانوں کا جائزہ"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "سی ٹی کورونری انجیوگرام میں دل کو خون پہنچانے والی شریانوں کا تفصیلی جائزہ لیا جاتا ہے۔  یہ ٹیسٹ دل کی مختلف بیماریوں، خصوصاً شریانوں کی تنگی یا رکاوٹ کی تشخیص کے لیے استعمال ہوتا ہے۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/ct-coronary-angiogram-tests-urdu/",
+              "href": "https://www.shifanews.com/ct-coronary-angiogram-tests-urdu/\r\n"
+            },
+            {
+              "text": " :مزید پڑھیے\r"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1821,
+      "slug": "ankle-brachial-index",
+      "title": "Ankle-brachial index",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "اینکل بریکیل انڈیکس: ٹانگوں میں خون کی روانی کا ٹیسٹ"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "یہ ایک سادہ اور چند منٹ میں مکمل ہونے والا ٹیسٹ ہے، جو ٹانگوں میں خون کی روانی کا جائزہ لے کر پیریفرل آرٹری ڈیزیز کی تشخیص اور شریانوں کی رکاوٹ کا اندازہ لگانے میں مدد دیتا ہے۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/ankle-brachial-index-tests-urdu/",
+              "href": "https://www.shifanews.com/ankle-brachial-index-tests-urdu/\r\n"
+            },
+            {
+              "text": " :مزید پڑھیے\r"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1826,
+      "slug": "antinuclear-antibody-ana-test",
+      "title": "Antinuclear antibody (ANA) test",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "اے این اے ٹیسٹ: آٹو امیون بیماریوں کی تشخیص میں معاون "
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "اینٹی نیوکلیئر اینٹی باڈی ٹیسٹ (اے این اے ٹیسٹ) خون کا ایک تشخیصی ٹیسٹ ہے، جو مدافعتی نظام کی غیر معمولی سرگرمی کا پتہ لگانے اور آٹو امیون بیماریوں کی تشخیص میں مدد دیتا ہے۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/ana-test-tests-urdu/",
+              "href": "https://www.shifanews.com/ana-test-tests-urdu/\r\n"
+            },
+            {
+              "text": " :مزید پڑھیے\r"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1831,
+      "slug": "aspartate-aminotransferase-ast-blood-test",
+      "title": "Aspartate aminotransferase (AST) blood test",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "اے ایس ٹی ٹیسٹ: جگر کی صحت کا جائزہ"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "یہ جگر کی صحت جانچنے والا اہم بلڈ ٹیسٹ ہے۔ یہ دل، پٹھوں اور دیگر اعضا کو پہنچنے والے نقصان کا اندازہ لگانے اور کئی بیماریوں کی تشخیص میں بھی مدد دیتا ہے۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/ast-test-test-urdu/",
+              "href": "https://www.shifanews.com/ast-test-test-urdu/\r\n"
+            },
+            {
+              "text": " :مزید پڑھیے\r"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1502,
+      "slug": "barium-enema",
+      "title": "Barium enema",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "بیریئم انیما: بڑی آنت کا ایکسرے"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "بیریئم انیما بڑی آنت میں تبدیلیوں یا خرابیوں کی نشاندہی کے لیے کیا جاتا ہے۔ اسے کولون ایکس رے بھی کہا جاتا ہے۔ اس میں ریکٹم کے ذریعے مائع داخل کیا جاتا ہے جو آنت کی اندرونی ساخت کو واضح کرنے میں مدد دیتا ہے۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/barium-enema-urdu/",
+              "href": "https://www.shifanews.com/barium-enema-urdu/\r\n"
+            },
+            {
+              "text": ":مزید پڑھیے"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1504,
+      "slug": "basal-body-temperature",
+      "title": "Basal body temperature",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "بیسل باڈی ٹمپریچر"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "بیسل باڈی ٹمپریچرکا طریقہ حمل کی منصوبہ بندی اور منع حمل کا ایک مؤثر قدرتی طریقہ ہے۔ اسے عموماً صبح بیدار ہونے کے فوراً بعد چیک کیا جاتا ہے، جب جسمانی سرگرمی ابھی شروع نہیں ہوئی ہوتی۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/basal-body-temperature-urdu/",
+              "href": "https://www.shifanews.com/basal-body-temperature-urdu/\r\n"
+            },
+            {
+              "text": " :مزید پڑھیے"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1512,
+      "slug": "bilirubin-test",
+      "title": "Bilirubin test",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "بلیروبن بلڈ ٹیسٹ"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "بلیروبن بلڈ ٹیسٹ جگر کی کارکردگی جانچنے کے لیے کیا جاتا ہے۔ اس ٹیسٹ میں خون میں بلیروبن کی مقدار ماپی جاتی ہے۔ بلیروبن اس وقت بنتا ہے جب خون کے سرخ خلیے ٹوٹتے ہیں اور ان کا مواد جسم میں ری سائیکل ہوتا ہے۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/bilirubin-blood-test-test-urdu/",
+              "href": "https://www.shifanews.com/bilirubin-blood-test-test-urdu/\r\n"
+            },
+            {
+              "text": " :مزید پڑھیے"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1843,
+      "slug": "biopsy-bone-marrow-also-bone-marrow-biopsy",
+      "title": "Biopsy, bone marrow (also Bone marrow biopsy)",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "بون میرو بائیوپسی اور ایسپیریشن "
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "بون میرو بایوپسی اور بون میرو ایسپیریشن اہم تشخیصی ٹیسٹ ہیں، جن کے ذریعے خون اور بون میرو کی بیماریوں، بعض کینسرز اور نامعلوم وجہ کے بخار کی تشخیص اور علاج کی نگرانی کی جاتی ہے۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/bone-marrow-biopsy-and-aspiration-tests-urdu/",
+              "href": "https://www.shifanews.com/bone-marrow-biopsy-and-aspiration-tests-urdu/\r\n"
+            },
+            {
+              "text": " :مزید پڑھیے\r"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1520,
+      "slug": "biopsy-breast-also-breast-biopsy",
+      "title": "Biopsy, breast (also Breast biopsy)",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "بریسٹ بائیوپسی "
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "بریسٹ بائیوپسی ایک میڈیکل پروسیجر ہے جس میں چھاتی کے ٹشو کا نمونہ لے کر جانچ کے لیے لیبارٹری میں بھیجا جاتا ہے۔ یہ طریقہ اس وقت استعمال کیا جاتا ہے جب چھاتی میں کسی مشتبہ تبدیلی، گلٹی یا کینسر کا شبہ ہو۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/breast-biopsy-tests-urdu/",
+              "href": "https://www.shifanews.com/breast-biopsy-tests-urdu/\r\n"
+            },
+            {
+              "text": " :مزید پڑھیے"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1523,
+      "slug": "biopsy-kidney-also-kidney-biopsy",
+      "title": "Biopsy, kidney (also Kidney biopsy)",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "گردے کی بائیوپسی"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "گردے کی بائیوپسی ایک میڈیکل پروسیجر ہے جو گردے کی بیماری کی تشخیص اور اس کی شدت جاننے کے لیے کیا جاتا ہے۔ بعض اوقات یہ علاج کی مانیٹرنگ کے لیے بھی استعمال ہوتا ہے۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/kidney-biopsy-urdu/",
+              "href": "https://www.shifanews.com/kidney-biopsy-urdu/\r\n"
+            },
+            {
+              "text": " :مزید پڑھیے"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1350,
+      "slug": "biopsy-needle-also-needle-biopsy",
+      "title": "Biopsy, needle (also Needle biopsy)",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "نیڈل بائیوپسی"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "نیڈل بائیوپسی ایک میڈیکل پروسیجر ہے جس میں جسم سے سوئی کے ذریعے خلیوں یا ٹشو کا چھوٹا سا نمونہ حاصل کیا جاتا ہے۔ اسے لیبارٹری میں تجزیے کے لیے بھیجا جاتا ہے تاکہ بیماری کی تشخیص کی جا سکے۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/needle-biopsy-urdu/",
+              "href": "https://www.shifanews.com/needle-biopsy-urdu/\r\n"
+            },
+            {
+              "text": " :مزید پڑھیے"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1526,
+      "slug": "biopsy-prostate-also-prostate-biopsy",
+      "title": "Biopsy, prostate (also Prostate biopsy)",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "پروسٹیٹ بائیوپسی"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "پروسٹیٹ بائیوپسی  میں پروسٹیٹ سے ٹشوز کے نمونے حاصل کیے جاتے ہیں۔ اس کے لیے باریک سوئی استعمال کی جاتی ہے۔ یہ پروسیجر یورولوجسٹ انجام دیتے ہیں"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/prostate-biopsy-tests-urdu/",
+              "href": "https://www.shifanews.com/prostate-biopsy-tests-urdu/\r\n"
+            },
+            {
+              "text": " :مزید پڑھیے"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1528,
+      "slug": "biopsy-skin-also-skin-biopsy",
+      "title": "Biopsy, skin (also Skin biopsy)",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "سکن بائیوپسی"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "سکن بائیوپسی ایک میڈیکل پروسیجر ہے جس میں جسم سے خلیے یا جلد کا نمونہ لیا جاتا ہے۔ اس کا مقصد مختلف جلدی بیماریوں اور کیفیات کی درست تشخیص، یا انہیں خارج از امکان قرار دینا ہوتا ہے۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/skin-biopsy-test-urdu/",
+              "href": "https://www.shifanews.com/skin-biopsy-test-urdu/\r\n"
+            },
+            {
+              "text": ":مزید پڑھیے"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1534,
+      "slug": "blood-pressure-measurement-also-blood-pressure-test",
+      "title": "Blood pressure measurement (also Blood pressure test)",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "بلڈ پریشر ٹیسٹ"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "بلڈ پریشر ٹیسٹ میں اس وقت شریانوں کے اندر خون کے دباؤ کی پیمائش کی جاتی ہے جب دل خون پمپ کر رہا ہوتا ہے۔ یہ ٹیسٹ عام معائنے کا حصہ ہوتا ہے، اور ہائی بلڈ پریشر کی تشخیص کے لیے بھی کیا جاتا ہے۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/blood-pressure-test-urdu/",
+              "href": "https://www.shifanews.com/blood-pressure-test-urdu/\r\n"
+            },
+            {
+              "text": " :مزید پڑھیے"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1846,
+      "slug": "blood-pressure-monitoring-also-blood-pressure-test",
+      "title": "Blood pressure monitoring (also Blood pressure test)",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "بلڈ پریشر ٹیسٹ"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "بلڈ پریشر ٹیسٹ میں اس وقت شریانوں کے اندر خون کے دباؤ کی پیمائش کی جاتی ہے جب دل خون پمپ کر رہا ہوتا ہے۔ یہ ٹیسٹ عام معائنے کا حصہ ہوتا ہے، اور ہائی بلڈ پریشر کی تشخیص کے لیے بھی کیا جاتا ہے۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/blood-pressure-test-urdu/",
+              "href": "https://www.shifanews.com/blood-pressure-test-urdu/\r\n"
+            },
+            {
+              "text": " :مزید پڑھیے\r"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1847,
+      "slug": "blood-pressure-reading-also-blood-pressure-test",
+      "title": "Blood pressure reading (also Blood pressure test)",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "بلڈ پریشر ٹیسٹ"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "بلڈ پریشر ٹیسٹ میں اس وقت شریانوں کے اندر خون کے دباؤ کی پیمائش کی جاتی ہے جب دل خون پمپ کر رہا ہوتا ہے۔ یہ ٹیسٹ عام معائنے کا حصہ ہوتا ہے، اور ہائی بلڈ پریشر کی تشخیص کے لیے بھی کیا جاتا ہے۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/blood-pressure-test-urdu/",
+              "href": "https://www.shifanews.com/blood-pressure-test-urdu/\r\n"
+            },
+            {
+              "text": " :مزید پڑھیے\r"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1848,
+      "slug": "blood-pressure-test",
+      "title": "Blood pressure test",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "بلڈ پریشر ٹیسٹ"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "بلڈ پریشر ٹیسٹ میں اس وقت شریانوں کے اندر خون کے دباؤ کی پیمائش کی جاتی ہے جب دل خون پمپ کر رہا ہوتا ہے۔ یہ ٹیسٹ عام معائنے کا حصہ ہوتا ہے، اور ہائی بلڈ پریشر کی تشخیص کے لیے بھی کیا جاتا ہے۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/blood-pressure-test-urdu/",
+              "href": "https://www.shifanews.com/blood-pressure-test-urdu/\r\n"
+            },
+            {
+              "text": " :مزید پڑھیے\r"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1850,
+      "slug": "blood-urea-nitrogen-bun-test",
+      "title": "Blood urea nitrogen (BUN) test",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "بلڈ یوریا نائٹروجن ٹیسٹ"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "بلڈ یوریا نائٹروجن خون کا ایک عام ٹیسٹ ہے جو گردوں کی کارکردگی کے بارے میں اہم معلومات فراہم کرتا ہے۔ یہ ٹیسٹ خون میں یوریا نائٹروجن کی مقدار جانچتا ہے۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/blood-urea-nitrogen-bun-test-urdu/",
+              "href": "https://www.shifanews.com/blood-urea-nitrogen-bun-test-urdu/\r\n"
+            },
+            {
+              "text": " :مزید پڑھیے\r"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1540,
+      "slug": "bone-density-test",
+      "title": "Bone density test",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "بون ڈینسٹی ٹیسٹ"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "ہڈیوں کی کثافت کا ٹیسٹ یہ دیکھنے کے لیے کیا جاتا ہے کہ ہڈیاں کتنی مضبوط ہیں۔ یہ ٹیسٹ ریڑھ کی ہڈی، کولہا یا بازو کی ہڈی میں کیلشیم اور معدنیات کی مقدار ناپتا ہے تاکہ آسٹیوپوروسس جیسی بیماری کا پتہ لگایا جا سکے۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/bone-density-test/",
+              "href": "https://www.shifanews.com/bone-density-test/\r\n"
+            },
+            {
+              "text": " :مزید پڑھیے"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1852,
+      "slug": "bone-marrow-biopsy",
+      "title": "Bone marrow biopsy",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "بون میرو بائیوپسی اور ایسپیریشن "
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "بون میرو بایوپسی اور بون میرو ایسپیریشن اہم تشخیصی ٹیسٹ ہیں، جن کے ذریعے خون اور بون میرو کی بیماریوں، بعض کینسرز اور نامعلوم وجہ کے بخار کی تشخیص اور علاج کی نگرانی کی جاتی ہے۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/bone-marrow-biopsy-and-aspiration-tests-urdu/",
+              "href": "https://www.shifanews.com/bone-marrow-biopsy-and-aspiration-tests-urdu/\r\n"
+            },
+            {
+              "text": " :مزید پڑھیے\r"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1858,
+      "slug": "bone-marrow-examination-also-bone-marrow-biopsy",
+      "title": "Bone marrow examination (also Bone marrow biopsy)",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "بون میرو بائیوپسی اور ایسپیریشن "
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "بون میرو بایوپسی اور بون میرو ایسپیریشن اہم تشخیصی ٹیسٹ ہیں، جن کے ذریعے خون اور بون میرو کی بیماریوں، بعض کینسرز اور نامعلوم وجہ کے بخار کی تشخیص اور علاج کی نگرانی کی جاتی ہے۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/bone-marrow-biopsy-and-aspiration-tests-urdu/",
+              "href": "https://www.shifanews.com/bone-marrow-biopsy-and-aspiration-tests-urdu/\r\n"
+            },
+            {
+              "text": " :مزید پڑھیے\r"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1541,
+      "slug": "bone-scan",
+      "title": "Bone scan",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "بون سکین"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "بون سکین نیوکلیئر امیجنگ کے ذریعے ہڈیوں کی مختلف بیماریوں کی تشخیص اور مانیٹرنگ میں مدد دیتا ہے۔ یہ سکین اس کینسر کی نشاندہی میں بھی اہم کردار ادا کرتا ہے جو اپنی اصل جگہ سے ہڈیوں تک پھیل چکا ہو۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/bone-scan-urdu/",
+              "href": "https://www.shifanews.com/bone-scan-urdu/\r\n"
+            },
+            {
+              "text": " :مزید پڑھیے"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1908,
+      "slug": "brain-magnetic-resonance-imaging",
+      "title": "Brain magnetic resonance imaging",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "برین ایم آر آئی"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "دماغ سے متعلق مختلف علامات اور بیماریوں کی وجہ جاننے کے لیے برین ایم آر آئی کیا جاتا ہے۔ یہ دماغ کے مختلف حصوں کی واضح اور تفصیلی تصاویر فراہم کرتا ہے۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/brain-mri-tests-urdu/",
+              "href": "https://www.shifanews.com/brain-mri-tests-urdu/\r\n"
+            },
+            {
+              "text": " :مزید پڑھیے\r"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1912,
+      "slug": "brca-gene-test",
+      "title": "BRCA gene test",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "بی آر سی اے جین ٹیسٹ: بریسٹ اور اوورین کینسر کے خطرے کا جائزہ"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "بی آر سی اے جین ٹیسٹ سے معلوم کیا جاتا ہے کہ جین میں ایسی تبدیلیاں موجود ہیں یا نہیں، جو بریسٹ اور اوورین کینسر کے خطرے کو بڑھا سکتی ہیں۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/brca-gene-test-for-breast-and-ovarian-cancer-risk-urdu-test/",
+              "href": "https://www.shifanews.com/brca-gene-test-for-breast-and-ovarian-cancer-risk-urdu-test/\r\n"
+            },
+            {
+              "text": " :مزید پڑھیے\r"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1914,
+      "slug": "brca-gene-test-for-breast-and-ovarian-cancer-risk-also-brca-gene-test",
+      "title": "BRCA gene test for breast and ovarian cancer risk (also BRCA gene test)",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "بی آر سی اے جین ٹیسٹ: بریسٹ اور اوورین کینسر کے خطرے کا جائزہ"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "بی آر سی اے جین ٹیسٹ سے معلوم کیا جاتا ہے کہ جین میں ایسی تبدیلیاں موجود ہیں یا نہیں، جو بریسٹ اور اوورین کینسر کے خطرے کو بڑھا سکتی ہیں۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/brca-gene-test-for-breast-and-ovarian-cancer-risk-urdu-test/",
+              "href": "https://www.shifanews.com/brca-gene-test-for-breast-and-ovarian-cancer-risk-urdu-test/\r\n"
+            },
+            {
+              "text": " :مزید پڑھیے\r"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1916,
+      "slug": "breast-biopsy",
+      "title": "Breast biopsy",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "بریسٹ بائیوپسی "
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "بریسٹ بائیوپسی ایک میڈیکل پروسیجر ہے جس میں چھاتی کے ٹشو کا نمونہ لے کر جانچ کے لیے لیبارٹری میں بھیجا جاتا ہے۔ یہ طریقہ اس وقت استعمال کیا جاتا ہے جب چھاتی میں کسی مشتبہ تبدیلی، گلٹی یا کینسر کا شبہ ہو۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/breast-biopsy-tests-urdu/",
+              "href": "https://www.shifanews.com/breast-biopsy-tests-urdu/\r\n"
+            },
+            {
+              "text": " :مزید پڑھیے\r"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1860,
+      "slug": "breast-cancer-risk-assessment",
+      "title": "Breast cancer risk assessment",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "بریسٹ کینسر کے ممکنہ خطرے کا جائزہ"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "اس جائزے کا مقصد یہ اندازہ لگانا ہے کہ مستقبل میں آپ کو بریسٹ کینسر ہونے کا امکان کتنا ہے۔ اس کے نتائج سکریننگ، جینیاتی جانچ اور خطرہ کم کرنے کے لیے مناسب علاج کے انتخاب میں رہنمائی کرتے ہیں۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/breast-cancer-risk-assessment-tests-urdu/",
+              "href": "https://www.shifanews.com/breast-cancer-risk-assessment-tests-urdu/\r\n"
+            },
+            {
+              "text": " :مزید پڑھیے\r"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1862,
+      "slug": "breast-mri",
+      "title": "Breast MRI",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "بریسٹ ایم آر آئی"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "بریسٹ ایم آر آئی چھاتی کی تفصیلی تصاویر بنانے والا ٹیسٹ ہے، جو کینسر کی تشخیص، اس کے پھیلاؤ کا جائزہ لینے اور زیادہ خطرے والی خواتین کی سکریننگ میں مددگار ثابت ہوتا ہے۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/breast-mri-test-urdu/",
+              "href": "https://www.shifanews.com/breast-mri-test-urdu/\r\n"
+            },
+            {
+              "text": " :مزید پڑھیے\r"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1557,
+      "slug": "breast-self-exam-for-breast-awareness",
+      "title": "Breast self-exam for breast awareness",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "چھاتی کا از خود معائنہ"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "چھاتی کا از خود معائنہ وہ طریقہ ہے جس میں فرد اپنی چھاتیوں کا خود جائزہ لیتا ہے۔ اس عمل میں ہاتھوں کی مدد سے چھاتیوں کی شکل، ساخت اور محسوس ہونے والی تبدیلیوں کو نوٹ کیا جاتا ہے۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/breast-self-exam-urdu/",
+              "href": "https://www.shifanews.com/breast-self-exam-urdu/\r\n"
+            },
+            {
+              "text": " :مزید پڑھیے"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1920,
+      "slug": "breast-tomosynthesis-also-3d-mammogram",
+      "title": "Breast tomosynthesis (also 3D mammogram)",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "بریسٹ ٹوموسنتھیسس: تھری ڈی میموگرام"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "تھری ڈی میموگرام چھاتی کی تفصیلی تصاویر فراہم کرنے والا امیجنگ ٹیسٹ ہے۔ یہ بریسٹ کینسر کی سکریننگ اور چھاتی میں مشتبہ تبدیلیوں کی بہتر نشاندہی میں مدد دیتا ہے۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/breast-tomosynthesis-3d-mammogram-tests-urdu/",
+              "href": "https://www.shifanews.com/breast-tomosynthesis-3d-mammogram-tests-urdu/\r\n"
+            },
+            {
+              "text": " :مزید پڑھیے\r"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1560,
+      "slug": "bronchoscopy",
+      "title": "Bronchoscopy",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "برونکوسکوپی"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "برونکوسکوپی ایک میڈیکل پروسیجر ہے جس کے ذریعے پھیپھڑوں اور سانس کی نالیوں کا معائنہ کیا جاتا ہے۔ پروسیجر کے دوران ایک باریک نالی (برونکوسکوپ) ناک یا منہ کے راستے پھیپھڑوں تک پہنچائی جاتی ہے۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/bronchoscopy-tests-urdu/",
+              "href": "https://www.shifanews.com/bronchoscopy-tests-urdu/\r\n"
+            },
+            {
+              "text": " :مزید پڑھیے"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1561,
+      "slug": "bun-test-also-blood-urea-nitrogen-test",
+      "title": "BUN test (also Blood urea nitrogen test)",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "بلڈ یوریا نائٹروجن ٹیسٹ"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "بلڈ یوریا نائٹروجن خون کا ایک عام ٹیسٹ ہے جو گردوں کی کارکردگی کے بارے میں اہم معلومات فراہم کرتا ہے۔ یہ ٹیسٹ خون میں یوریا نائٹروجن کی مقدار جانچتا ہے۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/blood-urea-nitrogen-bun-test-urdu/",
+              "href": "https://www.shifanews.com/blood-urea-nitrogen-bun-test-urdu/\r\n"
+            },
+            {
+              "text": " :مزید پڑھیے"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1278,
+      "slug": "ca-125-test",
+      "title": "CA 125 test",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "سی اے 125 ٹیسٹ "
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "سی اے 125 ٹیسٹ میں خون میں کینسر اینٹیجن 125 کی مقدار کا جائزہ لیا جاتا ہے۔ یہ ٹیسٹ بیضہ دانی کے کینسر کی نگرانی یا خطرے والی خواتین کی ابتدائی تشخیص کے لیے استعمال ہوتا ہے۔ یہ عام سکریننگ کیلئے مؤثر نہیں، کیونکہ حیض، رحم کی رسولیاں اور دیگر طبی کیفیات بھی اس کی سطح بڑھا سکتی ہیں۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/ca-125-test/",
+              "href": "https://www.shifanews.com/ca-125-test/\r\n"
+            },
+            {
+              "text": ":مزید پڑھیے"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1922,
+      "slug": "capsule-endoscopy",
+      "title": "Capsule endoscopy",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "کیپسول اینڈو سکوپی"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "کیپسول اینڈو سکوپی میں ایک چھوٹے وائرلیس کیمرے والے کیپسول کو نگلا جاتا ہے جو ہاضمے کی نالی کے اندر سفر کرتے ہوئے ہزاروں تصاویر لیتا ہے۔ یہ خاص طور پر چھوٹی آنت کو دیکھنے کے لیے مفید ہے، جہاں عام اینڈو سکوپی پہنچنا مشکل ہوتا ہے۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/capsule-endoscopy/",
+              "href": "https://www.shifanews.com/capsule-endoscopy/\r\n"
+            },
+            {
+              "text": " :مزید پڑھیے\r"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1354,
+      "slug": "capsule-enteroscopy-also-capsule-endoscopy",
+      "title": "Capsule enteroscopy (also Capsule endoscopy)",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "کیپسول اینڈو سکوپی"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "کیپسول اینڈو سکوپی میں ایک چھوٹے وائرلیس کیمرے والے کیپسول کو نگلا جاتا ہے جو ہاضمے کی نالی کے اندر سفر کرتے ہوئے ہزاروں تصاویر لیتا ہے۔ یہ خاص طور پر چھوٹی آنت کو دیکھنے کے لیے مفید ہے، جہاں عام اینڈو سکوپی پہنچنا مشکل ہوتا ہے۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/capsule-endoscopy/",
+              "href": "https://www.shifanews.com/capsule-endoscopy/ \r\n"
+            },
+            {
+              "text": " :مزید پڑھیے"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1564,
+      "slug": "cat-scan-also-ct-scan",
+      "title": "CAT scan (also CT scan)",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "سی ٹی سکین"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "سی ٹی سکین ایک امیجنگ ٹیسٹ ہے جو جسم کی تفصیلی تصاویر بنانے کے لیے استعمال ہوتا ہے۔ سی ٹی سکین کی تصاویر عام ایکس رے کے مقابلے میں کہیں زیادہ تفصیل فراہم کرتی ہیں۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/ct-scan-tests-urdu/",
+              "href": "https://www.shifanews.com/ct-scan-tests-urdu/\r\n"
+            },
+            {
+              "text": " :مزید پڑھیے"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1358,
+      "slug": "cbc-also-complete-blood-count",
+      "title": "CBC (also Complete blood count)",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "کمپلیٹ بلڈ کاؤنٹ (سی بی سی) "
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "سی بی سی ٹیسٹ خون کا ٹیسٹ ہے جو مجموعی صحت کا جائزہ لینے، اور انیمیا، انفیکشن یا لیوکیمیا جیسے امراض کی تشخیص میں مدد دیتا ہے۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/complete-blood-count-cbc/",
+              "href": "https://www.shifanews.com/complete-blood-count-cbc/\r\n"
+            },
+            {
+              "text": ":مزید پڑھیے"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1360,
+      "slug": "cervical-cytology-also-pap-smear",
+      "title": "Cervical cytology (also Pap smear)",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "پیپ سمیئر: سرویکل کینسر کا ایک اہم ٹیسٹ"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "پیپ سمیئر ایک پروسیجر ہے جس میں سرویکس کے خلیوں کی جانچ کی جاتی ہے۔ یہ اکثر سرویکل کینسر کی جانچ کے لیے استعمال ہوتا ہے۔ پیپ ٹیسٹ ایسے خلیے بھی تلاش کر لیتا ہے جو مستقبل میں کینسر بن سکتے ہیں۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/pap-smear-urdu/",
+              "href": "https://www.shifanews.com/pap-smear-urdu/\r\n"
+            },
+            {
+              "text": ":مزید پڑھیے"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1363,
+      "slug": "chest-x-rays",
+      "title": "Chest X-rays",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "سینے کا ایکسرے"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "سینے میں درد، سینے کی چوٹ، یا سانس پھولنے کی شکایت ہو تو عموماً سینے کا ایکسرے کیا جاتا ہے۔ اس سے دل کی بیماری، پھیپھڑا سکڑنے، نمونیا، پسلی ٹوٹنے، کینسر، یا کسی اور بیماری کے بارے میں معلومات ملتی ہیں۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/chest-x-ray-urdu/",
+              "href": "https://www.shifanews.com/chest-x-ray-urdu/\r\n"
+            },
+            {
+              "text": ":مزید پڑھیے"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1930,
+      "slug": "cholescintigraphy-also-hida-scan",
+      "title": "Cholescintigraphy (also HIDA scan)",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "ہائڈا سکین: جگر، گال بلیڈر اور بائل ڈکٹس کا امیجنگ ٹیسٹ"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "گال بلیڈر کی سوزش یا بائل ڈکٹ میں رکاوٹ کی تشخیص کے لیے ہائڈا سکین کیا جا سکتا ہے۔ یہ بائل کے بہاؤ اور گال بلیڈر کی کارکردگی بھی جانچتا ہے۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/cholescintigraphy-hida-scan-tests-urdu/",
+              "href": "https://www.shifanews.com/cholescintigraphy-hida-scan-tests-urdu/\r\n"
+            },
+            {
+              "text": " :مزید پڑھیے\r"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1630,
+      "slug": "cholesterol-test",
+      "title": "Cholesterol test",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "کولیسٹرول ٹیسٹ"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": " لپڈ پروفائل خون کا ٹیسٹ ہے جس سے خون میں کولیسٹرول اور ٹرائی گلیسرائیڈز کی مقدار معلوم کی جاتی ہے۔ یہ ٹیسٹ شریانوں کے تنگ یا بند ہونے کے خطرے کا اندازہ لگانے میں مدد دیتا ہے۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/lipid-profile-cholesterol-test/",
+              "href": "https://www.shifanews.com/lipid-profile-cholesterol-test/"
+            },
+            {
+              "text": " :مزید پڑھیے\r"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1932,
+      "slug": "choline-c-11-pet-scan",
+      "title": "Choline C-11 PET scan",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "کولین سی-11 پی ای ٹی سکین"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "کولین سی-11 پی ای ٹی سکین جسم میں تیزی سے بڑھنے والے خلیوں کی نشاندہی کرتا ہے اور بالخصوص دوبارہ ہونے والے پروسٹیٹ کینسر کا پتا لگانے میں مدد دیتا ہے۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/choline-c-11-pet-scan-tests-urdu/",
+              "href": "https://www.shifanews.com/choline-c-11-pet-scan-tests-urdu/\r\n"
+            },
+            {
+              "text": " :مزید پڑھیے\r"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1938,
+      "slug": "cologuard-test-also-stool-dna-test",
+      "title": "Cologuard test (also Stool DNA test)",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "پاخانے کا ڈی این اے ٹیسٹ"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "پاخانے کا ڈی این اے ٹیسٹ  بڑی آنت کے کینسر کی ابتدائی علامات تلاش کرنے کے لیے کیا جاتا ہے۔ اس ٹیسٹ میں پاخانے کے نمونے کا تجزیہ کیا جاتا ہے تاکہ خلیوں کے ڈی این اے میں تبدیلیاں دیکھی جا سکیں۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/stool-dna-test-tests-urdu/",
+              "href": "https://www.shifanews.com/stool-dna-test-tests-urdu/\r\n"
+            },
+            {
+              "text": " :مزید پڑھیے\r"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1869,
+      "slug": "computerized-tomography-coronary-angiogram-also-ct-coronary-angiogram",
+      "title": "Computerized tomography coronary angiogram (also CT coronary angiogram)",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "سی ٹی کورونری انجیوگرام: دل کی شریانوں کا جائزہ"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "سی ٹی کورونری انجیوگرام میں دل کو خون پہنچانے والی شریانوں کا تفصیلی جائزہ لیا جاتا ہے۔  یہ ٹیسٹ دل کی مختلف بیماریوں، خصوصاً شریانوں کی تنگی یا رکاوٹ کی تشخیص کے لیے استعمال ہوتا ہے۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/ct-coronary-angiogram-tests-urdu/",
+              "href": "https://www.shifanews.com/ct-coronary-angiogram-tests-urdu/\r\n"
+            },
+            {
+              "text": " :مزید پڑھیے\r"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1870,
+      "slug": "coronary-angiogram",
+      "title": "Coronary angiogram",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "سی ٹی کورونری انجیوگرام: دل کی شریانوں کا جائزہ"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "سی ٹی کورونری انجیوگرام میں دل کو خون پہنچانے والی شریانوں کا تفصیلی جائزہ لیا جاتا ہے۔  یہ ٹیسٹ دل کی مختلف بیماریوں، خصوصاً شریانوں کی تنگی یا رکاوٹ کی تشخیص کے لیے استعمال ہوتا ہے۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/ct-coronary-angiogram-tests-urdu/",
+              "href": "https://www.shifanews.com/ct-coronary-angiogram-tests-urdu/\r\n"
+            },
+            {
+              "text": " :مزید پڑھیے\r"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1946,
+      "slug": "coronary-calcium-scan",
+      "title": "Coronary calcium scan",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "کورونری کیلشیم سکین: کورونری آرٹری ڈیزیز کے خطرے کی جانچ"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "دل کی شریانوں میں کیلشیم جمع ہونا کورونری آرٹری ڈیزیز کی علامت ہو سکتا ہے۔ کورونری کیلشیم سکین اس بیماری اور ہارٹ اٹیک کے ممکنہ خطرے کا اندازہ لگانے میں مدد دیتا ہے۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/coronary-calcium-scan-tests-urdu/",
+              "href": "https://www.shifanews.com/coronary-calcium-scan-tests-urdu/\r\n"
+            },
+            {
+              "text": " :مزید پڑھیے\r"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1634,
+      "slug": "coronary-ct-angiogram-also-ct-coronary-angiogram",
+      "title": "Coronary CT angiogram (also CT coronary angiogram)",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "سی ٹی کورونری انجیوگرام: دل کی شریانوں کا جائزہ"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "سی ٹی کورونری انجیوگرام میں دل کو خون پہنچانے والی شریانوں کا تفصیلی جائزہ لیا جاتا ہے۔  یہ ٹیسٹ دل کی مختلف بیماریوں، خصوصاً شریانوں کی تنگی یا رکاوٹ کی تشخیص کے لیے استعمال ہوتا ہے۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/ct-coronary-angiogram-tests-urdu/",
+              "href": "https://www.shifanews.com/ct-coronary-angiogram-tests-urdu/"
+            },
+            {
+              "text": " :مزید پڑھیے\r"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1590,
+      "slug": "creatinine-test",
+      "title": "Creatinine test",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "کریٹینائن ٹیسٹ"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "کریٹینائن ایک کیمیائی مادہ ہے جو پٹھوں میں توانائی بنانے کے عمل کے دوران پیدا ہوتا ہے۔ گردے اسے پیشاب کے ذریعے جسم سے خارج کر دیتے ہیں۔ خون یا پیشاب میں اس کی مقدار سے گردوں کی کارکردگی کا اندازہ لگایا جا سکتا ہے۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/creatinine-test-tests-urdu/",
+              "href": "https://www.shifanews.com/creatinine-test-tests-urdu/\r\n"
+            },
+            {
+              "text": ":مزید پڑھیے"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1637,
+      "slug": "crp-test-also-c-reactive-protein-test",
+      "title": "CRP test (also C-reactive protein test)",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "سی- ری ایکٹو پروٹین ٹیسٹ"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "سی- ری ایکٹو پروٹین (سی آر پی) جگر میں بننے والی ایک پروٹین ہے۔ جسم میں سوزش ہونے پرخون میں اس کی سطح بڑھ جاتی ہے۔ اس ٹیسٹ سے سی- ری ایکٹو پروٹین کی مقدار معلوم کی جا سکتی ہے۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/c-reactive-protein-test-crp-tests-urdu/",
+              "href": "https://www.shifanews.com/c-reactive-protein-test-crp-tests-urdu/"
+            },
+            {
+              "text": " :مزید پڑھیے\r"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1871,
+      "slug": "ct-coronary-angiogram",
+      "title": "CT coronary angiogram",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "سی ٹی کورونری انجیوگرام: دل کی شریانوں کا جائزہ"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "سی ٹی کورونری انجیوگرام میں دل کو خون پہنچانے والی شریانوں کا تفصیلی جائزہ لیا جاتا ہے۔  یہ ٹیسٹ دل کی مختلف بیماریوں، خصوصاً شریانوں کی تنگی یا رکاوٹ کی تشخیص کے لیے استعمال ہوتا ہے۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/ct-coronary-angiogram-tests-urdu/",
+              "href": "https://www.shifanews.com/ct-coronary-angiogram-tests-urdu/\r\n"
+            },
+            {
+              "text": " :مزید پڑھیے"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1592,
+      "slug": "ct-scan",
+      "title": "CT scan",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "سی ٹی سکین"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "سی ٹی سکین ایک امیجنگ ٹیسٹ ہے جو جسم کی تفصیلی تصاویر بنانے کے لیے استعمال ہوتا ہے۔ سی ٹی سکین کی تصاویر عام ایکس رے کے مقابلے میں کہیں زیادہ تفصیل فراہم کرتی ہیں۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/ct-scan-tests-urdu/",
+              "href": "https://www.shifanews.com/ct-scan-tests-urdu/\r\n"
+            },
+            {
+              "text": ":مزید پڑھیے"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1597,
+      "slug": "densitometry-also-bone-density-test",
+      "title": "Densitometry (also Bone density test)",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "بون ڈینسٹی ٹیسٹ"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "ہڈیوں کی کثافت کا ٹیسٹ یہ دیکھنے کے لیے کیا جاتا ہے کہ ہڈیاں کتنی مضبوط ہیں۔ یہ ٹیسٹ ریڑھ کی ہڈی، کولہا یا بازو کی ہڈی میں کیلشیم اور معدنیات کی مقدار ناپتا ہے تاکہ آسٹیوپوروسس جیسی بیماری کا پتہ لگایا جا سکے۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/bone-density-test/",
+              "href": "https://www.shifanews.com/bone-density-test/\r\n"
+            },
+            {
+              "text": ":مزید پڑھیے"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1288,
+      "slug": "dexa-scan-also-bone-density-test",
+      "title": "DEXA scan (also Bone density test)",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "بون ڈینسٹی ٹیسٹ"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "ہڈیوں کی کثافت کا ٹیسٹ یہ دیکھنے کے لیے کیا جاتا ہے کہ ہڈیاں کتنی مضبوط ہیں۔ یہ ٹیسٹ ریڑھ کی ہڈی، کولہا یا بازو کی ہڈی میں کیلشیم اور معدنیات کی مقدار ناپتا ہے تاکہ آسٹیوپوروسس جیسی بیماری کا پتہ لگایا جا سکے۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/bone-density-test/",
+              "href": "https://www.shifanews.com/bone-density-test/\r\n"
+            },
+            {
+              "text": ":مزید پڑھیے"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1373,
+      "slug": "discogram",
+      "title": "Discogram",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "ڈسکو گرام"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "ڈسکو گرام امیجنگ ٹیسٹ ہے جو کمر درد کی وجہ معلوم کرنے کے لیے کیا جاتا ہے۔ اس سے یہ تعین کرنے میں مدد ملتی ہے کہ ریڑھ کی ہڈی کی کون سی ڈسک درد کی وجہ بن رہی ہے۔ اسے ڈسکوگرافی بھی کہا جاتا ہے۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/discogram-eng/",
+              "href": "https://www.shifanews.com/discogram-eng/\r\n"
+            },
+            {
+              "text": ":مزید پڑھیے"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1603,
+      "slug": "dual-energy-x-ray-absorptiometry-also-bone-density-test",
+      "title": "Dual-energy x-ray absorptiometry (also Bone density test)",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "بون ڈینسٹی ٹیسٹ"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "ہڈیوں کی کثافت کا ٹیسٹ یہ دیکھنے کے لیے کیا جاتا ہے کہ ہڈیاں کتنی مضبوط ہیں۔ یہ ٹیسٹ ریڑھ کی ہڈی، کولہا یا بازو کی ہڈی میں کیلشیم اور معدنیات کی مقدار ناپتا ہے تاکہ آسٹیوپوروسس جیسی بیماری کا پتہ لگایا جا سکے۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/bone-density-test/",
+              "href": "https://www.shifanews.com/bone-density-test/\r\n"
+            },
+            {
+              "text": " :مزید پڑھیے"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1643,
+      "slug": "ecg-also-electrocardiogram",
+      "title": "ECG (also Electrocardiogram)",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "الیکٹرو کارڈیو گرام (ای سی جی)"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "ای سی جی دل کی برقی سرگرمی کو ریکارڈ کر کے دھڑکنوں کا تجزیہ کرتا ہے۔ اس کے نتائج دل کے دوروں اور بے ترتیب دھڑکنوں (اریتھمیا) کی تشخیص میں اہم کردار ادا کرتے ہیں۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/electrocardiogram-ecg-tests-urdu/",
+              "href": "https://www.shifanews.com/electrocardiogram-ecg-tests-urdu/"
+            },
+            {
+              "text": " :مزید پڑھیے\r"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1644,
+      "slug": "echocardiogram",
+      "title": "Echocardiogram",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "ایکو کارڈیو گرام"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "ایکو کارڈیو گرام  ایک تشخیصی ٹیسٹ ہے جس میں دل کے اندر خون کے بہاؤ، والوز کی کارکردگی اور دل کی مجموعی ساخت کا جائزہ لیا جاتا ہے۔ اسے ہارٹ الٹراساؤنڈ اور ہارٹ سونوگرام بھی کہا جاتا ہے۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/echocardiogram-tests-urdu/",
+              "href": "https://www.shifanews.com/echocardiogram-tests-urdu/"
+            },
+            {
+              "text": " :مزید پڑھیے\r"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1649,
+      "slug": "emg-also-electromyography",
+      "title": "EMG (also Electromyography )",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "الیکٹرو مایوگرافی: اعصاب اور پٹھوں کا ٹیسٹ"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "اس ٹیسٹ  میں پٹھوں اور انہیں کنٹرول کرنے والے اعصابی خلیوں کا جائزہ لیا جاتا ہے۔ اس سے اعصابی خرابی، پٹھوں کی کمزوری یا اعصاب اور پٹھوں کے درمیان سگنل کی ترسیل میں مسائل سامنے آ جاتے ہیں۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/electromyography-emg-tests-urdu/",
+              "href": "https://www.shifanews.com/electromyography-emg-tests-urdu/"
+            },
+            {
+              "text": " :مزید پڑھیے\r"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1377,
+      "slug": "endoscopic-ultrasound",
+      "title": "Endoscopic ultrasound",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "اینڈو سکوپک الٹراساؤنڈ"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "یہ ایک میڈیکل پروسیجر ہے جو نظام انہضام، قریبی اعضاء اور ٹشوز سے متعلق بیماریوں کی تشخیص میں مدد فراہم کرتا ہے۔ اسے بعض اوقات سیال مادہ نکالنے یا کسی مخصوص حصے میں دوا پہنچانے کے لیے بھی استعمال کیا جاتا ہے۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/endoscopic-ultrasound-urdu/",
+              "href": "https://www.shifanews.com/endoscopic-ultrasound-urdu/\r\n"
+            },
+            {
+              "text": ":مزید پڑھیے"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1612,
+      "slug": "exercise-stress-test-also-stress-test",
+      "title": "Exercise stress test (also Stress test)",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "ایکسرسائز سٹریس ٹیسٹ"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "ایکسرسائز سٹریس ٹیسٹ میں اس بات کا جائزہ لیا جاتا ہے کہ جسمانی مشقت کے دوران دل کیسے کام کرتا ہے۔ ورزش کے دوران دل کی رفتار اور پمپنگ بڑھ جاتی ہے جس سے خون کے بہاؤ میں تبدیلیاں واضح ہو جاتی ہیں۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/exercise-stress-test-tests-urdu/",
+              "href": "https://www.shifanews.com/exercise-stress-test-tests-urdu/\r\n"
+            },
+            {
+              "text": ":مزید پڑھیے"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1655,
+      "slug": "ferritin-test",
+      "title": "Ferritin test",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "فیریٹِن ٹیسٹ: آئرن کے ذخیرے کا اندازہ"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "فیریٹِن خون کی ایک پروٹین ہے جو آئرن ذخیرہ کرتی ہے۔ یہ ٹیسٹ خون میں فیریٹِن کی مقدار کا جائزہ لیتا ہے۔ اس کی کم سطح کا مطلب جسم میں آئرن کی کمی ہے۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/ferritin-test-tests-urdu/",
+              "href": "https://www.shifanews.com/ferritin-test-tests-urdu/"
+            },
+            {
+              "text": " :مزید پڑھیے\r"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1874,
+      "slug": "genetic-testing",
+      "title": "Genetic testing",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "جینیاتی ٹیسٹنگ"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "جینیاتی ٹیسٹنگ جینز میں ان تبدیلیوں کی نشاندہی کرتی ہے جو انسانی صحت پر اثر انداز ہو سکتی ہیں۔ طبی ماہرین اسے بیماری کی تشخیص، علاج اور اس کے ممکنہ اثرات جانچنے کے لیے بھی استعمال کرتے ہیں۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/genetic-testing-tests-urdu/",
+              "href": "https://www.shifanews.com/genetic-testing-tests-urdu/\r\n"
+            },
+            {
+              "text": " :مزید پڑھیے"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1666,
+      "slug": "glucose-tolerance-test",
+      "title": "Glucose tolerance test",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "گلوکوز ٹالرنس ٹیسٹ"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "گلوکوز ٹالرنس ٹیسٹ جسم میں شوگر کے رسپانس کی پیمائش کرتا ہے۔ یہ بالعموم علامات ظاہر ہونے سے پہلے ٹائپ 2 ذیابیطس اور پری ذیابیطس کی سکریننگ کے لیے کیا جاتا ہے۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/glucose-tolerance-test-tests-urdu/",
+              "href": "https://www.shifanews.com/glucose-tolerance-test-tests-urdu/\r\n"
+            },
+            {
+              "text": " :مزید پڑھیے\r"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1954,
+      "slug": "hepatobiliary-scan-also-hida-scan",
+      "title": "Hepatobiliary scan (also HIDA scan)",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "ہائڈا سکین: جگر، گال بلیڈر اور بائل ڈکٹس کا امیجنگ ٹیسٹ "
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "گال بلیڈر کی سوزش یا بائل ڈکٹ میں رکاوٹ کی تشخیص کے لیے ہائڈا سکین کیا جا سکتا ہے۔ یہ بائل کے بہاؤ اور گال بلیڈر کی کارکردگی بھی جانچتا ہے۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/cholescintigraphy-hida-scan-tests-urdu/",
+              "href": "https://www.shifanews.com/cholescintigraphy-hida-scan-tests-urdu/\r\n"
+            },
+            {
+              "text": " :مزید پڑھیے\r"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1956,
+      "slug": "hida-scan",
+      "title": "HIDA scan",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "ہائڈا سکین: جگر، گال بلیڈر اور بائل ڈکٹس کا امیجنگ ٹیسٹ "
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "گال بلیڈر کی سوزش یا بائل ڈکٹ میں رکاوٹ کی تشخیص کے لیے ہائڈا سکین کیا جا سکتا ہے۔ یہ بائل کے بہاؤ اور گال بلیڈر کی کارکردگی بھی جانچتا ہے۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/cholescintigraphy-hida-scan-tests-urdu/",
+              "href": "https://www.shifanews.com/cholescintigraphy-hida-scan-tests-urdu/\r\n"
+            },
+            {
+              "text": " :مزید پڑھیے\r"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1685,
+      "slug": "holter-monitor",
+      "title": "Holter monitor",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "ہولٹر مانیٹر"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "ہولٹر مانیٹر ایک پہننے والا آلہ ہے جو دل کی دھڑکن کو مسلسل ریکارڈ کرتا ہے۔ اس کا مقصد ایسی بے قاعدہ دھڑکنوں کی نشاندہی کرنا ہے جو عام ٹیسٹ میں سامنے نہیں آتیں۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/holter-monitor-test-urdu/",
+              "href": "https://www.shifanews.com/holter-monitor-test-urdu/"
+            },
+            {
+              "text": " :مزید پڑھیے\r"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1390,
+      "slug": "hpv-test",
+      "title": "HPV test",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "ایچ پی وی ٹیسٹ"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "ایچ پی وی جنسی طور پر منتقل ہونے والا وائرس ہے جو جنسی اعضاء کے وارٹس، سروکس کے خلیوں میں تبدیلی اور بعض صورتوں میں کینسر کا سبب بن سکتا ہے۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/hpv-test-urdu/",
+              "href": "https://www.shifanews.com/hpv-test-urdu/\r\n"
+            },
+            {
+              "text": " :مزید پڑھیے"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1398,
+      "slug": "kidney-biopsy",
+      "title": "Kidney biopsy",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "گردے کی بائیوپسی"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "گردے کی بائیوپسی ایک میڈیکل پروسیجر ہے جو گردے کی بیماری کی تشخیص اور اس کی شدت جاننے کے لیے کیا جاتا ہے۔ بعض اوقات یہ علاج کی مانیٹرنگ کے لیے بھی استعمال ہوتا ہے۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/kidney-biopsy-urdu/",
+              "href": "https://www.shifanews.com/kidney-biopsy-urdu/\r\n"
+            },
+            {
+              "text": ":مزید پڑھیے"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1404,
+      "slug": "lipid-profile-also-cholesterol-test",
+      "title": "Lipid profile (also Cholesterol test)",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "لپڈ پروفائل (کولیسٹرول ٹیسٹ)"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": " لپڈ پروفائل خون کا ٹیسٹ ہے جس سے خون میں کولیسٹرول اور ٹرائی گلیسرائیڈز کی مقدار معلوم کی جاتی ہے۔ یہ ٹیسٹ شریانوں کے تنگ یا بند ہونے کے خطرے کا اندازہ لگانے میں مدد دیتا ہے۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/lipid-profile-cholesterol-test/",
+              "href": "https://www.shifanews.com/lipid-profile-cholesterol-test/\r\n"
+            },
+            {
+              "text": ":مزید پڑھیے"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1699,
+      "slug": "liver-function-tests",
+      "title": "Liver function tests",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "لیور فنکشن ٹیسٹ"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "لیور فنکشن ٹیسٹ خون کے وہ تجزیاتی ٹیسٹ ہیں جو جگر کی صحت، کارکردگی اور ممکنہ بیماریوں کی نشاندہی کے لیے کیے جاتے ہیں۔ یہ ٹیسٹ خون میں مخصوص انزائمز اور پروٹینز کی سطح کو ماپتے ہیں۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/liver-function-tests-tests-urdu/",
+              "href": "https://www.shifanews.com/liver-function-tests-tests-urdu/"
+            },
+            {
+              "text": " :مزید پڑھیے\r"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1705,
+      "slug": "lumbar-puncture-spinal-tap",
+      "title": "Lumbar puncture (spinal tap)",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "لمبر پنکچر (سپائنل ٹیپ)"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "لمبر پنکچر سنگین انفیکشنز، مثلاً گردن توڑ بخار، مرکزی اعصابی نظام کی بیماریوں، مثلاً گیلین بیری سنڈروم اور ملٹی پل سکلروسس کے علاوہ  دماغ اور ریڑھ کی ہڈی کے بعض کینسرز کی تشخیص میں بھی مددگار ثابت ہوتا ہے۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/lumbar-puncture-spinal-tap-tests-urdu/",
+              "href": "https://www.shifanews.com/lumbar-puncture-spinal-tap-tests-urdu/\r\n"
+            },
+            {
+              "text": " :مزید پڑھیے\r"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1708,
+      "slug": "lung-cancer-screening",
+      "title": "Lung cancer screening",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "پھیپھڑوں کے کینسر کی سکریننگ"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "اس کینسر کی سکریننگ کا مقصد زیادہ خطرے والے افراد میں کینسر کی بروقت شناخت کرنا ہے۔ اس کے لیے کم مقدار والا کمپیوٹرائزڈ ٹوموگرافی (ایل ڈی سی ٹی) سکین استعمال ہوتا ہے۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/lung-cancer-screening-tests-urdu/",
+              "href": "https://www.shifanews.com/lung-cancer-screening-tests-urdu/\r\n"
+            },
+            {
+              "text": " :مزید پڑھیے\r"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1958,
+      "slug": "lung-ct-scan-also-lung-cancer-screening",
+      "title": "Lung CT scan (also Lung cancer screening)",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "پھیپھڑوں کے کینسر کی سکریننگ"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "اس کینسر کی سکریننگ کا مقصد زیادہ خطرے والے افراد میں کینسر کی بروقت شناخت کرنا ہے۔ اس کے لیے کم مقدار والا کمپیوٹرائزڈ ٹوموگرافی (ایل ڈی سی ٹی) سکین استعمال ہوتا ہے۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/lung-cancer-screening-tests-urdu/",
+              "href": "https://www.shifanews.com/lung-cancer-screening-tests-urdu/\r\n"
+            },
+            {
+              "text": " :مزید پڑھیے\r"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1412,
+      "slug": "mammogram",
+      "title": "Mammogram",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "میموگرام"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "میموگرام  چھاتی کے ٹشو کا ایکسرے ہے جو بریسٹ کینسر کی سکریننگ کے لیے استعمال ہوتا ہے۔ میموگرام چھاتی کے کینسر کی بروقت تشخیص میں اہم کردار ادا کرتے ہیں، جس سے مرض بڑھنے اور اموات کا خطرہ کم ہو جاتا ہے۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/mammogram-urdu/",
+              "href": "https://www.shifanews.com/mammogram-urdu/\r\n"
+            },
+            {
+              "text": " :مزید پڑھیے"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1414,
+      "slug": "mri",
+      "title": "MRI",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "ایم آر آئی"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "ایم آر آئی ایک جدید میڈیکل امیجنگ تکنیک ہے، جس کے ذریعے اندرونی اعضاء اور ٹشوز کی نہایت واضح تصاویر حاصل کی جاتی ہیں۔  اس سے ڈاکٹر کو اعضاء، ٹشوز اور ہڈیوں کے نظام کا تفصیلی جائزہ لینے میں مدد ملتی ہے۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/mri-urdu/",
+              "href": "https://www.shifanews.com/mri-urdu/\r\n"
+            },
+            {
+              "text": ":مزید پڑھیے"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1876,
+      "slug": "mri-breast-also-breast-mri",
+      "title": "MRI, breast (also Breast MRI)",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "بریسٹ ایم آر آئی"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "بریسٹ ایم آر آئی چھاتی کی تفصیلی تصاویر بنانے والا ٹیسٹ ہے، جو کینسر کی تشخیص، اس کے پھیلاؤ کا جائزہ لینے اور زیادہ خطرے والی خواتین کی سکریننگ میں مددگار ثابت ہوتا ہے۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/breast-mri-test-urdu/",
+              "href": "https://www.shifanews.com/breast-mri-test-urdu/\r\n"
+            },
+            {
+              "text": " :مزید پڑھیے"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1416,
+      "slug": "needle-biopsy",
+      "title": "Needle biopsy",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "نیڈل بائیوپسی"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "نیڈل بائیوپسی ایک میڈیکل پروسیجر ہے جس میں جسم سے سوئی کے ذریعے خلیوں یا ٹشو کا چھوٹا سا نمونہ حاصل کیا جاتا ہے۔ اسے لیبارٹری میں تجزیے کے لیے بھیجا جاتا ہے تاکہ بیماری کی تشخیص کی جا سکے۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/needle-biopsy-urdu/",
+              "href": "https://www.shifanews.com/needle-biopsy-urdu/\r\n"
+            },
+            {
+              "text": " :مزید پڑھیے"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1714,
+      "slug": "nuclear-stress-test",
+      "title": "Nuclear stress test",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "نیوکلیئر سٹریس ٹیسٹ: آرام اور ورزش کے دوران دل کی جانچ"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "نیوکلیئر سٹریس ٹیسٹ میں آرام کی حالت اور جسمانی سرگرمی کے دوران دل میں خون کے بہاؤ کو جانچا جاتا ہے۔ بعض اوقات اسے عام ایکسرسائز ٹیسٹ کے بعد کیا جاتا ہے، جبکہ کچھ صورتوں میں یہی پہلا ٹیسٹ ہوتا ہے۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/nuclear-stress-test-tests-urdu-shifa-news/",
+              "href": "https://www.shifanews.com/nuclear-stress-test-tests-urdu-shifa-news/\r\n"
+            },
+            {
+              "text": " :مزید پڑھیے\r"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1420,
+      "slug": "oral-cancer-screening",
+      "title": "Oral cancer screening",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "اورل کینسر سکریننگ"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "اورل کینسر سکریننگ ایک طبی معائنہ ہے جو دانتوں کے ڈاکٹر یا فزیشن کرتے ہیں تاکہ منہ میں کینسر یا قبل از کینسر علامات تلاش کی جا سکیں۔ اس کا مقصد منہ کے کینسر کو ابتدائی مرحلے میں شناخت کرنا ہوتا ہے۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/oral-cancer-screening-urdu/",
+              "href": "https://www.shifanews.com/oral-cancer-screening-urdu/\r\n"
+            },
+            {
+              "text": " :مزید پڑھیے"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1428,
+      "slug": "pap-smear",
+      "title": "Pap smear",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "پیپ سمیئر: سرویکل کینسر کا ایک اہم ٹیسٹ"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "پیپ سمیئر ایک پروسیجر ہے جس میں سرویکس کے خلیوں کی جانچ کی جاتی ہے۔ یہ اکثر سرویکل کینسر کی جانچ کے لیے استعمال ہوتا ہے۔ پیپ ٹیسٹ ایسے خلیے بھی تلاش کر لیتا ہے جو مستقبل میں کینسر بن سکتے ہیں۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/pap-smear-urdu/",
+              "href": "https://www.shifanews.com/pap-smear-urdu/\r\n"
+            },
+            {
+              "text": ":مزید پڑھیے"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1616,
+      "slug": "parkinson-s-test",
+      "title": "Parkinson's test",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "پارکنسنز ٹیسٹ"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "ایک نیا تشخیصی ٹیسٹ پارکنسن کی بیماری کو ابتدائی مراحل میں یا علامات ظاہر ہونے سے پہلے شناخت کرنے کی صلاحیت رکھتا ہے۔ اسے پارکنسنز ٹیسٹ یا ''الفا-سینوکلین سیڈ ایمپلیفیکیشن'' ایسے کہا جاتا ہے۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/parkinsons-test-a-synuclein-seed-amplification-assay-urdu/",
+              "href": "https://www.shifanews.com/parkinsons-test-a-synuclein-seed-amplification-assay-urdu/"
+            },
+            {
+              "text": " :مزید پڑھیے\r"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1725,
+      "slug": "pelvic-exam",
+      "title": "Pelvic exam",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "پیلوک معائنہ: تولیدی نظام کا طبی جائزہ"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "پیلوک معائنہ بالعموم خواتین کے تولیدی اعضاء کی صحت کو جانچنے کا ایک طریقہ ہے۔ اس میں بالعموم چند منٹ لگتے ہیں۔ اس میں وجائنا، سروکس، بیضہ دانی، رحم، ریکٹم اور پیلوس کا معائنہ کیا جاتا ہے۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/pelvic-exam-tests-urdu/",
+              "href": "https://www.shifanews.com/pelvic-exam-tests-urdu/\r\n"
+            },
+            {
+              "text": " :مزید پڑھیے\r"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1728,
+      "slug": "pet-scan-also-positron-emission-tomography-scan",
+      "title": "PET scan (also Positron emission tomography scan)",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "پی ای ٹی سکین: جسم کے اندرونی افعال کی جانچ"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "اس ٹیسٹ  سے یہ معلوم ہوتا ہے کہ جسم کے ٹشوز اور اعضا کیسے کام کر رہے ہیں۔ پی ای ٹی سکین عام طور پر سی ٹی سکین یا ایم آر آئی کے مقابلے میں خلیاتی اور میٹابولک تبدیلیوں کو زیادہ جلد اور واضح انداز میں ظاہر کر سکتا ہے۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/pet-scan-tests-urdu/",
+              "href": "https://www.shifanews.com/pet-scan-tests-urdu/\r\n"
+            },
+            {
+              "text": " :مزید پڑھیے\r"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1729,
+      "slug": "prostate-biopsy",
+      "title": "Prostate biopsy",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "پروسٹیٹ بائیوپسی"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "پروسٹیٹ بائیوپسی  میں پروسٹیٹ سے ٹشوز کے نمونے حاصل کیے جاتے ہیں۔ اس کے لیے باریک سوئی استعمال کی جاتی ہے۔ یہ پروسیجر یورولوجسٹ انجام دیتے ہیں"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/prostate-biopsy-tests-urdu/",
+              "href": "https://www.shifanews.com/prostate-biopsy-tests-urdu/\r\n"
+            },
+            {
+              "text": " :مزید پڑھیے"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1735,
+      "slug": "psa-test",
+      "title": "PSA test",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "پی ایس اے ٹیسٹ: پروسٹیٹ کینسر سکریننگ"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "پی ایس اے ٹیسٹ پروسٹیٹ کینسر کی سکریننگ کے لیے استعمال ہوتا ہے۔ پی ایس اے ایک پروٹین ہے جو پروسٹیٹ گلینڈ کے سرطانی اور غیر سرطانی دونوں ٹشوز سے پیدا ہوتی ہے۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/psa-test-tests-urdu/",
+              "href": "https://www.shifanews.com/psa-test-tests-urdu/\r\n"
+            },
+            {
+              "text": " :مزید پڑھیے\r"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1744,
+      "slug": "renal-biopsy-also-kidney-biopsy",
+      "title": "Renal biopsy (also Kidney biopsy)",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "گردے کی بائیوپسی"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "گردے کی بائیوپسی ایک میڈیکل پروسیجر ہے جو گردے کی بیماری کی تشخیص اور اس کی شدت جاننے کے لیے کیا جاتا ہے۔ بعض اوقات یہ علاج کی مانیٹرنگ کے لیے بھی استعمال ہوتا ہے۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/kidney-biopsy-urdu/",
+              "href": "https://www.shifanews.com/kidney-biopsy-urdu/"
+            },
+            {
+              "text": " :مزید پڑھیے\r"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1434,
+      "slug": "rheumatoid-factor",
+      "title": "Rheumatoid factor",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "روماٹائیڈ فیکٹر"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "روماٹائیڈ فیکٹرز مدافعتی نظام کی بنائی گئی وہ پروٹین ہیں جو جسم کے صحت مند ٹشوز پر حملہ کرسکتی ہیں۔ روماٹائیڈ فیکٹر ٹیسٹ خون میں ان فیکٹرز کی پیمائش کرتا ہے۔ ان کی زیادہ سطح کا تعلق بالعموم آٹو امیون بیماریوں سے ہوتا ہے۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/rheumatoid-factor-urdu/",
+              "href": "https://www.shifanews.com/rheumatoid-factor-urdu/\r\n"
+            },
+            {
+              "text": ":مزید پڑھیے"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1750,
+      "slug": "sgpt-test-also-alanine-aminotransferase-alt",
+      "title": "SGPT test (also Alanine aminotransferase (ALT))",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "اے ایل ٹی ٹیسٹ"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "اے ایل ٹی ایک انزائم ہے جو زیادہ تر جگر میں پایا جاتا ہے۔ صحت مند جگر میں اس کی سطح عام طور پر کم رہتی ہے۔ اے ایل ٹی ٹیسٹ جگر کی صحت جانچنے کے لیے کیا جاتا ہے۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/alanine-aminotransferase-alt-blood-test/",
+              "href": "https://www.shifanews.com/alanine-aminotransferase-alt-blood-test/"
+            },
+            {
+              "text": " :مزید پڑھیے\r"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1751,
+      "slug": "skin-biopsy",
+      "title": "Skin biopsy",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "سکن بائیوپسی"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "سکن بائیوپسی ایک میڈیکل پروسیجر ہے جس میں جسم سے خلیے یا جلد کا نمونہ لیا جاتا ہے۔ اس کا مقصد مختلف جلدی بیماریوں اور کیفیات کی درست تشخیص، یا انہیں خارج از امکان قرار دینا ہوتا ہے۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/skin-biopsy-test-urdu/",
+              "href": "https://www.shifanews.com/skin-biopsy-test-urdu/\r\n"
+            },
+            {
+              "text": ":مزید پڑھیے"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1757,
+      "slug": "small-bowel-capsule-endoscopy-also-capsule-endoscopy",
+      "title": "Small bowel capsule endoscopy (also Capsule endoscopy)",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "کیپسول اینڈو سکوپی"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "کیپسول اینڈو سکوپی میں ایک چھوٹے وائرلیس کیمرے والے کیپسول کو نگلا جاتا ہے جو ہاضمے کی نالی کے اندر سفر کرتے ہوئے ہزاروں تصاویر لیتا ہے۔ یہ خاص طور پر چھوٹی آنت کو دیکھنے کے لیے مفید ہے، جہاں عام اینڈو سکوپی پہنچنا مشکل ہوتا ہے۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/capsule-endoscopy/",
+              "href": "https://www.shifanews.com/capsule-endoscopy/\r\n"
+            },
+            {
+              "text": " :مزید پڑھیے\r"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1758,
+      "slug": "small-bowel-endoscopy-also-capsule-endoscopy",
+      "title": "Small bowel endoscopy (also Capsule endoscopy)",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "کیپسول اینڈو سکوپی"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "کیپسول اینڈو سکوپی میں ایک چھوٹے وائرلیس کیمرے والے کیپسول کو نگلا جاتا ہے جو ہاضمے کی نالی کے اندر سفر کرتے ہوئے ہزاروں تصاویر لیتا ہے۔ یہ خاص طور پر چھوٹی آنت کو دیکھنے کے لیے مفید ہے، جہاں عام اینڈو سکوپی پہنچنا مشکل ہوتا ہے۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/capsule-endoscopy/",
+              "href": "https://www.shifanews.com/capsule-endoscopy/\r\n"
+            },
+            {
+              "text": " :مزید پڑھیے\r"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1759,
+      "slug": "sonography-also-ultrasound",
+      "title": "Sonography (also Ultrasound)",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "الٹراساؤنڈ"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "تشخیصی الٹراساؤنڈ جسم کے اندرونی حصوں کی تصاویر بنانے کے لیے استعمال ہوتا ہے۔ یہ تصاویر مختلف بیماریوں کی تشخیص اور علاج میں مدد فراہم کرتی ہیں۔ اسے سونوگرافی بھی کہا جاتا ہے۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/ultrasound-urdu/",
+              "href": "https://www.shifanews.com/ultrasound-urdu/\r\n"
+            },
+            {
+              "text": " :مزید پڑھیے\r"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1762,
+      "slug": "spect-scan",
+      "title": "SPECT scan",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "سپیکٹ سکین"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "سپیکٹ سکین میں جسم کی تھری ڈی تصاویر لینے کے لیے ریڈیو ایکٹو مادہ اور خصوصی کیمرہ استعمال کیا جاتا ہے۔ یہ اعضاء کی ساخت کے ساتھ ساتھ ان کی کارکردگی بھی واضح کرتا ہے۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/spect-scan-tests-urdu/",
+              "href": "https://www.shifanews.com/spect-scan-tests-urdu/\r\n"
+            },
+            {
+              "text": " :مزید پڑھیے\r"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1442,
+      "slug": "spirometry",
+      "title": "Spirometry",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "سپائرومیٹری"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "سپائرومیٹرٹیسٹ پھیپھڑوں کی کارکردگی جانچنے کے لیے کیا جاتا ہے۔ اس ٹیسٹ کے ذریعے دمہ، سی او پی ڈی اور سانس کی دیگر بیماریوں کی تشخیص کی جاتی ہے۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/spirometry-urdu/",
+              "href": "https://www.shifanews.com/spirometry-urdu/\r\n"
+            },
+            {
+              "text": ":مزید پڑھیے"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1769,
+      "slug": "stool-dna-test",
+      "title": "Stool DNA test",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "پاخانے کا ڈی این اے ٹیسٹ"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "پاخانے کا ڈی این اے ٹیسٹ  بڑی آنت کے کینسر کی ابتدائی علامات تلاش کرنے کے لیے کیا جاتا ہے۔ اس ٹیسٹ میں پاخانے کے نمونے کا تجزیہ کیا جاتا ہے تاکہ خلیوں کے ڈی این اے میں تبدیلیاں دیکھی جا سکیں۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/stool-dna-test-tests-urdu/",
+              "href": "https://www.shifanews.com/stool-dna-test-tests-urdu/\r\n"
+            },
+            {
+              "text": " :مزید پڑھیے\r"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1771,
+      "slug": "stress-exercise-test-also-stress-test",
+      "title": "Stress exercise test (also Stress test)",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "سٹریس ٹیسٹ"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "سٹریس ٹیسٹ میں اس بات کا جائزہ لیا جاتا ہے کہ جسمانی مشقت کے دوران دل کیسے کام کرتا ہے۔ ورزش کے دوران دل کی رفتار اور پمپنگ بڑھ جاتی ہے جس سے خون کے بہاؤ میں تبدیلیاں واضح ہو جاتی ہیں۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/exercise-stress-test-tests-urdu/",
+              "href": "https://www.shifanews.com/exercise-stress-test-tests-urdu/\r\n"
+            },
+            {
+              "text": " :مزید پڑھیے\r"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1976,
+      "slug": "stress-test",
+      "title": "Stress test",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "سٹریس ٹیسٹ"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "سٹریس ٹیسٹ میں اس بات کا جائزہ لیا جاتا ہے کہ جسمانی مشقت کے دوران دل کیسے کام کرتا ہے۔ ورزش کے دوران دل کی رفتار اور پمپنگ بڑھ جاتی ہے جس سے خون کے بہاؤ میں تبدیلیاں واضح ہو جاتی ہیں۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/exercise-stress-test-tests-urdu/",
+              "href": "https://www.shifanews.com/exercise-stress-test-tests-urdu/\r\n"
+            },
+            {
+              "text": "  :مزید پڑھیے\r"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1880,
+      "slug": "tilt-table-test",
+      "title": "Tilt table test",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "ٹِلٹ ٹیبل ٹیسٹ: بے ہوشی اور چکر آنے کی وجہ جانچنے کا ٹیسٹ"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "یہ ایک اہم تشخیصی ٹیسٹ ہے جو بے ہوشی، چکر آنے اور بلڈ پریشر سے متعلق بعض مسائل کی وجہ جاننے میں مدد دیتا ہے۔ اس سے مناسب علاج میں راہنمائی ملتی ہے۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/tilt-table-test-tests-urdu/",
+              "href": "https://www.shifanews.com/tilt-table-test-tests-urdu/\r\n"
+            },
+            {
+              "text": " :مزید پڑھیے\r"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1450,
+      "slug": "ultrasound",
+      "title": "Ultrasound",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "الٹراساؤنڈ"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "تشخیصی الٹراساؤنڈ جسم کے اندرونی حصوں کی تصاویر بنانے کے لیے استعمال ہوتا ہے۔ یہ تصاویر مختلف بیماریوں کی تشخیص اور علاج میں مدد فراہم کرتی ہیں۔ اسے سونوگرافی بھی کہا جاتا ہے۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/ultrasound-urdu/",
+              "href": "https://www.shifanews.com/ultrasound-urdu/\r\n"
+            },
+            {
+              "text": ":مزید پڑھیے"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1984,
+      "slug": "ultrasound-abdominal-also-abdominal-ultrasound",
+      "title": "Ultrasound, abdominal (also Abdominal ultrasound)",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "پیٹ کا الٹرا ساؤنڈ "
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "پیٹ کا الٹرا ساؤنڈ پیٹ کے اندرونی حصوں خاص طور پر پیٹ کی بڑی شریان میں پھیلاؤ کا جائزہ لینے کے لیے استعمال ہوتا ہے۔ 65 سے 75 سال کے ان افراد میں فائدہ مند ہے جو تمباکو نوشی کرتے۔ دیگر افراد میں علامات یا فیملی ہسٹری کی صورت میں یہ ٹیسٹ تجویز کیا جاتا ہے۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/abdominal-ultrasound/",
+              "href": "https://www.shifanews.com/abdominal-ultrasound/\r\n"
+            },
+            {
+              "text": " :مزید پڑھیے\r"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 2010,
+      "slug": "upper-endoscopy",
+      "title": "Upper endoscopy",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "نظام ہضم کے اوپری حصے کی اینڈوسکوپی"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "نظام ہضم کے اوپری حصے کی اینڈوسکوپی ایک میڈیکل پروسیجر ہے۔ اس میں ایک لمبی اور لچکدار نلکی کے سرے پر لگے چھوٹے کیمرے کی مدد سے اندرونی اعضا کا جائزہ لیا جاتا ہے۔ "
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/upper-endoscopy-urdu/",
+              "href": "https://www.shifanews.com/upper-endoscopy-urdu/"
+            },
+            {
+              "text": ":مزید پڑھیے"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1454,
+      "slug": "upper-gastrointestinal-endoscopy-also-upper-endoscopy",
+      "title": "Upper gastrointestinal endoscopy (also Upper endoscopy)",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "اپر گیسٹروانٹسٹائنل اینڈوسکوپی"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "نظام ہضم کے اوپری حصے کی اینڈوسکوپی ایک میڈیکل پروسیجر ہے۔ اس میں ایک لمبی اور لچکدار نلکی کے سرے پر لگے چھوٹے کیمرے کی مدد سے اندرونی اعضا کا جائزہ لیا جاتا ہے۔ "
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/upper-endoscopy-urdu/",
+              "href": "https://www.shifanews.com/upper-endoscopy-urdu/\r\n"
+            },
+            {
+              "text": ":مزید پڑھیے"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1456,
+      "slug": "upper-gi-endoscopy-also-upper-endoscopy",
+      "title": "Upper GI endoscopy (also Upper endoscopy)",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "اپر جی آئی اینڈوسکوپی"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "نظام ہضم کے اوپری حصے کی اینڈوسکوپی ایک میڈیکل پروسیجر ہے۔ اس میں ایک لمبی اور لچکدار نلکی کے سرے پر لگے چھوٹے کیمرے کی مدد سے اندرونی اعضا کا جائزہ لیا جاتا ہے۔ "
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/upper-endoscopy-urdu/",
+              "href": "https://www.shifanews.com/upper-endoscopy-urdu/\r\n"
+            },
+            {
+              "text": " :مزید پڑھیے"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1458,
+      "slug": "urinalysis",
+      "title": "Urinalysis",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "پیشاب کا تجزیہ"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "پیشاب کی نالی کے انفیکشن، گردوں کی بیماری اور ذیابیطس سمیت کئی امراض کی تشخیص اور مانیٹرنگ کے لیے پیشاب کا تجزیہ کیا جاتا ہے۔ اس ٹیسٹ میں پیشاب کی ظاہری حالت، مقدار اور اجزا کا جائزہ لیا جاتا ہے۔ "
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/urinalysis-urdu/",
+              "href": "https://www.shifanews.com/urinalysis-urdu/\r\n"
+            },
+            {
+              "text": " :مزید پڑھیے"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 2003,
+      "slug": "virtual-colonoscopy",
+      "title": "Virtual colonoscopy",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "ورچوئل کولونوسکوپی: بڑی آنت کے کینسر کا سکریننگ ٹیسٹ"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "روایتی کولونوسکوپی کے برعکس ورچوئل کولونوسکوپی میں بڑی آنت کے اندر سکوپ داخل کرنے کے بجائے سی ٹی سکین سے تصاویر لے کر کینسر اور پولپس کی جانچ کی جاتی ہے۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/virtual-colonoscopy-tests-urdu/",
+              "href": "https://www.shifanews.com/virtual-colonoscopy-tests-urdu/\r\n"
+            },
+            {
+              "text": " :مزید پڑھیے\r"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1466,
+      "slug": "x-ray",
+      "title": "X-ray",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "ایکس رے"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "ایکس رے ٹیسٹ جسم کے اندرونی ڈھانچے، خصوصاً ہڈیوں کی تصویر بناتا ہے۔ ٹیسٹ میں ہڈی اور دھات سفید دکھائی دیتے ہیں، پھیپھڑوں کی ہوا سیاہ نظر آتی ہے جبکہ چربی اور عضلات سرمئی شیڈز میں ظاہر ہوتے ہیں۔ "
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/x-ray-urdu/",
+              "href": "https://www.shifanews.com/x-ray-urdu/\r\n"
+            },
+            {
+              "text": ":مزید پڑھیے"
+            }
+          ]
+        }
+      ],
+      "english": []
+    },
+    {
+      "id": 1468,
+      "slug": "x-ray-chest-also-chest-x-rays",
+      "title": "X-ray, chest (also Chest X-rays)",
+      "urdu": [
+        {
+          "type": "heading",
+          "runs": [
+            {
+              "text": "سینے کا ایکسرے"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "سینے میں درد، سینے کی چوٹ، یا سانس پھولنے کی شکایت ہو تو عموماً سینے کا ایکسرے کیا جاتا ہے۔ اس سے دل کی بیماری، پھیپھڑا سکڑنے، نمونیا، پسلی ٹوٹنے، کینسر، یا کسی اور بیماری کے بارے میں معلومات ملتی ہیں۔"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "https://www.shifanews.com/chest-x-ray-urdu/",
+              "href": "https://www.shifanews.com/chest-x-ray-urdu/\r\n"
+            },
+            {
+              "text": ":مزید پڑھیے"
+            }
+          ]
+        }
+      ],
+      "english": []
+    }
+  ]
+}

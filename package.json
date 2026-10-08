@@ -6,7 +6,8 @@
     "dev": "next dev -p 22421",
     "build": "next build",
     "start": "next start -p 22421",
-    "typecheck": "tsc -p tsconfig.json --noEmit"
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "fetch:tests": "node scripts/fetch-medical-tests.mjs"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "4.3.3",

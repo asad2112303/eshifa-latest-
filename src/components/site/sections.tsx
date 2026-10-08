@@ -62,6 +62,7 @@ import {
   Megaphone,
   ExternalLink,
   FileDown,
+  BookOpen,
   User,
   Stethoscope,
   Plus,
@@ -554,6 +555,23 @@ const ResourcesDropdown = ({ linkClass }: { linkClass: (href: string) => string 
             className="absolute right-0 top-full z-50 w-[620px] pt-4"
           >
             <div className="whitespace-normal rounded-2xl border border-[#ECECEC] bg-white p-4 shadow-xl">
+              <Link
+                href="/patient-guide"
+                className="group mb-4 flex items-center gap-3 rounded-xl bg-[#F5F9FF] px-4 py-3 transition-colors hover:bg-[#EAF4FF]"
+              >
+                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#0289E8]/10 text-[#0289E8]">
+                  <BookOpen className="h-[18px] w-[18px]" aria-hidden="true" />
+                </span>
+                <span className="min-w-0">
+                  <span className="block text-sm font-semibold text-[#1B004E] group-hover:text-[#0289E8]">
+                    Medical Tests A–Z
+                  </span>
+                  <span className="block text-[11px] text-[#9AA1AC]">
+                    Blood tests, scans and screenings explained in Urdu, A to Z
+                  </span>
+                </span>
+                <ArrowRight aria-hidden="true" className="ml-auto h-4 w-4 shrink-0 text-[#0289E8]" />
+              </Link>
               <p className="px-1 pb-3 text-xs font-semibold uppercase tracking-wide text-[#9AA1AC]">
                 Resources for Patient &amp; Family Education
               </p>
@@ -844,6 +862,12 @@ export const Navbar = () => {
                         <li>
                           <Link href="/resources" className="block py-2 pl-3 text-sm font-semibold text-[#0289E8]">
                             All resources
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href="/patient-guide" className="flex items-center gap-3 py-2 pl-3 text-sm text-[#444444]">
+                            <BookOpen className="h-[18px] w-[18px] shrink-0 text-[#0289E8]" aria-hidden="true" />
+                            Medical Tests A–Z
                           </Link>
                         </li>
                         {resourcesByCategory().map((group) => (
@@ -1933,6 +1957,7 @@ export const Footer = () => {
     { href: "/labs", label: "Lab Centers" },
   // Rendered as a dropdown of downloadable leaflets; there is no /resources page.
   { href: "/resources", label: "Patient Resources" },
+    { href: "/patient-guide", label: "Medical Tests A–Z" },
     // Kept in step with the navbar: the same label must not lead two places.
     { href: SHIFA_GLOBAL_URL, label: "International Patients", external: true },
     { href: "/partner", label: "Partner With Us" },
