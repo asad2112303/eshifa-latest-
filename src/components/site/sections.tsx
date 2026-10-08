@@ -2213,7 +2213,7 @@ export function DoctorsPage() {
   return (
     <>
       <ImageHero
-        title="Consult Certified Doctors Without Delay - Anytime, Anywhere in Pakistan"
+        title="Expert Healthcare, Just a Call Away"
         description="General physicians and specialists through a seamless digital-first consultation experience, with proper follow-up care built in."
         image="about.png"
       />
