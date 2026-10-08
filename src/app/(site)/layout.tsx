@@ -1,4 +1,5 @@
 import { Navbar, Footer } from "@/components/site/sections";
+import { WhatsAppButton } from "@/components/site/whatsapp-button";
 
 /**
  * Public website chrome.
@@ -13,6 +14,7 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
       <Navbar />
       <main>{children}</main>
       <Footer />
+      <WhatsAppButton />
     </>
   );
 }

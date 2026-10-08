@@ -41,6 +41,13 @@ export const siteConfig = {
     uanTel: "tel:051111111567",
     uanE164: "+92-51-111-111-567",
     email: "info@eshifa.org",
+    /**
+     * Number behind the floating WhatsApp button, as digits in international
+     * format (no plus, spaces or dashes) because that is what wa.me links take.
+     * This is the UAN; if WhatsApp is run from a different line, change only
+     * this value and the button follows.
+     */
+    whatsappNumber: "9251111111567",
     address: {
       street: "Plot No. 17-18, 2nd Floor, EOBI Building, I-8 Markaz",
       locality: "Islamabad",
@@ -57,6 +64,15 @@ export const siteConfig = {
     play: "https://play.google.com/store/search?q=eShifa&c=apps",
   },
 } as const;
+
+/**
+ * Link that opens a WhatsApp chat with eShifa, with an opening message so the
+ * patient does not start from a blank screen. wa.me works in the app, on the
+ * web client and on desktop, and falls back to the App Store or Play Store
+ * when WhatsApp is not installed.
+ */
+export const whatsappUrl = (message = "Hello eShifa, I would like to ask about your home healthcare services.") =>
+  `https://wa.me/${siteConfig.contact.whatsappNumber}?text=${encodeURIComponent(message)}`;
 
 /** Absolute URL for a site-relative path, used for canonicals and structured data. */
 export const absoluteUrl = (path: string) => `${siteConfig.url}${path.startsWith("/") ? path : `/${path}`}`;
