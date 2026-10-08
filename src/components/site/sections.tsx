@@ -307,7 +307,7 @@ type FaqAnswer = string | Array<{ label: string; text: string }>;
 const homeFaqItems: Array<{ q: string; a: FaqAnswer }> = [
   {
     q: "What is eShifa?",
-    a: "eShifa is a trusted healthcare platform that brings quality, convenient, and patient-centered healthcare services to your doorstep beyond hospital walls.",
+    a: "eShifa is a trusted home healthcare platform that brings quality, convenient, and patient-centered healthcare services to your doorstep beyond hospital walls.",
   },
   {
     q: "How do I book an eShifa service?",
