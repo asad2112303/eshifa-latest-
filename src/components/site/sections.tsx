@@ -76,6 +76,8 @@ const PLAY_STORE_URL = "https://play.google.com/store/search?q=eShifa&c=apps";
 const FACEBOOK_URL = "https://facebook.com/eshifa.official";
 const CONTACT_EMAIL = "info@eshifa.org";
 const UAN_DISPLAY = "051-111-111-567";
+const COMPLAINTS_PHONE = "0333-1786123";
+const COMPLAINTS_EMAIL = "complaints@eshifa.org";
 /** Shifa Global handles international patients; that journey lives on its own site. */
 const SHIFA_GLOBAL_URL = "https://shifaglobal.uk/";
 const BRAND_PROMISE = "Quality Healthcare at Your Doorstep";
@@ -1967,7 +1969,7 @@ export const Footer = () => {
   return (
     <footer className="bg-[#171A20] text-white pt-16 pb-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-10 xl:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-6 gap-10 xl:gap-8">
           <div>
             <h4 className="text-xl font-semibold text-white mb-4">About eShifa</h4>
             <div className="h-px bg-white/20 mb-6"></div>
@@ -2076,6 +2078,29 @@ export const Footer = () => {
                 <span className="text-sm font-semibold leading-none">App Store</span>
               </a>
             </div>
+          </div>
+
+          <div>
+            <h4 className="text-xl font-semibold text-white mb-4">For Complaints</h4>
+            <div className="h-px bg-white/20 mb-6"></div>
+            <ul className="space-y-4 text-white/80">
+              <li className="flex items-start gap-3">
+                <Phone className="w-4 h-4 text-[#2F8AD8] shrink-0 mt-1" />
+                <a href={`tel:${COMPLAINTS_PHONE.replace(/-/g, "")}`} className="inline-flex min-h-11 items-center hover:text-white transition-colors">
+                  Call: {COMPLAINTS_PHONE}
+                </a>
+              </li>
+              <li className="flex items-start gap-3">
+                <Mail className="w-4 h-4 text-[#2F8AD8] shrink-0 mt-1" />
+                <a href={`mailto:${COMPLAINTS_EMAIL}`} className="inline-flex min-h-11 items-center hover:text-white transition-colors">
+                  {/* Let a narrow column wrap the address after the "@" rather than mid-word. */}
+                  <span>
+                    Email: {COMPLAINTS_EMAIL.split("@")[0]}@<wbr />
+                    {COMPLAINTS_EMAIL.split("@")[1]}
+                  </span>
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
