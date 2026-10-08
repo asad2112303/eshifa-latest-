@@ -1819,7 +1819,7 @@ const ContactPreview = () => {
   );
 };
 
-const ImageHero = ({ eyebrow, title, description, image }: { eyebrow: string; title: string; description: string; image: string }) => {
+const ImageHero = ({ eyebrow, title, description, image }: { eyebrow?: string; title: string; description: string; image: string }) => {
   return (
     <section className="relative h-[100svh] min-h-[600px] w-full overflow-hidden text-white">
       <motion.div
@@ -1835,9 +1835,11 @@ const ImageHero = ({ eyebrow, title, description, image }: { eyebrow: string; ti
 
       <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-8 flex items-end pb-20 sm:pb-28">
         <motion.div variants={staggerContainer} initial="hidden" animate="visible">
-          <motion.div variants={staggerItem}>
-            <SectionEyebrow>{eyebrow}</SectionEyebrow>
-          </motion.div>
+          {eyebrow && (
+            <motion.div variants={staggerItem}>
+              <SectionEyebrow>{eyebrow}</SectionEyebrow>
+            </motion.div>
+          )}
           <motion.h1 variants={staggerItem} className="text-white text-4xl sm:text-5xl lg:text-6xl leading-[1.05] font-light max-w-4xl">
             {title}
           </motion.h1>
@@ -2211,7 +2213,6 @@ export function DoctorsPage() {
   return (
     <>
       <ImageHero
-        eyebrow="ONLINE DOCTOR CONSULTATION"
         title="Consult Certified Doctors Without Delay - Anytime, Anywhere in Pakistan"
         description="General physicians and specialists through a seamless digital-first consultation experience, with proper follow-up care built in."
         image="about.png"
