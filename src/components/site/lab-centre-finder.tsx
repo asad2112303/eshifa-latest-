@@ -13,7 +13,7 @@ import {
 /**
  * Searchable directory of eShifa Labs collection centres.
  *
- * 76 centres across 51 cities, so the filters carry real weight: a plain list
+ * 74 centres across 51 cities, so the filters carry real weight: a plain list
  * would be unusable and a chip per city would be 51 chips. Grouping by province
  * keeps the choices to six, and free-text search covers the rest.
  *
@@ -86,15 +86,11 @@ export default function LabCentreFinder() {
     <section className="bg-[#F5F7FA] py-20" id="lab-centres">
       <div className="mx-auto max-w-7xl px-4 sm:px-8">
         <header className="mx-auto max-w-2xl text-center">
-          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#0289E8]">
-            Collection Centres
-          </p>
-          <h2 className="mt-3 text-3xl font-light text-[#1B004E] sm:text-4xl">
-            Find a Lab Center Near You
+          <h2 className="text-3xl font-light text-[#1B004E] sm:text-4xl">
+            Find a Lab collection Center Near You
           </h2>
           <p className="mt-4 text-lg text-[#777777]">
-            {labCentres.length} eShifa Labs collection centres across Pakistan. Walk in for sample
-            collection, or book a home visit instead.
+            50 eShifa Labs collection centres across Pakistan
           </p>
         </header>
 

@@ -332,7 +332,7 @@ const homeFaqItems: Array<{ q: string; a: FaqAnswer }> = [
   },
   {
     q: "Is eShifa available in Islamabad, Lahore, Faisalabad and Peshawar?",
-    a: "Yes. eShifa provides home healthcare services in Islamabad, Lahore, Faisalabad and Peshawar with expanding coverage across major cities of Pakistan and 75+ lab collection centers nationwide.",
+    a: "Yes. eShifa provides home healthcare services in Islamabad, Lahore, Faisalabad and Peshawar with expanding coverage across major cities of Pakistan and 70+ lab collection centers nationwide.",
   },
   {
     q: "Can overseas Pakistanis manage care for their families through eShifa?",
@@ -2319,7 +2319,7 @@ export function LabsPage() {
       <ImageHero
         eyebrow="HOME LAB TESTS"
         title="Fast, Reliable Home Lab Tests - Diagnostics Without the Wait"
-        description="Certified phlebotomists, secure sample handling, and timely digital reports reviewed by your care team."
+        description="Expert phlebotomists, secure sample handling and transportation."
         image="lab.png"
       />
 

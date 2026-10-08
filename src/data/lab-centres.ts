@@ -1,8 +1,13 @@
 /**
  * eShifa Labs collection centres.
  *
- * Source: "eShifa Lab Collection Cenetrs" spreadsheet, 76 centres across 51
- * cities. Regenerate rather than hand-edit if the sheet is reissued.
+ * Source: "eShifa Lab Collection Cenetrs" spreadsheet, originally 76 centres
+ * across 51 cities. Regenerate rather than hand-edit if the sheet is reissued,
+ * then re-apply the edits below.
+ *
+ * Hand edits requested 2026-10-08 (now 74 centres): B-17 Islamabad
+ * (ES-LPP-081) and Jhang city (ES-LPP-063) removed; the Daggar centre
+ * (ES-LPP-006) address reads "Swat" instead of "Dist. Buner".
  *
  * Opening hours are deliberately absent: the source has no hours column, and
  * publishing invented times for a medical facility would send patients to a
@@ -60,15 +65,6 @@ export const labCentres: LabCentre[] = [
     address: "Mirabella Complex, Block B, Gulshan-e-Sehat, E-18, Islamabad",
     phones: ["051-6120416", "0334-7237033"],
     email: "pnj.e18@shifalabs.org",
-  },
-  {
-    id: "ES-LPP-081",
-    city: "Islamabad",
-    province: "Islamabad",
-    area: "B-17",
-    address: "Sea Square, Basement Shop# 05, Block # B, Near Gate # 01, B-17, Islamabad",
-    phones: ["051-7247624", "0313-5888555"],
-    email: "isb.b17@shifalabs.org",
   },
   {
     id: "ES-LPP-082",
@@ -168,15 +164,6 @@ export const labCentres: LabCentre[] = [
     address: "Tarbela moor, near THQ Hospital, Opposite Danish Surgical Center, Hazro",
     phones: ["057-2310098", "0303-5301710"],
     email: "pnj.hazro@shifalabs.org",
-  },
-  {
-    id: "ES-LPP-063",
-    city: "Jhang",
-    province: "Punjab",
-    area: "",
-    address: "Opposite DHQ Hospital, Emergency Gate Gojra Road, Toor Wali Gali, Jhang.",
-    phones: ["047-7630189", "0346-9818442"],
-    email: "pnj.jhang@shifalabs.org",
   },
   {
     id: "ES-LPP-065",
@@ -615,7 +602,7 @@ export const labCentres: LabCentre[] = [
     city: "Swat",
     province: "Khyber Pakhtunkhwa",
     area: "",
-    address: "Near DHQ Hospital, Daggar, Dist. Buner",
+    address: "Near DHQ Hospital, Daggar, Swat",
     phones: ["0939-512001", "0335-6664445"],
     email: "kpk.bunner@shifalabs.org",
   },
