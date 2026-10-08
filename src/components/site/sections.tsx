@@ -23,6 +23,7 @@ import { normalizePakistaniPhone, LIMITS } from "@/lib/callback-validation";
 import { trackEvent } from "@/lib/analytics";
 import { callbackServiceOptions } from "@/data/callback-services";
 import { doctors, doctorCredentials, type Doctor } from "@/data/doctors";
+import { siteConfig } from "@/lib/site-config";
 import {
   partnershipIntro,
   partnershipLead,
@@ -38,7 +39,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { FaFacebookF } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import {
   Phone,
   Mail,
@@ -75,7 +76,12 @@ import {
 
 const APPLE_STORE_URL = "https://apps.apple.com/pk/app/eshifa/id1525359185";
 const PLAY_STORE_URL = "https://play.google.com/store/search?q=eShifa&c=apps";
-const FACEBOOK_URL = "https://facebook.com/eshifa.official";
+/** Footer social icons, in the order they appear. URLs live in siteConfig so the Organization schema in layout.tsx stays in step. */
+const SOCIAL_LINKS = [
+  { href: siteConfig.social.facebook, label: "eShifa on Facebook", Icon: FaFacebookF },
+  { href: siteConfig.social.instagram, label: "eShifa on Instagram", Icon: FaInstagram },
+  { href: siteConfig.social.linkedin, label: "eShifa on LinkedIn", Icon: FaLinkedinIn },
+];
 const CONTACT_EMAIL = "info@eshifa.org";
 const UAN_DISPLAY = "051-111-111-567";
 const COMPLAINTS_PHONE = "0333-1786123";
@@ -1993,15 +1999,18 @@ export const Footer = () => {
               eShifa brings quality healthcare services to your doorstep across Pakistan.
             </p>
             <div className="flex items-center gap-3 mt-6">
-              <a
-                href={FACEBOOK_URL}
-                target="_blank"
-                rel="noreferrer"
-                aria-label="eShifa on Facebook"
-                className="w-11 h-11 rounded-full border border-white/20 flex items-center justify-center hover:border-white/40 transition-colors"
-              >
-                <FaFacebookF className="w-4 h-4" />
-              </a>
+              {SOCIAL_LINKS.map(({ href, label, Icon }) => (
+                <a
+                  key={href}
+                  href={href}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={label}
+                  className="w-11 h-11 rounded-full border border-white/20 flex items-center justify-center hover:border-white/40 transition-colors"
+                >
+                  <Icon className="w-4 h-4" />
+                </a>
+              ))}
             </div>
           </div>
 

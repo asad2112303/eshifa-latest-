@@ -84,7 +84,7 @@ const organizationSchema = {
   email: siteConfig.contact.email,
   foundingDate: "2019-12-16",
   parentOrganization: { "@type": "Organization", name: "Shifa International Hospitals Ltd." },
-  sameAs: [siteConfig.social.facebook],
+  sameAs: Object.values(siteConfig.social),
   address: {
     "@type": "PostalAddress",
     streetAddress: "Plot No. 17-18, 2nd Floor, EOBI Building, I-8 Markaz",

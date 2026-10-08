@@ -57,7 +57,9 @@ export const siteConfig = {
     },
   },
   social: {
-    facebook: "https://facebook.com/eshifa.official",
+    facebook: "https://www.facebook.com/eshifahomehealthservices",
+    instagram: "https://www.instagram.com/eshifahomehealth/",
+    linkedin: "https://www.linkedin.com/company/eshifa",
   },
   apps: {
     apple: "https://apps.apple.com/pk/app/eshifa/id1525359185",
