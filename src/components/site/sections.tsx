@@ -22,6 +22,7 @@ import { serviceList, servicePath, type ServiceSlug } from "@/data/services";
 import { normalizePakistaniPhone, LIMITS } from "@/lib/callback-validation";
 import { trackEvent } from "@/lib/analytics";
 import { callbackServiceOptions } from "@/data/callback-services";
+import { doctors, doctorCredentials, type Doctor } from "@/data/doctors";
 import {
   partnershipIntro,
   partnershipLead,
@@ -65,6 +66,7 @@ import {
   BookOpen,
   User,
   Stethoscope,
+  Salad,
   Plus,
   Lock,
   Clock,
@@ -344,10 +346,10 @@ const homeFaqItems: Array<{ q: string; a: FaqAnswer }> = [
   },
 ];
 
-const doctorNetworkItems = [
-  "General Physicians - same-day urgent consultations and ongoing primary care",
-  "Specialist Network - cardiology, endocrinology, orthopaedics, paediatrics, and more",
-  "Teleconsult Support - dedicated coordination for patients requiring multi-disciplinary input",
+const teleConsultationItems = [
+  "Online Consultation with Specialists",
+  "Digital Prescription & Electronic Medical Records",
+  "Professional Medical Guidance from Home",
 ];
 
 const internationalCards = [
@@ -2260,6 +2262,68 @@ export function ServicesPage() {
   );
 }
 
+/**
+ * Doctor cards for the Doctors page. Each card leads with the doctor's studio
+ * portrait cropped to head and shoulders (square, anchored to the top so the
+ * face is never cut), edge to edge across the top; a doctor without a photo
+ * gets a profession icon instead. Name, credentials and designation mirror the flyer so the two
+ * never disagree.
+ */
+const DoctorsGrid = ({ items }: { items: Doctor[] }) => (
+  <section className="py-20 bg-[#F5F5F5]">
+    <div className="max-w-7xl mx-auto px-4 sm:px-8">
+      <Reveal>
+        <h2 className="text-3xl sm:text-4xl font-light text-[#1B004E] mb-4">Meet Our Doctors</h2>
+        <p className="text-lg text-[#444444] max-w-3xl mb-10">
+          Qualified doctors and nutritionists available for tele consultation. Book your consultation on 051-111-111-567.
+        </p>
+      </Reveal>
+      <motion.ul
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="visible"
+        viewport={VIEWPORT_ONCE}
+        className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 list-none p-0 m-0"
+      >
+        {items.map((doctor) => {
+          const Icon = doctor.kind === "nutritionist" ? Salad : Stethoscope;
+          return (
+            <motion.li
+              key={doctor.name}
+              variants={staggerItem}
+              className={`${CARD_ON_GREY} h-full overflow-hidden flex flex-col text-center`}
+            >
+              {doctor.photo ? (
+                <Image
+                  src={`/images/doctors/${doctor.photo}`}
+                  alt={`${doctor.name}, ${doctor.designation}`}
+                  width={640}
+                  height={800}
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="w-full h-auto aspect-square object-cover object-top"
+                />
+              ) : (
+                <div className="flex justify-center pt-6">
+                  <div className="w-16 h-16 rounded-full bg-[#1B004E]/8 text-[#1B004E] flex items-center justify-center">
+                    <Icon className="w-8 h-8" aria-hidden="true" />
+                  </div>
+                </div>
+              )}
+              <div className="flex flex-col items-center grow p-6">
+                <h3 className="text-2xl font-semibold text-[#1B004E] mb-2">{doctor.name}</h3>
+                <p className="text-base text-[#444444] leading-relaxed mb-5">{doctorCredentials(doctor)}</p>
+                <span className="mt-auto inline-block rounded-full bg-[#1B004E] px-5 py-1.5 text-sm font-semibold text-white">
+                  {doctor.designation}
+                </span>
+              </div>
+            </motion.li>
+          );
+        })}
+      </motion.ul>
+    </div>
+  </section>
+);
+
 export function DoctorsPage() {
 
   return (
@@ -2268,6 +2332,8 @@ export function DoctorsPage() {
         title="Convenient Tele Consultation with qualified healthcare professionals from the comfort of your home."
         image="about.png"
       />
+
+      <DoctorsGrid items={doctors} />
 
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-8">
@@ -2288,21 +2354,31 @@ export function DoctorsPage() {
 
       <section className="py-20 bg-[#F5F5F5]">
         <div className="max-w-7xl mx-auto px-4 sm:px-8 grid lg:grid-cols-2 gap-12 items-center">
-          <Reveal>
-            <Image
-              src={"/images/teleconsultation.png"}
-              alt={"Patient conducting online doctor teleconsultation with eShifa certified physician Pakistan"}
-              width={800}
-              height={600}
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              className={"rounded-[28px] shadow-xl w-full aspect-[4/3] object-cover"}
-            />
+          <Reveal className="flex justify-center">
+            {/* Circular portrait. The photo is 4:3 with the laptop right of centre,
+                so the crop focus is nudged right to keep the consultant on screen. */}
+            <div className="relative isolate aspect-square w-full max-w-[460px]">
+              <div className="absolute inset-0 -z-10 translate-x-3 translate-y-3 rounded-full bg-[#1B004E]/10" />
+              <div className="pointer-events-none absolute -inset-3 rounded-full border-2 border-dashed border-[#0289E8]/30" />
+              <Image
+                src={"/images/serene-home-teleconsultation.png"}
+                alt={"Patient at home on a laptop teleconsultation with an eShifa consultant"}
+                width={1448}
+                height={1086}
+                sizes="(max-width: 640px) 90vw, 460px"
+                className={"h-full w-full rounded-full object-cover object-[62%_50%] shadow-xl ring-8 ring-white"}
+              />
+            </div>
           </Reveal>
           <Reveal delay={100}>
-            <h2 className="text-3xl sm:text-4xl text-[#1B004E] font-light mb-6">Our Medical Network</h2>
-            <BulletList items={doctorNetworkItems} />
-            <h3 className="text-2xl text-[#1B004E] font-semibold mt-8 mb-3">Teleconsultation Hours</h3>
-            <p className="text-lg text-[#444444]">Teleconsultations run 9am to 5pm, Monday to Saturday. Outside those hours, call our 24/7 helpline on 051-111-111-567 and our team will arrange the right care.</p>
+            <h2 className="text-3xl sm:text-4xl text-[#1B004E] font-light mb-6">Tele-Consultation</h2>
+            <p className="text-lg text-[#444444] mb-6">
+              eShifa Tele Consultation Services provide convenient online access to qualified consultants of Shifa International Hospital
+              from the comfort of your home. Consult with experienced doctors remotely and receive professional medical guidance without
+              the need to visit the hospital.
+            </p>
+            <p className="text-lg text-[#1B004E] font-semibold mb-4">It includes the following services:</p>
+            <BulletList items={teleConsultationItems} />
           </Reveal>
         </div>
       </section>
