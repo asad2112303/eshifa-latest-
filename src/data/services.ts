@@ -223,7 +223,7 @@ export const services: Record<ServiceSlug, ServiceContent> = {
       imageAlt: "eShifa healthcare professional collecting a blood sample from a patient at home in Pakistan",
     },
     about: {
-      heading: "Diagnostics That Come to You",
+      heading: "Diagnostics Laboratory Services",
       paragraphs: [
         "Home Laboratory Services remove the trip to a collection centre. A trained healthcare professional visits at a time that suits you, collects the required sample, and coordinates it for processing through our laboratory network across Pakistan.",
         "Samples are labelled and handled according to proper procedure from collection through to transport, so the diagnostic pathway stays intact between your home and the laboratory.",
