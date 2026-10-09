@@ -1,0 +1,80 @@
+name: Security
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    # Weekly, so a newly published advisory against a pinned dependency is
+    # caught even when nothing has been pushed.
+    - cron: "17 3 * * 1"
+
+# Every action is pinned to a full commit hash, not a tag, so a compromised or
+# moved tag upstream cannot change what runs here. Bump the hashes deliberately.
+permissions:
+  contents: read
+
+concurrency:
+  group: security-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  checks:
+    name: Typecheck, tests, dependency audit, build, HTTP security tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci --no-audit --no-fund
+      - run: npm run typecheck
+      - run: npm test
+      - name: Dependency audit (production dependencies, high or critical fails)
+        run: npm run audit
+      - name: Production build
+        run: npm run build
+        env:
+          NEXT_PUBLIC_SITE_URL: https://eshifa.org
+      - name: Start the built server and run the HTTP security tests
+        env:
+          HEALTH_CHECK_TOKEN: ci-only-health-token
+          BASE_URL: http://localhost:23999
+        run: |
+          npx next start -p 23999 > server.log 2>&1 &
+          for i in $(seq 1 30); do
+            curl -sf http://localhost:23999/api/health >/dev/null && break
+            sleep 1
+          done
+          npm run test:security
+      - name: Server log on failure
+        if: failure()
+        run: cat server.log || true
+
+  semgrep:
+    name: Static analysis (Semgrep)
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    container:
+      image: semgrep/semgrep@sha256:93963d9295a366f59e4850127b1550400ee7b388f04fe144e4a1f6325d96e01b # latest as of 2026-10-09
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - run: >
+          semgrep scan
+          --config p/owasp-top-ten --config p/typescript --config p/react --config p/nodejs --config p/secrets
+          --exclude node_modules --exclude .next
+          --metrics=off --error
+
+  gitleaks:
+    name: Secret scan (Gitleaks)
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          fetch-depth: 0
+      - uses: gitleaks/gitleaks-action@ff98106e4c7b2bc287b24eaf42907196329070c7 # v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

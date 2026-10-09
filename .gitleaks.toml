@@ -1,0 +1,16 @@
+# Gitleaks configuration. The default ruleset applies; this only tells it where
+# placeholder values live so they are not reported as findings.
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Documented placeholders, never real credentials"
+paths = [
+  '''\.env\.example$''',
+]
+regexes = [
+  '''sb_publishable_your-key''',
+  '''sb_secret_your-key''',
+  '''re_your_key''',
+  '''ci-only-health-token''',
+]
