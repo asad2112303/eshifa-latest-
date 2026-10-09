@@ -1,3 +1,4 @@
+import { JsonLd } from "@/components/seo/json-ld";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { services, servicePageSlugs, servicePath, isServiceSlug } from "@/data/services";
@@ -70,8 +71,8 @@ export default async function ServicePage({ params }: RouteParams) {
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <JsonLd data={serviceSchema} />
+      <JsonLd data={faqSchema} />
 
       <ServiceHero service={service} />
       <ServiceAbout service={service} />

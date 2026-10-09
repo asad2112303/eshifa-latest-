@@ -2466,7 +2466,7 @@ export function AboutPage() {
       <section className="py-20 bg-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-8">
           <Reveal>
-            <h2 className="text-3xl sm:text-4xl text-[#1B004E] font-light mb-6">Company Overview & Legal Identity</h2>
+            <h2 className="text-3xl sm:text-4xl text-[#1B004E] font-light mb-6">Company Overview &amp; Legal Identity</h2>
             <dl className="space-y-5">
               {companyFacts.map((fact) => (
                 <div key={fact.label} className="border-l-4 border-[#00E5B9] pl-5">
