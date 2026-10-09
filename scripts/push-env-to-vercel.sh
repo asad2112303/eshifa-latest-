@@ -19,15 +19,22 @@ cd "$(dirname "$0")/.."
 ENV_FILE=".env.local"
 ENVIRONMENTS=(production preview development)
 
-# SUPABASE_SERVICE_ROLE_KEY is accepted as a legacy alternative to
-# SUPABASE_SECRET_KEY; whichever is present will be picked up.
+# The website needs only the public Supabase settings. It holds no privileged
+# key: the admin portal is a separate app with its own environment.
 REQUIRED=(
   NEXT_PUBLIC_SUPABASE_URL
   NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY
-  SUPABASE_SECRET_KEY
-  ADMIN_EMAIL
-  ADMIN_PASSWORD_HASH
-  ADMIN_SESSION_SECRET
+)
+
+# Pushed when present in .env.local, skipped silently when not.
+OPTIONAL=(
+  RESEND_API_KEY
+  EMAIL_FROM
+  EMAIL_TEAM_INBOX
+  HEALTH_CHECK_TOKEN
+  TRUSTED_PROXY_HOPS
+  UPSTASH_REDIS_REST_URL
+  UPSTASH_REDIS_REST_TOKEN
 )
 
 [ -f "$ENV_FILE" ] || { echo "✗ $ENV_FILE not found."; exit 1; }
@@ -63,7 +70,8 @@ npx --yes vercel link --yes
 
 echo
 echo "  Uploading..."
-for key in "${REQUIRED[@]}"; do
+push_var() {
+  local key="$1" value
   value="$(read_value "$key")"
   for env in "${ENVIRONMENTS[@]}"; do
     # Remove any existing value first so this script is safe to re-run.
@@ -72,6 +80,10 @@ for key in "${REQUIRED[@]}"; do
   done
   unset value
   echo "    ✓ $key"
+}
+for key in "${REQUIRED[@]}"; do push_var "$key"; done
+for key in "${OPTIONAL[@]}"; do
+  [ -n "$(read_value "$key")" ] && push_var "$key" || echo "    - $key (not set locally, skipped)"
 done
 
 # NEXT_PUBLIC_SITE_URL should be the real domain in production, not localhost.
@@ -86,5 +98,5 @@ npx --yes vercel --prod --force --yes
 
 echo
 echo "  Done. Verify with:"
-echo "    curl -s https://eshifa-latest.vercel.app/api/health?check=config"
+echo "    curl -s -H \"Authorization: Bearer \$HEALTH_CHECK_TOKEN\" https://eshifa-latest.vercel.app/api/health?check=config"
 echo

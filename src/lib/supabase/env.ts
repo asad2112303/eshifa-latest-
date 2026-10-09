@@ -25,21 +25,3 @@ export function missingPublicConfig(): string[] {
   if (!supabasePublicKey()) missing.push("NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY");
   return missing;
 }
-
-/**
- * Server-only key. Bypasses Row Level Security, so it is confined to the admin
- * API routes and used only after the session cookie has been verified.
- *
- * It is required because the admin is not a Supabase user: the database cannot
- * tell them apart from an anonymous visitor, so RLS cannot authorize them and
- * the server must read on their behalf.
- *
- * Never prefix with NEXT_PUBLIC_ — that would ship it to every browser.
- */
-export function supabaseServiceKey(): string | undefined {
-  return (
-    process.env.SUPABASE_SECRET_KEY?.trim() ||
-    process.env.SUPABASE_SERVICE_ROLE_KEY?.trim() ||
-    undefined
-  );
-}

@@ -1,7 +1,6 @@
 import { createServerClient } from "@supabase/ssr";
 import { cookies } from "next/headers";
-import { createClient as createSupabaseClient } from "@supabase/supabase-js";
-import { supabaseUrl, supabasePublicKey, supabaseServiceKey, missingPublicConfig } from "./env";
+import { supabaseUrl, supabasePublicKey, missingPublicConfig } from "./env";
 
 /**
  * The application's only Supabase client.
@@ -59,20 +58,4 @@ export async function createServerSupabase() {
       },
     },
   );
-}
-
-/**
- * Server-only client for admin reads and writes. Bypasses RLS.
- *
- * Call this ONLY after requireAdmin() has verified the session cookie, and
- * never from a "use client" module.
- */
-export function createAdminSupabase() {
-  const missing = missingPublicConfig();
-  if (!supabaseServiceKey()) missing.push("SUPABASE_SECRET_KEY (or SUPABASE_SERVICE_ROLE_KEY)");
-  if (missing.length) throw new SupabaseNotConfiguredError(missing);
-
-  return createSupabaseClient(supabaseUrl()!, supabaseServiceKey()!, {
-    auth: { persistSession: false, autoRefreshToken: false },
-  });
 }
