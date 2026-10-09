@@ -9,6 +9,10 @@ updates:
     schedule:
       interval: weekly
       day: monday
+    # Wait a week before proposing a newly published version: a compromised
+    # release is usually pulled within days, and nothing here needs same-day updates.
+    cooldown:
+      default-days: 7
     open-pull-requests-limit: 5
     groups:
       production-dependencies:
@@ -20,3 +24,5 @@ updates:
     schedule:
       interval: weekly
       day: monday
+    cooldown:
+      default-days: 7
